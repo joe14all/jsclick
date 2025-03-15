@@ -1,0 +1,133 @@
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+bottom: 0;
+    width: 100%;
+    z-index: 30;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  
+  .footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footerLinks a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .footerLinks a:hover {
+    text-decoration: underline;
+    color: #ddd;
+  }
+  
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .socialMedia img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(180deg);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .socialMedia img:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(90%) sepia(50%) hue-rotate(180deg);
+  }
+  
+  .contactInfo {
+    font-size: 0.9em;
+  }
+  
+  .footer p {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #aaa;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: #ddd;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+  
+    .footerLinks {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .socialMedia {
+      gap: 12px;
+    }
+  
+    .socialMedia img {
+      width: 26px;
+      height: 26px;
+    }
+  
+    .contactInfo {
+      text-align: center;
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 30px 0;
+    }
+  
+    .footerLinks a {
+      margin: 6px 0;
+    }
+  
+    .socialMedia img {
+      width: 22px;
+      height: 22px;
+    }
+  
+    .footer p {
+      font-size: 0.8em;
+    }
+  
+    .container {
+      gap: 15px;
+    }
+  }
+  

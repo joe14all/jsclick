@@ -1,0 +1,60 @@
+.contactSection {
+  
+  background: #fbd562;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .heading {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .ctaButton:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2em;
+    }
+    
+    .description {
+      font-size: 1em;
+    }
+    
+    .ctaButton {
+      padding: 12px 30px;
+      font-size: 1em;
+    }
+  }

@@ -1,0 +1,130 @@
+/* ====== Achievements Section Wrapper ====== */
+.achievementsSection {
+    margin: 5rem 0 ;
+    position: relative;
+    background: linear-gradient(135deg, #fbd562, #fbd562);
+    padding: 120px 0;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ====== Decorative Moving Balls ====== */
+.movingBall {
+    position: absolute;
+    width: 1500px;
+    height: 1500px;
+    border-radius: 50%;
+    z-index: 0;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+.ballBottomRight {
+    top: -150px;
+    left: -150px;
+    background: rgba(105, 105, 105, 1);
+}
+
+.ballTopLeft {
+    top: -750px;
+    left: -750px;
+    background: rgba(192, 192, 192, 1);
+}
+
+/* ====== Centering Wrapper ====== */
+.wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* ====== Container ====== */
+.container {
+    width: 100%;
+}
+
+/* ====== Section Heading ====== */
+.achievementsSection h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* ====== Achievements Grid ====== */
+.achievementsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* Individual Grid Items (Cards) */
+.achievementsGrid > * {
+    flex: 0 1 calc(33.333% - 30px); /* 3 per row, considering gap */
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+/* ====== Button Centering ====== */
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* ====== Responsive Breakpoints ====== */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .achievementsGrid > * {
+        flex: 0 1 calc(50% - 30px); /* 2 per row */
+    }
+
+    .container h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .achievementsSection {
+        padding: 80px 15px;
+    }
+
+    .achievementsGrid {
+        gap: 20px;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 600px) {
+    .achievementsGrid > * {
+        flex: 0 1 calc(100% - 30px); /* Full width */
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .achievementsGrid {
+        gap: 15px;
+    }
+
+    .achievementsSection {
+        padding: 60px 10px;
+    }
+}

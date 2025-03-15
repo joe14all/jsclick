@@ -1,0 +1,50 @@
+/* Logo.module.css */
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 15px 0;
+  }
+  
+  .logoImage {
+    max-height: 35px;
+    margin-right: 10px;
+  }
+  
+  .logoName {
+    font-size: 1.75em;
+    font-weight: 700;
+    color: #007bff;
+    margin-right: 5px;
+  }
+  
+  .separator {
+    font-size: 1.75em;
+    color: #333;
+    margin: 0 5px;
+  }
+  
+  .credentials {
+    font-size: 1em;
+    font-style: italic;
+    color: #333;
+    padding-top: 7px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .logoImage {
+      max-height: 25px;
+    }
+  
+    .logoName {
+      font-size: 1.2em;
+    }
+  
+    .credentials {
+      font-size: 0.8em;
+    }
+  }
+  

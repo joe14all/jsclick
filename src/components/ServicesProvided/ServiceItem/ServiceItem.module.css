@@ -1,0 +1,150 @@
+.serviceItem {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 1rem;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Collapsed state - title at bottom */
+  .serviceItem:not(.open) {
+    height: 180px;
+    justify-content: flex-end;
+  }
+  
+  /* Expanded state - title at top */
+  .serviceItem.open {
+    justify-content: flex-start;
+  }
+  
+  /* Overlay behind the title for readability */
+  .overlay {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .serviceTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-align: left;
+  }
+  
+  /* Service List container */
+  .contentWrapper {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.5s ease, padding 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+  /* Expanded state content */
+  .showContent {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 800px; /* enough for large lists */
+    flex-grow: 1; /* Fills remaining space if needed */
+    min-height: 200px; /* Ensure it looks like a card even with short content */
+  }
+  
+  /* Service List */
+  .serviceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .serviceListItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 0.5rem;
+  }
+  
+  .serviceListItem:last-child {
+    border-bottom: none;
+  }
+  
+ /* ServiceItem.module.css */
+.listIcon {
+  color: #007bff; /* Adjust to your theme */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+
+  
+  /* Hover effect */
+  .serviceItem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .serviceItem:not(.open) {
+      height: 150px;
+    }
+  
+    .serviceTitle {
+      font-size: 1.1rem;
+    }
+  
+    .showContent {
+      max-height: 600px;
+    }
+  
+    .serviceListItem {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Phones */
+  @media (max-width: 480px) {
+    .serviceItem:not(.open) {
+      height: 130px;
+    }
+  
+    .serviceTitle {
+      font-size: 1rem;
+    }
+  
+    .serviceListItem {
+      font-size: 0.85rem;
+    }
+  
+    .overlay {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  

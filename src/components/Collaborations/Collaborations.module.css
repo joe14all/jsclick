@@ -1,0 +1,112 @@
+/* Collaborations.module.css */
+
+.collaborationsSection {
+    margin: 5rem 0 ;
+    position: relative;
+    padding: 6rem 0;
+    background: rgba(255, 255, 255, 0.9);
+     overflow: hidden;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .logosScroller {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .logosTrack {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    animation: scroll 50s linear infinite;
+    will-change: transform;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Grid layout for mobile */
+  .logosGridMobile {
+    display: none; /* Hidden on desktop */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+    padding: 1rem;
+  }
+  
+  .description {
+    text-align: center;
+    margin-top: 3rem;
+    color: #444;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* -------------------- Responsive Adjustments -------------------- */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .sectionTitle {
+      font-size: 2.5rem;
+    }
+  
+    .logosTrack {
+      gap: 4rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+      max-width: 700px;
+    }
+  }
+  
+  /* Mobile Large */
+  @media (max-width: 768px) {
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  
+    .logosScroller {
+      display: none; /* Hide scrolling marquee on mobile */
+    }
+  
+    .logosGridMobile {
+      display: grid; /* Show grid on mobile */
+    }
+  
+    .description {
+      font-size: 0.95rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  /* Mobile Small */
+  @media (max-width: 480px) {
+    .sectionTitle {
+      font-size: 1.8rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+  

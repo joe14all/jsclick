@@ -1,0 +1,58 @@
+.primaryButton {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: 
+      background 0.3s ease, 
+      transform 0.3s ease, 
+      box-shadow 0.3s ease, 
+      filter 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+  }
+  
+  .primaryButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);
+    transition: left 0.4s ease;
+  }
+  
+  .primaryButton:hover::before {
+    left: 130%;
+  }
+  
+  .primaryButton:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 123, 255, 0.45);
+    filter: brightness(1.1);
+    color: #fff;
+  }
+  
+  .primaryButton:active {
+    transform: translateY(-1px) scale(1);
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.4);
+  }
+  
+  .primaryButton:focus-visible {
+    outline: 3px solid rgba(0, 123, 255, 0.6);
+    outline-offset: 3px;
+  }
+  

@@ -1,0 +1,65 @@
+/* CollaborationLogo.module.css */
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 1rem;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+  
+  .logoLink:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .logoImage {
+    max-height: 240px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+  
+  .logoLink:hover .logoImage {
+    transform: scale(1.05);
+  }
+  
+  /* -------------------- Responsive Logo Adjustments -------------------- */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .logoImage {
+      max-height: 180px;
+    }
+  
+    .logoLink {
+      min-width: 160px;
+    }
+  }
+  
+  /* Mobile Grid Adjustments */
+  @media (max-width: 768px) {
+    .logoImage {
+      max-height: 120px; /* Smaller logos in grid */
+    }
+  
+    .logoLink {
+      min-width: auto; /* Auto width in grid */
+      width: 100%; /* Stretch within grid */
+      filter: none; /* ✅ Remove grayscale on mobile */
+      opacity: 1; /* Full opacity */
+    }
+  
+    .logoLink:hover {
+      transform: none; /* No hover transform on mobile */
+    }
+  
+    .logoLink:hover .logoImage {
+      transform: none; /* No zoom on mobile */
+    }
+  }
+  

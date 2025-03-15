@@ -1,0 +1,88 @@
+/* Navigation.module.css */
+
+/* Navigation Wrapper */
+.navLinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navigation List */
+  .navLinks ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  /* List Item */
+  .navItem {
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  /* Link Style */
+  .navLink {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover + Active State */
+  .navLink:hover,
+  .navLink.active {
+    color: #007bff;
+  }
+  
+  /* Underline Animation */
+  .navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s ease;
+  }
+  
+  .navLink:hover::after,
+  .navLink.active::after {
+    width: 100%;
+  }
+  
+  /* --- Mobile Styles --- */
+  @media (max-width: 768px) {
+    .navLinks {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: block;
+    }
+  
+    .navLinks.open {
+      max-height: 500px;
+    }
+  
+    .navLinks ul {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .navItem {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .navItem:first-child {
+      margin-top: 0;
+    }
+  }
+  
