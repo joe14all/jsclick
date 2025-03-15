@@ -35,7 +35,7 @@ const Achievements = () => {
   }, [isDesktop]);
 
   return (
-    <AnimatedSection direction="fade" delay={0.15}> {/* OUTER WRAPPER FOR SECTION */}
+    <AnimatedSection direction="fade" delay={0.15}>
       <section id="achievements" className={styles.achievementsSection}>
         <div ref={ballBottomRight} className={`${styles.movingBall} ${styles.ballBottomRight}`}></div>
         <div ref={ballTopLeft} className={`${styles.movingBall} ${styles.ballTopLeft}`}></div>
