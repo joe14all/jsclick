@@ -1,0 +1,135 @@
+/* General Styling */
+.aboutMePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9); /* ✅ Subtle white gradient */
+    color: #333;
+
+  }
+  
+  /* Professional Photo */
+  .professionalPhoto {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .professionalPhoto img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4a90e2;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* ✅ Softer shadow */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .professionalPhoto img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Section Styling */
+  .section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ✅ Softer, minimal shadow */
+    padding: 2rem 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .section:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Decorative Background Circle */
+  .circleBg {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 70px;
+    height: 70px;
+    background: #4a90e2;
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  
+  /* Container for Content */
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  .CTASsection{
+
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+  }
+  
+  /* Typography */
+  h2, h3 {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #555;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Mobile Header */
+  .mobileHeader {
+    display: none;
+  }
+  
+  .mobileHeader img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 1rem;
+  }
+  
+  /* ✅ Responsive Design */
+  @media (max-width: 768px) {
+    .aboutMePage {
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+  
+    .professionalPhoto img {
+      width: 140px;
+      height: 140px;
+      border: 3px solid #4a90e2;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+  
+    .mobileHeader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .section {
+      padding: 1.5rem 1.8rem;
+    }
+  
+    h2, h3 {
+      font-size: 1.6rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+  }
+  

@@ -1,0 +1,67 @@
+/* ===== Biography Section Styling ===== */
+
+.mediaCarousel {
+    width: 100%;
+    max-width: 450px;
+    max-height: 500px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .storyBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    height: 650px;
+  }
+  
+  .storyBlock.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .textContent {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    line-height: 1.7;
+  }
+  
+  /* === Mobile friendly adjustments === */
+  @media (max-width: 768px) {
+    .storyBlock {
+      flex-direction: column !important; /* ✅ Force column layout for both normal and reverse */
+      text-align: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .textContent {
+      padding: 0 1rem;
+      order: 1; /* ✅ Always put text first */
+    }
+  
+    .mediaCarousel {
+      max-width: 100%;
+      order: 2; /* ✅ Carousel comes after text */
+    }
+  }
+  
+  .biographySection {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff); /* Light gradient, no gray */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    color: #4a90e2;
+  }
+  
+  .highlight {
+    color: #d9534f;
+    font-weight: bold;
+  }
+  

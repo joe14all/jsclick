@@ -1,0 +1,99 @@
+/* === Philosophy Section General === */
+.philosophySection {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.philosophySection h2 {
+  text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    color: #4a90e2;
+}
+
+/* === Card Style (Image + Text Block) === */
+.card {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 60px;
+  gap: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* === Image as background block === */
+.image {
+  flex: 1;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* === Text Styling === */
+.text {
+  flex: 1;
+  padding: 50px;
+  font-size: 1.8rem;
+  line-height: 1.9;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* === Reverse the order for alternating layout === */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 1024px) {
+  .text {
+    padding: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .image {
+    min-height: 500px;
+  background-position: contain;
+  }
+
+  .text {
+    padding: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .philosophySection h2 {
+    font-size: 2.2rem;
+  }
+}
