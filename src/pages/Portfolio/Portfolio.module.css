@@ -1,0 +1,61 @@
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Heading */
+.heading {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937; /* Gray-800 */
+  font-weight: 700;
+  position: relative;
+}
+
+/* Underline Effect */
+.heading::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: #1a73e8;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+/* Portfolio Grid */
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* No Projects Found Message */
+.noProjects {
+  text-align: center;
+  color: #6b7280; /* Gray-500 */
+  font-size: 1.2rem;
+  padding: 3rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .portfolioGrid {
+    gap: 1rem;
+  }
+}

@@ -71,7 +71,7 @@
 
 /* Individual Grid Items (Cards) */
 .achievementsGrid > * {
-    flex: 0 1 calc(33.333% - 30px); /* 3 per row, considering gap */
+    flex: 0 1 calc(25% - 30px); /* 3 per row, considering gap */
     max-width: 320px;
     box-sizing: border-box;
 }

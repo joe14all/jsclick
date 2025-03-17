@@ -1,0 +1,135 @@
+/* === Resume.module.css === */
+
+/* Main container */
+.resumeCvSection {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f7f9fc, #eef2f7);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+  }
+  
+  /* Center container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Header */
+  .interactiveResume h3 {
+    font-size: 2.5rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .interactiveResume p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Resume List */
+  .resumeList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .resumeList li {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .resumeList li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Titles inside Resume List */
+  .resumeList li strong {
+    color: #1a73e8;
+    font-weight: 600;
+  }
+  
+ /* Courses Section */
+.coursesSection {
+  margin-top: 2rem;
+}
+
+.coursesSection h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Course List */
+.coursesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Optional: Center each course */
+.coursesList > * {
+  display: flex;
+  justify-content: center;
+}
+
+  
+  /* Call To Action Section */
+  .CTASection {
+    margin: 2rem auto 0;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+  }
+  
+  .CTASection p {
+    margin-top: 1rem;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+ 
+  /* LinkedIn & Download CV Buttons */
+  .linkedInIntegration,
+  .downloadCV {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .resumeCvSection {
+      padding: 2rem 1rem;
+    }
+  
+    .interactiveResume h3 {
+      font-size: 2rem;
+    }
+  
+    .coursesList {
+      grid-template-columns: 1fr;
+    }
+  }
+  

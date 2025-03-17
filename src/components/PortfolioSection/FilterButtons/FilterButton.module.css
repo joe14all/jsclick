@@ -1,0 +1,50 @@
+/* Filter Buttons Container */
+.filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 0;
+  }
+  
+  /* Individual Button Styling */
+  .filterBtn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+    background-color: #f3f4f6;
+    border: 2px solid transparent;
+    border-radius: 9999px; /* Full rounded pill style */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Hover Effect */
+  .filterBtn:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Active Button Style */
+  .active {
+    background-color: #2563eb;
+    color: white;
+    border-color: #1e40af;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 640px) {
+    .filterBtn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  

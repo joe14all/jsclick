@@ -1,0 +1,74 @@
+.caseStudyDetails {
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Section Wrapper */
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  /* Section Title */
+  .sectionTitle {
+    font-size: 1.5rem;
+    color: #1a73e8;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Optional line under title */
+  .sectionTitle::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #1a73e8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+  }
+  
+  /* Text Content */
+  .sectionText {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .caseStudyDetails {
+      padding: 1.5rem 1rem;
+    }
+  
+    .sectionTitle {
+      font-size: 1.3rem;
+    }
+  
+    .sectionText {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .caseStudyDetails {
+      padding: 1rem;
+    }
+  
+    .sectionTitle {
+      font-size: 1.2rem;
+    }
+  
+    .sectionText {
+      font-size: 0.9rem;
+    }
+  }
+  

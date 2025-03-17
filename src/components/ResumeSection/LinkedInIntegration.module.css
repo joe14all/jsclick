@@ -1,0 +1,51 @@
+/* === LinkedInIntegration.module.css === */
+
+/* Main container */
+.linkedinIntegration {
+    padding: 2rem;
+    background: linear-gradient(135deg, #e0f2ff, #f0f7ff);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 1.75rem;
+    color: #0077b5; /* LinkedIn blue */
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* Optional Description */
+  .description {
+    color: #333;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Hover effect */
+  .linkedinIntegration:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  }
+  

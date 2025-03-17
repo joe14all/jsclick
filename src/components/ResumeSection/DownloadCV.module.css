@@ -1,0 +1,67 @@
+
+
+/* Main container for download section */
+.downloadCv {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa, #e9edf3);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  /* Title */
+  .downloadTitle {
+    font-size: 2rem;
+    color: #1a73e8;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  /* Container for iframe */
+  .pdfContainer {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+  
+  /* iframe styling */
+  .iframePreview {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+  }
+  
+  /* Button adjustment */
+  .button {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+  }
+  
+  /* Hover and interactive effects */
+  .downloadCv:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .pdfContainer {
+      height: 350px;
+    }
+  
+    .downloadTitle {
+      font-size: 1.5rem;
+    }
+  }
+  
