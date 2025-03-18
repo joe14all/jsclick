@@ -4,11 +4,11 @@ import { useEffect } from "react";
 
 const AnimatedSection = ({ 
   children, 
-  direction = "up", // "up", "down", "left", "right", "zoom-in", "zoom-out", "fade", "rotate"
+  direction = "up",
   delay = 0 
 }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {
@@ -16,7 +16,6 @@ const AnimatedSection = ({
     }
   }, [controls, inView]);
 
-  // Define animation variants dynamically based on "direction" type
   const variants = {
     hidden: getHiddenVariant(direction),
     visible: {
@@ -30,35 +29,26 @@ const AnimatedSection = ({
   };
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={variants}>
+    <motion.div 
+      ref={ref} 
+      initial="hidden" 
+      animate={controls} 
+      variants={variants} 
+      style={{ visibility: inView ? "visible" : "hidden" }} // Ensures visibility
+    >
       {children}
     </motion.div>
   );
 };
 
-// Helper to return the correct hidden variant based on direction
 const getHiddenVariant = (direction) => {
+  const mobileOffset = window.innerWidth < 768 ? 20 : 50;
   switch (direction) {
-    case "up":
-      return { opacity: 0, y: 50 };
-    case "down":
-      return { opacity: 0, y: -50 };
-    case "left":
-      return { opacity: 0, x: 50 };
-    case "right":
-      return { opacity: 0, x: -50 };
-    case "zoom-in":
-      return { opacity: 0, scale: 0.8 };
-    case "zoom-out":
-      return { opacity: 0, scale: 1.2 };
-    case "rotate":
-      return { opacity: 0, rotate: -10 }; // slight rotation
-    case "flip":
-      return { opacity: 0, rotateY: 90 }; // horizontal flip
-    case "fade": // just fade without motion
-      return { opacity: 0 };
-    default:
-      return { opacity: 0, y: 50 }; // Default to 'up'
+    case "up": return { opacity: 0, y: mobileOffset };
+    case "down": return { opacity: 0, y: -mobileOffset };
+    case "left": return { opacity: 0, x: mobileOffset };
+    case "right": return { opacity: 0, x: -mobileOffset };
+    default: return { opacity: 0, y: mobileOffset };
   }
 };
 

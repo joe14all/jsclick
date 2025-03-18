@@ -14,9 +14,8 @@ const CourseItem = ({ course }) => {
       <div className={styles.courseContent}>
         {/* Left Side */}
         <div className={styles.imageContainer}>
-          <a href={course.image.link} target="_blank" rel="noopener noreferrer">
             <img src={course.image.src} alt={course.image.alt} loading="lazy" />
-          </a>
+        
         </div>
 
         {/* Right Side */}

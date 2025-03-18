@@ -46,14 +46,14 @@ const Resume = () => {
             </ul>
 
             {/* Courses Section */}
-            {/* <div className={styles.coursesSection}>
+            <div className={styles.coursesSection}>
               <h4>Courses</h4>
               <div className={styles.coursesList}>
                 {resumeData.courses.map((course, index) => (
                   <CourseItem key={index} course={course} />
                 ))}
               </div>
-            </div> */}
+            </div>
 
             {/* Download and LinkedIn */}
             <DownloadCV />

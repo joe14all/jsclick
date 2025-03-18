@@ -1,120 +1,108 @@
 /* Modal Backdrop */
 .modalBackdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.75);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+/* Modal Content */
+.modalContent {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 95%;
+  width: 1600px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease-out;
+  position: relative;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+/* Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.5rem;
+}
+
+.modalTitle {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.closeBtn {
+  font-size: 2rem;
+  color: #888;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #000;
+}
+
+/* Content Layout */
+.modalBody {
+  display: flex;
+  gap: 2rem;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* Sticky Carousel */
+.carouselWrapper {
+  width: 45%;
+  position: sticky;
+  top: 1rem;
+  height: 100%;
+}
+
+/* Details Section */
+.detailsWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 1rem;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .modalBody {
+    flex-direction: column;
+    height: auto;
     overflow-y: auto;
   }
-  
-  /* Modal Window */
-  .modalContent {
-    background: #fff;
-    border-radius: 16px;
-    max-width: 900px;
+
+  .carouselWrapper {
     width: 100%;
-    max-height: 95vh;
-    overflow-y: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.4s ease-out;
     position: relative;
-    padding: 1.5rem;
   }
-  
-  /* Modal Header */
-  .modalHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 0.5rem;
+
+  .detailsWrapper {
+    height: auto;
+    max-height: 70vh; /* Allows scrolling */
+    overflow-y: auto;
   }
-  
-  .modalTitle {
-    font-size: 1.8rem;
-    color: #333;
-    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    max-width: 95%;
   }
-  
-  /* Close Button */
-  .closeBtn {
-    font-size: 2rem;
-    line-height: 1;
-    color: #888;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .closeBtn:hover {
-    color: #000;
-  }
-  
-  /* Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* ----------- RESPONSIVE DESIGN (without affecting desktop) ------------ */
-  
-  /* Tablets (<= 768px) */
-  @media (max-width: 768px) {
-    .modalContent {
-      max-width: 95%; /* Almost full width on tablets */
-      padding: 1.2rem;
-      border-radius: 12px;
-    }
-  
-    .modalTitle {
-      font-size: 1.5rem;
-    }
-  
-    .modalHeader {
-      margin-bottom: 0.8rem;
-      padding-bottom: 0.4rem;
-    }
-  }
-  
-  /* Phones (<= 480px) */
-  @media (max-width: 480px) {
-    .modalBackdrop{
-        width:100vw
-    }
-    .modalContent {
-      max-width: 100%;
-      height: auto;
-      max-height: 90vh; /* Ensure no overflow on short screens */
-      padding: 1rem;
-      border-radius: 10px;
-    }
-  
-    .modalTitle {
-      font-size: 1.3rem;
-    }
-  
-    .modalHeader {
-      margin-bottom: 0.6rem;
-      padding-bottom: 0.3rem;
-    }
-  
-    .closeBtn {
-      font-size: 1.6rem;
-    }
-  }
-  
+}

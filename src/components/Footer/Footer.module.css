@@ -1,133 +1,130 @@
 /* Footer */
 .footer {
-    background: #333;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-    position: relative;
-bottom: 0;
-    width: 100%;
-    z-index: 30;
-  }
-  
+  background: #333;
+  color: #fff;
+  padding: 25px 0; /* Reduced padding */
+  text-align: center;
+  width: 100%;
+  z-index: 30;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Reduced side padding */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
+  box-sizing: border-box;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px; /* Smaller gap */
+}
+
+.footerLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85em; /* Reduced font size */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #ddd;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Reduced gap */
+}
+
+.socialMedia img {
+  width: 24px; /* Reduced icon size */
+  height: 24px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(180deg);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.socialMedia img:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(90%) sepia(50%) hue-rotate(180deg);
+}
+
+.contactInfo {
+  font-size: 0.8em; /* Reduced text size */
+}
+
+.footer p {
+  font-size: 0.8em; /* Reduced text size */
+  margin-top: 5px; /* Less spacing */
+  color: #aaa;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-    display: flex;
+    padding: 0 12px;
+    gap: 12px; /* Tighter layout */
+  }
+
+  .footerLinks {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    box-sizing: border-box;
+    gap: 8px;
   }
-  
-  .footerLinks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .footerLinks a {
-    color: #fff;
-    text-decoration: none;
-    margin: 5px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .footerLinks a:hover {
-    text-decoration: underline;
-    color: #ddd;
-  }
-  
+
   .socialMedia {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 10px;
   }
-  
+
   .socialMedia img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(180deg);
-    transition: transform 0.3s ease, filter 0.3s ease;
+    width: 22px;
+    height: 22px;
   }
-  
-  .socialMedia img:hover {
-    transform: scale(1.1);
-    filter: brightness(0) saturate(100%) invert(90%) sepia(50%) hue-rotate(180deg);
-  }
-  
+
   .contactInfo {
-    font-size: 0.9em;
+    text-align: center;
+    padding: 0 8px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0; /* More compact */
+  }
+
+  .footerLinks a {
+    margin: 4px 0;
+  }
+
+  .socialMedia img {
+    width: 20px;
+    height: 20px;
+  }
+
   .footer p {
-    font-size: 0.9em;
-    margin-top: 10px;
-    color: #aaa;
+    font-size: 0.75em;
   }
-  
-  .footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+
+  .container {
+    gap: 10px;
   }
-  
-  .footer a:hover {
-    text-decoration: underline;
-    color: #ddd;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .container {
-      padding: 0 15px;
-    }
-  
-    .footerLinks {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .socialMedia {
-      gap: 12px;
-    }
-  
-    .socialMedia img {
-      width: 26px;
-      height: 26px;
-    }
-  
-    .contactInfo {
-      text-align: center;
-      padding: 0 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .footer {
-      padding: 30px 0;
-    }
-  
-    .footerLinks a {
-      margin: 6px 0;
-    }
-  
-    .socialMedia img {
-      width: 22px;
-      height: 22px;
-    }
-  
-    .footer p {
-      font-size: 0.8em;
-    }
-  
-    .container {
-      gap: 15px;
-    }
-  }
-  
+}

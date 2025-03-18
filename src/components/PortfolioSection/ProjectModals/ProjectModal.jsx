@@ -1,4 +1,3 @@
-// components/PortfolioSection/ProjectModals/ProjectModal.jsx
 import { useState, useEffect } from 'react';
 import styles from './ProjectModal.module.css';
 import CaseStudyCarousel from './CaseStudyCarousel';
@@ -15,10 +14,7 @@ const ProjectModal = ({ project, onClose }) => {
 
   return (
     <div className={styles.modalBackdrop} onClick={onClose}>
-      <div
-        className={styles.modalContent}
-        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside modal
-      >
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className={styles.modalHeader}>
           <h3 className={styles.modalTitle}>{project.title}</h3>
@@ -27,15 +23,22 @@ const ProjectModal = ({ project, onClose }) => {
           </button>
         </div>
 
-        {/* Carousel */}
-        <CaseStudyCarousel
-          images={project.caseStudy.carousel}
-          activeSlide={activeSlide}
-          setActiveSlide={setActiveSlide}
-        />
+        {/* Content Layout: Carousel & Details */}
+        <div className={styles.modalBody}>
+          {/* Sticky Carousel */}
+          <div className={styles.carouselWrapper}>
+            <CaseStudyCarousel
+              images={project.caseStudy.carousel}
+              activeSlide={activeSlide}
+              setActiveSlide={setActiveSlide}
+            />
+          </div>
 
-        {/* Case Study Details */}
-        <CaseStudyDetails content={project.caseStudy.sections} />
+          {/* Case Study Details */}
+          <div className={styles.detailsWrapper}>
+            <CaseStudyDetails content={project.caseStudy.sections} />
+          </div>
+        </div>
       </div>
     </div>
   );
