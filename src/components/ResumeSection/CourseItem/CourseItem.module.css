@@ -41,8 +41,19 @@
   height: 100px;
   margin: 0 auto;
 }
+.imageContainer img {
+  width: 150px;
+  height: 150px;
+  object-fit:contain;
+  margin: 0 auto;
+
+}
 
 .courseItem.expanded .imageContainer {
+  min-width: 180px;
+  height: 180px;
+}
+.courseItem.expanded .imageContainer img{
   min-width: 180px;
   height: 180px;
 }
@@ -57,17 +68,22 @@
   max-width: 1200px;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .courseItem {
-    grid-column: span 1;
+    grid-column: span 1; /* Ensure all cards take one column */
   }
-  
+
   .courseItem.expanded {
+    grid-column: span 1 ; /* Prevent expansion beyond mobile width */
     width: 100%;
   }
 
   .courseItem.expanded .courseContent {
-    flex-direction: column;
+    flex-direction: column; /* Keep stacked layout */
   }
+  .courseItem h4 {
+    margin-top: 20px;
+  }
+
 }
+

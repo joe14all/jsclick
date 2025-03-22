@@ -43,38 +43,32 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
 
       {/* Main Content - Arrows and Slides */}
       <div className={styles.mainContent}>
-        {/* Arrows - Outside on Desktop */}
-        <button
-          className={`${styles.carouselControl} ${styles.prev}`}
-          onClick={handlePrev}
-          aria-label="Previous Slide"
-        >
-          ‹
-        </button>
+  <button className={`${styles.carouselControl} ${styles.prev}`} onClick={handlePrev}>
+    ‹
+  </button>
 
-        <div
-          className={styles.carouselInner}
-          style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-        >
-          {images.map((image, index) => (
-            <div key={index} className={styles.carouselItem}>
-              <img
-                src={image.img}
-                alt={image.alt || `Slide ${index + 1}`}
-                className={styles.carouselImage}
-              />
-            </div>
-          ))}
+  {/* Add viewport wrapper */}
+  <div className={styles.carouselViewport}>
+    <div
+      className={styles.carouselInner}
+      style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+    >
+      {images.map((image, index) => (
+        <div key={index} className={styles.carouselItem}>
+          <img
+            src={image.img}
+            alt={image.alt || `Slide ${index + 1}`}
+            className={styles.carouselImage}
+          />
         </div>
+      ))}
+    </div>
+  </div>
 
-        <button
-          className={`${styles.carouselControl} ${styles.next}`}
-          onClick={handleNext}
-          aria-label="Next Slide"
-        >
-          ›
-        </button>
-      </div>
+  <button className={`${styles.carouselControl} ${styles.next}`} onClick={handleNext}>
+    ›
+  </button>
+</div>
     </div>
   );
 };

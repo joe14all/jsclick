@@ -17,16 +17,20 @@
 .modalContent {
   background: #fff;
   border-radius: 16px;
-  max-width: 95%;
-  width: 1600px;
+  max-width: 90vw;
+  width: 100%;
   max-height: 95vh;
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.4s ease-out;
-  position: relative;
+  position: fixed; /* Ensures proper centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 1.5rem;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -71,6 +75,7 @@
   position: sticky;
   top: 1rem;
   height: 100%;
+  padding: 2rem;
 }
 
 /* Details Section */
@@ -83,6 +88,10 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .modalContent {
+    max-width: 95vw;
+  }
+
   .modalBody {
     flex-direction: column;
     height: auto;
@@ -96,13 +105,35 @@
 
   .detailsWrapper {
     height: auto;
-    max-height: 70vh; /* Allows scrolling */
+    max-height: 70vh;
     overflow-y: auto;
+    scrollbar-width: none;
+
   }
 }
 
 @media (max-width: 768px) {
   .modalContent {
-    max-width: 95%;
+    max-width: 98vw;
+    max-height: 96vh; /* Prevents excessive height */
+    padding: 1rem; /* Adjust padding for better spacing */
+  }
+
+  .modalTitle {
+    font-size: 1.8rem;
+  }
+
+  .modalBody {
+    gap: 1rem;
+  }
+
+  .carouselWrapper {
+    min-height: 250px;
+    padding: 1rem;
+  }
+
+  .detailsWrapper {
+    max-height: 60vh;
+    padding-right: 0;
   }
 }

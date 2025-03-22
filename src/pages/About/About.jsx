@@ -15,13 +15,13 @@ const About = () => {
     <MainLayout isHomePage={false} currentPage="About">
       
       {/* Professional Photo */}
-      <aside className={styles.professionalPhoto}>
+      {/* <aside className={styles.professionalPhoto}>
         <img
           src={ProfessionalPhoto}
           srcSet={`${ProfessionalPhotoSmall} 2x`}
           alt="Professional"
         />
-      </aside>
+      </aside> */}
 
       <div className={styles.aboutMePage}>
 
@@ -32,7 +32,7 @@ const About = () => {
             {/* Mobile Header */}
             <div className={styles.mobileHeader}>
               <h2>Biography</h2>
-              <img src={ProfessionalPhotoSmall} alt="Mobile Professional" />
+              
             </div>
 
             {/* Enhanced Storytelling Component */}

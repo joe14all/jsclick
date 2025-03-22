@@ -10,25 +10,31 @@
 
   }
   
-  /* Professional Photo */
-  .professionalPhoto {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-  
-  .professionalPhoto img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #4a90e2;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* ✅ Softer shadow */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .professionalPhoto img:hover {
-    transform: scale(1.05);
-  }
+ /* Professional Photo */
+.professionalPhoto {
+  text-align: center;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.professionalPhoto img {
+  width: 220px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 4px solid #4a90e2;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+.professionalPhoto img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
   
   /* Section Styling */
   .section {
@@ -48,11 +54,11 @@
   
   /* Decorative Background Circle */
   .circleBg {
-    position: absolute;
+    position: fixed;
     top: -25px;
     left: -25px;
-    width: 70px;
-    height: 70px;
+    width:200vw;
+    height: 250vh;
     background: #4a90e2;
     border-radius: 50%;
     opacity: 0.15;
@@ -64,22 +70,29 @@
     z-index: 2;
   }
   .CTASsection{
-
     width: 80%;
     display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    padding-bottom: 100px;
+  }
+  .CTASsection .container{
+    display: flex;
     flex-direction: column;
-    justify-content:space-between;
+   align-items: center;
   }
   
   /* Typography */
-  h2, h3 {
+  .container h2, 
+  .container h3 
+  {
     font-size: 2rem;
     color: #4a90e2;
     margin-bottom: 1.2rem;
     font-weight: 700;
   }
   
-  p {
+  .container p {
     font-size: 1.05rem;
     line-height: 1.75;
     color: #555;
@@ -91,12 +104,7 @@
     display: none;
   }
   
-  .mobileHeader img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-top: 1rem;
-  }
+
   
   /* ✅ Responsive Design */
   @media (max-width: 768px) {
@@ -106,30 +114,35 @@
     }
   
     .professionalPhoto img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
       border: 3px solid #4a90e2;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    }
-  
-    .mobileHeader {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
   
     .section {
       padding: 1.5rem 1.8rem;
     }
   
-    h2, h3 {
+    .container h2, 
+    .container h3 {
       font-size: 1.6rem;
     }
   
-    p {
+    .container p {
       font-size: 0.95rem;
       line-height: 1.65;
+    }
+    .CTASsection {
+      display: flex;
+      align-items: center; 
+      flex-direction: column;
+   
+      }
+
+    .CTASsection .container {
+      display: flex;
+      flex-direction: column;
+    align-items: center;    
     }
   }
   

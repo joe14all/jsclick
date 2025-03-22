@@ -27,23 +27,35 @@ const Contact = () => {
     setSuccess(false);
 
     try {
-      const response = await fetch('https://your-api-gateway-url/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        'https://o1pnvpwfq3.execute-api.us-east-1.amazonaws.com/Prod/send-email',
+        {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+            // Add any required API keys or auth headers here
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const responseData = await response.json();
 
       if (response.ok) {
         setSuccess(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        setError('Failed to send message. Please try again.');
+        // Handle API-specific error messages
+        setError(responseData.error || 'Failed to send message. Please try again.');
+        if (responseData.details) {
+          console.error('API Error Details:', responseData.details);
+        }
       }
     } catch (err) {
-      setError('An error occurred. Please check your connection.');
+      setError(err.message || 'An error occurred. Please check your connection.');
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
@@ -53,10 +65,10 @@ const Contact = () => {
           <AnimatedSection direction="fade" delay={0.4}>
             <h2 className={styles.title}>Get in Touch</h2>
             <p className={styles.subtitle}>
-            Looking to collaborate?  
-                <br />  
-                Let’s connect !
-              </p>
+              Looking to collaborate?  
+              <br />  
+              Let’s connect!
+            </p>
             <form onSubmit={handleSubmit} className={styles.contactForm}>
               <div className={styles.inputGroup}>
                 <User className={styles.icon} />
@@ -67,6 +79,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  minLength="2"
                 />
               </div>
 
@@ -79,6 +92,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 />
               </div>
 
@@ -90,7 +104,6 @@ const Contact = () => {
                   placeholder="Subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  required
                 />
               </div>
 
@@ -101,10 +114,16 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  minLength="10"
                 ></textarea>
               </div>
 
-              <button type="submit" className={styles.submitButton} disabled={loading}>
+              <button 
+                type="submit" 
+                className={styles.submitButton} 
+                disabled={loading}
+                aria-busy={loading}
+              >
                 {loading ? 'Sending...' : (
                   <>
                     <Send size={18} /> Send Message
@@ -112,8 +131,19 @@ const Contact = () => {
                 )}
               </button>
 
-              {success && <p className={styles.successMessage}>Message sent successfully!</p>}
-              {error && <p className={styles.errorMessage}>{error}</p>}
+              {success && (
+                <p className={styles.successMessage}>
+                  Message sent successfully! 🎉
+                </p>
+              )}
+              
+              {error && (
+                <p className={styles.errorMessage}>
+                  ⚠️ {error}
+                  <br />
+                  <small>Please check your inputs and try again.</small>
+                </p>
+              )}
             </form>
           </AnimatedSection>
         </div>
