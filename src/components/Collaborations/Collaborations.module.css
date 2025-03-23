@@ -3,15 +3,16 @@
 .collaborationsSection {
     margin: 5rem 0 ;
     position: relative;
-    padding: 6rem 0;
+    padding: 40px 0;
     background: rgba(255, 255, 255, 0.9);
-     overflow: hidden;
+    overflow: hidden;
   }
   
   .sectionTitle {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: 3em;
+    margin-bottom: 0px;
+    margin-top: 0;
     color: #222;
     font-weight: 700;
     letter-spacing: 1px;
@@ -52,13 +53,13 @@
   
   .description {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 0rem;
     color: #444;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.5;
   }
   
   /* -------------------- Responsive Adjustments -------------------- */

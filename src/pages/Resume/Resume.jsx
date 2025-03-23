@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MainLayout from '../../components/Layout/MainLayout';
 import AnimatedSection from '../../components/AnimatedSection/AnimatedSection';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
@@ -7,10 +7,13 @@ import ResumeList from '../../components/ResumeSection/ResumeList/ResumeList';
 import CourseItem from '../../components/ResumeSection/CourseItem/CourseItem';
 import DownloadCV from '../../components/ResumeSection/DownloadCV';
 import LinkedInIntegration from '../../components/ResumeSection/LinkedInIntegration';
+import { CheckCircle } from 'lucide-react'; 
+
 import styles from './Resume.module.css';
+import ExpandableResumeList from '../../components/ResumeSection/ExpandableResumeList/ExpandableResumeList';
 
 const Resume = () => {
-  const [flippedIndex, setFlippedIndex] = useState(null);
+
 
   return (
     <MainLayout isHomePage={false} currentPage="Resume">
@@ -20,18 +23,28 @@ const Resume = () => {
             {/* Header */}
             <div className={styles.interactiveResume}>
               <h3>Resume</h3>
-              <p>Explore my professional journey, key experiences, and accomplishments:</p>
+              <p>Explore my professional journey, key experiences, and accomplishments <br/>
+              Over 10 years in Restorative Dentistry, Endodontics, Clear Aligners, Surgery, Implantology, and Cosmetic Dentistry</p>
             </div>
 
             {/* Main List */}
             <ul className={styles.resumeList}>
-              <li><strong>Position:</strong> {resumeData.position}</li>
+              
+              <li className={styles.resumeListSection}>
+                <h4 className={styles.sectionTitle}>Position</h4>
+                <ul className={styles.listItems}>
+                  {resumeData.position && (
+                    <li className={styles.listItem}>
+                      <CheckCircle size={18} className={styles.icon} />
+                      <span>{resumeData.position}</span>
+                    </li>
+                  )}
+                </ul>
+              </li>
+
+ 
 
               <ResumeList title="Education" items={resumeData.education} />
-
-              <li>
-                <strong>Experience:</strong> Over 10 years in Restorative Dentistry, Endodontics, Clear Aligners, Surgery, Implantology, and Cosmetic Dentistry
-              </li>
 
               <ResumeList title="Certifications" items={resumeData.certifications} />
 
@@ -43,17 +56,11 @@ const Resume = () => {
                   "Excellence in Clinical Care Award",
                 ]}
               />
+                 <ExpandableResumeList
+              title="Courses"
+              items={resumeData.courses}/>
             </ul>
 
-            {/* Courses Section */}
-            <div className={styles.coursesSection}>
-              <h4>Courses</h4>
-              <div className={styles.coursesList}>
-                {resumeData.courses.map((course, index) => (
-                  <CourseItem key={index} course={course} />
-                ))}
-              </div>
-            </div>
 
             {/* Download and LinkedIn */}
             <DownloadCV />

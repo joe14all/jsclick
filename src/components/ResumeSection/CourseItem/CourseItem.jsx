@@ -12,21 +12,25 @@ const CourseItem = ({ course }) => {
       aria-label={`Course: ${course.title}`}
     >
       <div className={styles.courseContent}>
-        {/* Left Side */}
+        {/* Left Side (Image) */}
         <div className={styles.imageContainer}>
-            <img src={course.image.src} alt={course.image.alt} loading="lazy" />
-        
+          <img src={course.image.src} alt={course.image.alt} loading="lazy" />
         </div>
 
-        {/* Right Side */}
+        {/* Right Side (Collapsed or Expanded Content) */}
         <div style={{ flex: 1 }}>
-          <h4 className={styles.courseTitle}>{course.title}</h4>
-          <p className={styles.courseInstructor}><strong>Instructor:</strong> {course.instructor}</p>
-          <p className={styles.courseDuration}><strong>Duration:</strong> {course.duration}</p>
-
-          {isExpanded && (
+          {isExpanded ? (
             <>
-              <p><strong>Type:</strong> {course.type}</p>
+              <h4 className={styles.courseTitle}>{course.title}</h4>
+              <p className={styles.courseInstructor}>
+                <strong>Instructor:</strong> {course.instructor}
+              </p>
+              <p className={styles.courseDuration}>
+                <strong>Duration:</strong> {course.duration}
+              </p>
+              <p>
+                <strong>Type:</strong> {course.type}
+              </p>
               <a
                 href={course.providerLink}
                 target="_blank"
@@ -37,11 +41,16 @@ const CourseItem = ({ course }) => {
               </a>
               <h5>Key Topics:</h5>
               <ul className={styles.courseDetails}>
-                {course.details.map((detail, index) => (
+                {course.details?.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
             </>
+          ) : (
+            /** Collapsed State - Show Title & Instructor */
+            <span className={styles.courseTitle}>
+             <strong> {course.title} - {course.instructor} </strong>{" | "} {course.duration}
+            </span>
           )}
         </div>
       </div>

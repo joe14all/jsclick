@@ -81,7 +81,7 @@ img {
 /* Responsive Utilities */
 @media (max-width: 768px) {
   #root {
-    padding: 0.5rem;
+    padding: 0rem;
   }
 
   main {

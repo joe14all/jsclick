@@ -43,6 +43,11 @@ const Collaborations = () => {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Collaborations</h2>
+          <p className={styles.description}>
+              I have had the pleasure of working with esteemed dental practices and institutions; 
+              <br /> 
+              providing innovative  dental solutions.
+            </p>
           <div className={styles.logosScroller}>
             <div className={styles.logosTrack}>
                 {collaborations.map((collab, index) => (
@@ -68,10 +73,8 @@ const Collaborations = () => {
             </div>
 
 
-          <p className={styles.description}>
-            I've had the pleasure of working with esteemed dental practices and institutions, 
-            providing innovative dental solutions.
-          </p>
+           
+
         </div>
       </div>
     </section>

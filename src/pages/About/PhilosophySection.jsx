@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Philosophy.module.css';
 import DentistryPhoto from '../../assets/images/Bio/dentalPhoto.jpg';
-import UCLATrain from '../../assets/images/Bio/learningPhoto.jpg';
+
 import LearningPhoto from '../../assets/images/joseph.jpg';
 
 

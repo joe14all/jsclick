@@ -8,7 +8,7 @@ const ResumeList = ({ title, items }) => (
     <ul className={styles.listItems}>
       {items.map((item, index) => (
         <li key={index} className={styles.listItem}>
-          <CheckCircle size={18} className={styles.icon} /> {/* Optional icon */}
+          <CheckCircle size={18} className={styles.icon} /> 
           <span>{item}</span>
         </li>
       ))}

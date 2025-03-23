@@ -3,7 +3,7 @@
     overflow: hidden;
     text-align: center;
     color: #fff;
-    padding: 150px 0;
+    padding: 120px 0;
     min-height: 40vh;
   }
 
@@ -24,6 +24,7 @@ html {
 .hero h1 {
     font-size: 3em;
     margin-bottom: 10px;
+    margin-top: 0;
     color: #fff;
 }
 

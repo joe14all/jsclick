@@ -18,7 +18,6 @@ import FamilyFour from '../../assets/images/Bio/Family/family_four.png';
 const BiographySection = () => {
     const earlyLifeMedia = [
         { type: 'image', src: UCLAOne, title: 'Stepping into a new chapter — First days at UCLA' },
-        { type: 'image', src: UCLATwo, title: 'Making memories and friendships beyond classrooms' },
         { type: 'image', src: UCLAThree, title: 'Hands-on learning — Exploring labs and experiments' },
         { type: 'image', src: UCLAFour, title: 'A proud moment — Graduation day at UCLA' },
       ];
@@ -27,15 +26,14 @@ const BiographySection = () => {
       const hobbiesMedia = [
         { type: 'image', src: BassGuitar, title: 'Lost in rhythm — My escape with the bass guitar' },
         { type: 'image', src: Photography, title: 'Through the lens — Capturing life’s fleeting moments' },
-        { type: 'video', src: SquashVideo, title: 'Game on! Staying energized with squash' },
+  
       ];
       
 
       const familyMedia = [
-        { type: 'image', src: FamilyOne, title: 'The moment "I love you" became "forever"' },
-        { type: 'image', src: FamilyTwo, title: 'Tied the knot — A day to remember' },
-        { type: 'image', src: FamilyThree, title: 'From two to three — where laughter is' },
-        { type: 'image', src: FamilyFour, title: 'Festive joy — Cherishing Christmas together' },
+       
+        { type: 'image', src: FamilyThree, title: 'Family' },
+        
       ];
       
 
