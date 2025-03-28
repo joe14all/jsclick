@@ -1,0 +1,73 @@
+import React from 'react';
+import styles from './Procedure.module.css';
+
+const Procedure = ({ procedure }) => {
+  if (!procedure) return null;
+
+const renderNestedList = (data, depth = 0) => {
+  if (!data || data.length === 0) return null;
+  
+  return (
+    <ul className={styles.nestedList} style={{ marginLeft: `${depth * 0.5}rem` }}>
+      {data.map((item, index) => {
+        if (typeof item === 'object' && !Array.isArray(item)) {
+          return (
+            <li key={index}>
+              {item.label && <strong>{item.label}: </strong>}
+              {Array.isArray(item.value) ? renderNestedList(item.value, depth + 1) : item.value}
+            </li>
+          );
+        }
+        return <li key={index}>{item}</li>;
+      })}
+    </ul>
+  );
+};
+
+
+  const sections = [
+    { label: 'Timeline', data: procedure.timeline },
+    { label: 'Metrics', data: procedure.metrics },
+    { label: 'Materials', data: procedure.materials },
+    { label: 'Parameters', data: procedure.parameters },
+    { label: 'Sequence', data: procedure.sequence },
+    { label: 'Instruments', data: procedure.instruments },
+    { label: 'Strategies', data: procedure.strategies },
+    { label: 'Steps', data: procedure.steps },
+    { label: 'Risks', data: procedure.risks },
+    { label: 'Details', data: procedure.details},
+    { label: 'Specs', data: procedure.specifications},
+    { label: 'Protocol', data: procedure.protocol},
+    { label: 'Activation', data: procedure.activation},
+
+
+  ];
+
+  return (
+    <div className={styles.procedureCard}>
+      <div className={styles.procedureHeader}>
+        <h5>{procedure.type}</h5>
+    
+        {procedure.category && <span className={styles.procedureCategory}>{procedure.category}</span>}
+      </div>
+      
+      <div className={styles.procedureDetails}>
+        {sections.map(({ label, data, ordered }) =>
+          data?.length > 0 ? (
+            <div key={label}>
+              <strong>{label}:</strong>
+              {ordered ? <ol className={styles.orderedList}>{renderNestedList(data)}</ol> : renderNestedList(data)}
+            </div>
+          ) : null
+        )}
+        
+        {procedure.product && <div><strong>Product:</strong> {procedure.product}</div>}
+        {procedure.software && <div><strong>Software:</strong> {procedure.software}</div>}
+        {procedure.technique && <div><strong>Technique:</strong> {procedure.technique}</div>}
+        {procedure.outcome && <div className={styles.procedureOutcome}><strong>Outcome ➞</strong> {procedure.outcome}</div>}
+      </div>
+    </div>
+  );
+};
+
+export default Procedure;

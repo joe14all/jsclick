@@ -1,34 +1,59 @@
 import React from 'react';
+import PatientProfile from './CaseStudySections/PatientProfile';
+import SimulationOverview from './CaseStudySections/SimulationOverview';
+import ChallengeItem from './CaseStudySections/ChallengeItem';
+import TreatmentStrategy from './CaseStudySections/TreatmentStrategy';
+import ResultsMetrics from './CaseStudySections/ResultsMetrics';
+import Presentation from './CaseStudySections/Presentation.js';
+import ClinicalAssessment from './CaseStudySections/ClinicalAssessment';
+import OutcomesGrid from './CaseStudySections/OutcomesGrid';
+import Section from '../../Section/Section';
+
 import styles from './CaseStudyDetails.module.css';
+
 
 const CaseStudyDetails = ({ content }) => {
   const { overview, challenges, solutions, results } = content;
-
   return (
     <div className={styles.caseStudyDetails}>
-      {/* Overview */}
-      <section className={styles.section}>
-        <h3 className={styles.sectionTitle}>Overview</h3>
-        <p className={styles.sectionText}>{overview}</p>
-      </section>
+      <Section title="Case Overview" icon="📋" initialOpen={false}>
+    {content.overview.content.patientProfile ? (
+      <PatientProfile data={content.overview.content.patientProfile} />
+    ) : (
+      <SimulationOverview data={content} />
+    )}
 
-      {/* Challenges */}
-      <section className={styles.section}>
-        <h3 className={styles.sectionTitle}>Challenges</h3>
-        <p className={styles.sectionText}>{challenges}</p>
-      </section>
+{overview.content.presentation && (
+    <Presentation data={overview.content.presentation} />
+  )}
 
-      {/* Solutions */}
-      <section className={styles.section}>
-        <h3 className={styles.sectionTitle}>Solutions</h3>
-        <p className={styles.sectionText}>{solutions}</p>
-      </section>
+  {overview.content.clinicalAssessment && (
+    <ClinicalAssessment data={overview.content.clinicalAssessment} />
+  )}
 
-      {/* Results */}
-      <section className={styles.section}>
-        <h3 className={styles.sectionTitle}>Results</h3>
-        <p className={styles.sectionText}>{results}</p>
-      </section>
+  </Section>
+
+      <Section title="Clinical Challenges" icon="⚠️">
+        <div className={styles.challengesGrid}>
+          {challenges.content.map((challenge, index) => (
+            <ChallengeItem key={index} challenge={challenge} />
+          ))}
+        </div>
+      </Section>
+
+      <Section title="Treatment Strategy" icon="📅">
+        <TreatmentStrategy 
+          timeline={solutions.timeline} 
+          phases={solutions.content} 
+        />
+      </Section>
+
+      <Section title="Treatment Outcomes" icon="📈">
+        <ResultsMetrics metrics={results.metrics} />
+        
+                <OutcomesGrid data={results.content} />
+
+      </Section>
     </div>
   );
 };

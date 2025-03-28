@@ -39,6 +39,7 @@
   flex-direction: row;
   gap: 1.5rem;
   align-items: flex-start;
+  padding:2rem 1rem
 }
 
 /* Image */
@@ -81,13 +82,13 @@
 }
 
 /* Title emphasis */
-.courseTitle {
+.collapsedCardText {
   font-weight: 300;
   font-size: clamp(0.85rem, 1.05vw, 1.2rem); /* Responsive scaling */
   color: #555;
 }
 
-.courseTitle strong {
+.collapsedCardText strong {
   font-weight: 500;
   font-size: clamp(0.9rem, 1.1vw, 1.3rem);
   color: #333;
@@ -107,12 +108,18 @@
 }
 
 /* Expanded state text styling */
-.courseItem.expanded .courseTitle,
+
 .courseItem.expanded .courseInstructor,
 .courseItem.expanded .courseDateRange {
   font-size: 16px;
   color: inherit;
   font-style: normal;
+}
+.courseItem.expanded .courseTitle {
+  font-size: 32px;
+    color: inherit;
+  font-style: normal;
+  margin:0
 }
 
 /* Grid */
@@ -125,12 +132,13 @@
   max-width: 1200px;
 }
 
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .courseItem {
     grid-column: span 1; /* Ensure all cards take one column */
   }
-  .courseTitle {
+  .collapsedCardText {
     font-size: clamp(0.8rem, 2.5vw, 1rem); /* Adjusted for readability */
   }
 
@@ -145,5 +153,8 @@
 
   .courseItem h4 {
     margin-top: 20px;
+  }
+  .courseItem.expanded .courseTitle {
+font-size: 18px;
   }
 }

@@ -18,7 +18,7 @@ const DownloadCV = () => {
 
   return (
     <div className={styles.downloadCv}>
-      <h3 className={styles.downloadTitle}>Download My Resume</h3>
+      <h3 className={styles.downloadTitle}>My Resume</h3>
       <div className={styles.pdfContainer}>
         <iframe
           loading="lazy"

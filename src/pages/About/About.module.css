@@ -69,16 +69,18 @@
     z-index: 2;
   }
   .CTASsection{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
     padding-bottom: 100px;
+    margin-top: 0;
   }
   .CTASsection .container{
     display: flex;
     flex-direction: column;
    align-items: center;
+   
   }
   
   /* Typography */
@@ -135,13 +137,16 @@
       display: flex;
       align-items: center; 
       flex-direction: column;
+
    
       }
 
     .CTASsection .container {
       display: flex;
       flex-direction: column;
-    align-items: center;    
+    align-items: center; 
+
+       
     }
   }
   

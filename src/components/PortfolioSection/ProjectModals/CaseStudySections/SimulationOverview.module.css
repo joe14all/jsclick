@@ -1,0 +1,126 @@
+/* Main container */
+.contextSection {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Shared title styles */
+  .sectionTitle {
+    color: #1a73e8;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(26, 115, 232, 0.1);
+  }
+  
+  /* Parameter grid styles */
+  .parameterGrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .parameterCard {
+    background: rgba(245, 245, 245, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .parameterLabel {
+    font-weight: 600;
+    color: #2d3748;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .parameterValue {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  /* Training objectives section */
+  .trainingObjectives {
+    margin-top: 2rem;
+  }
+  
+  .objectivesBlock {
+    background: rgba(249, 250, 251, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    backdrop-filter: blur(8px);
+  }
+  
+  .objectiveSubtitle {
+    color: #2b6cb0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* List styles */
+  .competencyList,
+  .benchmarkList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .competencyItem,
+  .benchmarkItem {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .listBullet {
+    color: #4299e1;
+    font-weight: 700;
+  }
+  
+  .checkmarkIcon {
+    color: #48bb78;
+    font-weight: 700;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contextSection {
+      padding: 1.5rem;
+      border-radius: 16px;
+    }
+    
+    .parameterGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .parameterCard {
+      padding: 1rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contextSection {
+      padding: 1rem;
+      backdrop-filter: blur(8px);
+    }
+    
+    .parameterValue {
+      font-size: 0.9rem;
+    }
+    
+    .objectiveSubtitle {
+      font-size: 1rem;
+    }
+  }

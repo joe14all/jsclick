@@ -48,7 +48,7 @@ const CourseItem = ({ course }) => {
             </>
           ) : (
             /** Collapsed State - Show Title & Instructor */
-            <span className={styles.courseTitle}>
+            <span className={styles.collapsedCardText}>
              <strong> {course.title} - {course.instructor} </strong>{" | "} {course.duration}
             </span>
           )}

@@ -1,10 +1,8 @@
 import React from 'react';
 import MainLayout from '../../components/Layout/MainLayout';
 import AnimatedSection from '../../components/AnimatedSection/AnimatedSection';
-import PrimaryButton from '../../components/Buttons/PrimaryButton';
 import resumeData from '../../components/ResumeSection/resumeData';
 import ResumeList from '../../components/ResumeSection/ResumeList/ResumeList';
-import CourseItem from '../../components/ResumeSection/CourseItem/CourseItem';
 import DownloadCV from '../../components/ResumeSection/DownloadCV';
 import LinkedInIntegration from '../../components/ResumeSection/LinkedInIntegration';
 import { CheckCircle } from 'lucide-react'; 
@@ -29,9 +27,8 @@ const Resume = () => {
 
             {/* Main List */}
             <ul className={styles.resumeList}>
-              
               <li className={styles.resumeListSection}>
-                <h4 className={styles.sectionTitle}>Position</h4>
+                <h4 className={styles.sectionTitle}>Current Position</h4>
                 <ul className={styles.listItems}>
                   {resumeData.position && (
                     <li className={styles.listItem}>
@@ -42,25 +39,17 @@ const Resume = () => {
                 </ul>
               </li>
 
- 
-
               <ResumeList title="Education" items={resumeData.education} />
+
+              <ResumeList title="Awards" items={resumeData.awards} />
 
               <ResumeList title="Certifications" items={resumeData.certifications} />
 
-              <ResumeList
-                title="Key Achievements"
-                items={[
-                  "Comprehensive Patient Care Award",
-                  "Excellence in Restorative Dentistry Award",
-                  "Excellence in Clinical Care Award",
-                ]}
+              <ExpandableResumeList
+                title="Courses"
+                items={resumeData.courses}
               />
-                 <ExpandableResumeList
-              title="Courses"
-              items={resumeData.courses}/>
             </ul>
-
 
             {/* Download and LinkedIn */}
             <DownloadCV />
@@ -68,15 +57,6 @@ const Resume = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <div className={styles.CTASection}>
-          <PrimaryButton
-            to="/contact"
-            label="Let's connect"
-            ariaLabel="go to contact"
-          />
-          <p>Looking for a general Dentist? Let's work together.</p>
-        </div>
       </AnimatedSection>
     </MainLayout>
   );

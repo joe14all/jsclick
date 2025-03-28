@@ -1,0 +1,55 @@
+/* Section styles */
+.section {
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .section.open {
+    border-color: #1a73e8;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.1);
+  }
+  
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    cursor: pointer;
+    background: #f8f9fa;
+    border-radius: 12px 12px 0 0;
+    transition: background 0.2s ease;
+  }
+  
+  .sectionHeader:hover {
+    background: #f1f3f4;
+  }
+  
+  .sectionTitleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .sectionIcon {
+    font-size: 1.2em;
+  }
+  
+  .sectionTitle {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  
+  .collapseIcon {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .sectionContent {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 0 0 12px 12px;
+  }
+  

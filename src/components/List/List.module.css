@@ -1,0 +1,21 @@
+/* components/List/List.module.css */
+.list {
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+    list-style: none;
+  }
+  
+  .list li {
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+    color: #4a5568;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  
+  .bullet {
+    color: var(--bullet-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }

@@ -1,30 +1,46 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './CaseStudyCarousel.module.css';
 
 const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
-  // Auto-slide logic
+  const intervalRef = useRef(null);
+  const timeoutRef = useRef(null);
+
+  const startAutoSlide = () => {
+    intervalRef.current = setInterval(() => {
+      setActiveSlide(prev => (prev + 1) % images.length);
+    }, 5000);
+  };
+
+  const pauseAndResumeAutoSlide = () => {
+    // Clear existing timers
+    clearInterval(intervalRef.current);
+    clearTimeout(timeoutRef.current);
+    
+    // Restart auto-slide after 10 seconds
+    timeoutRef.current = setTimeout(startAutoSlide, 10000);
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSlide((prevSlide) => (prevSlide + 1) % images.length);
-    }, 5000); // Change slide every 5 seconds
+    startAutoSlide();
+    return () => {
+      clearInterval(intervalRef.current);
+      clearTimeout(timeoutRef.current);
+    };
+  }, [images.length]);
 
-    // Cleanup on unmount
-    return () => clearInterval(interval);
-  }, [images.length, setActiveSlide]);
-
-  // Go to previous slide
   const handlePrev = () => {
-    setActiveSlide((activeSlide - 1 + images.length) % images.length);
+    setActiveSlide((prev) => (prev - 1 + images.length) % images.length);
+    pauseAndResumeAutoSlide();
   };
 
-  // Go to next slide
   const handleNext = () => {
-    setActiveSlide((activeSlide + 1) % images.length);
+    setActiveSlide((prev) => (prev + 1) % images.length);
+    pauseAndResumeAutoSlide();
   };
 
-  // Direct slide navigation
   const goToSlide = (index) => {
     setActiveSlide(index);
+    pauseAndResumeAutoSlide();
   };
 
   return (
@@ -43,32 +59,73 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
 
       {/* Main Content - Arrows and Slides */}
       <div className={styles.mainContent}>
-  <button className={`${styles.carouselControl} ${styles.prev}`} onClick={handlePrev}>
-    ‹
-  </button>
+        <button className={`${styles.carouselControl} ${styles.prev}`} onClick={handlePrev}>
+          ‹
+        </button>
 
-  {/* Add viewport wrapper */}
-  <div className={styles.carouselViewport}>
-    <div
-      className={styles.carouselInner}
-      style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-    >
-      {images.map((image, index) => (
-        <div key={index} className={styles.carouselItem}>
-          <img
-            src={image.img}
-            alt={image.alt || `Slide ${index + 1}`}
-            className={styles.carouselImage}
-          />
+        <div className={styles.carouselViewport}>
+          <div
+            className={styles.carouselInner}
+            style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+          >
+            {images.map((item, index) => (
+              <div key={index} className={styles.carouselItem}>
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    className={styles.carouselImage}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    aria-label={item.alt || `Slide ${index + 1}`}
+                  />
+                ) : (
+                  <img
+                    src={item.img}
+                    alt={item.alt || `Slide ${index + 1}`}
+                    className={styles.carouselImage}
+                  />
+                )}
+                
+                <div className={styles.imageMetadata}>
+                  {item.modality && (
+                    <span className={styles.modalityBadge}>
+                      {item.modality}
+                    </span>
+                  )}
+                  
+                  <div className={styles.metaContent}>
+                    {item.date && (
+                      <time className={styles.imageDate}>
+                        {new Date(item.date).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric'
+                        })}
+                      </time>
+                    )}
+                    
+                    {item.tags?.length > 0 && (
+                      <div className={styles.tagContainer}>
+                        {item.tags.map((tag, tagIndex) => (
+                          <span key={tagIndex} className={styles.tagPill}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
 
-  <button className={`${styles.carouselControl} ${styles.next}`} onClick={handleNext}>
-    ›
-  </button>
-</div>
+        <button className={`${styles.carouselControl} ${styles.next}`} onClick={handleNext}>
+          ›
+        </button>
+      </div>
     </div>
   );
 };

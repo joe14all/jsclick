@@ -1,0 +1,69 @@
+/* CaseStudySections/Presentation.module.css */
+.subsection {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+    color: #1a73e8;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(26, 115, 232, 0.1);
+  }
+  .subtitleLabel{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #666;
+    margin: 0.75rem 0 0.25rem;
+  }
+  .chiefComplaint{
+    padding: 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid #1a73e8;
+  margin: 1rem 0;
+  font-style: italic;
+
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 1rem 0;
+  }
+  
+  .gridItem {
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .gridItem ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0;   
+  }
+  
+  .gridItem li {
+    margin-bottom: 0.25rem;
+  }
+
+  @media (max-width: 480px) {
+    .subtitle {
+        font-size: 1rem;
+    }
+    .subtitleLabel {
+        font-size: 0.85rem;
+    }
+    .chiefComplaint {
+        font-size: 0.80rem;
+    }
+    .gridItem li {
+      font-size: 0.80rem;
+    }
+  }

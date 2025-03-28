@@ -1,8 +1,6 @@
 import React from 'react';
 import MainLayout from '../../components/Layout/MainLayout';
-import BiographySection from './BiographySection'; // ✅ New engaging component
-import ProfessionalPhoto from '../../assets/images/joseph.jpg';
-import ProfessionalPhotoSmall from '../../assets/images/joseph-small.jpg';
+import BiographySection from './BiographySection'; 
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 import AnimatedSection from '../../components/AnimatedSection/AnimatedSection';
 import styles from './About.module.css';
@@ -14,15 +12,6 @@ const About = () => {
   return (
     <MainLayout isHomePage={false} currentPage="About">
       
-      {/* Professional Photo */}
-      {/* <aside className={styles.professionalPhoto}>
-        <img
-          src={ProfessionalPhoto}
-          srcSet={`${ProfessionalPhotoSmall} 2x`}
-          alt="Professional"
-        />
-      </aside> */}
-
       <div className={styles.aboutMePage}>
 
         {/* Biography Section */}

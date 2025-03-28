@@ -1,0 +1,205 @@
+.strategyContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Timeline Section Styles */
+  .timelineSection {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timelineTitle {
+    color: #2c3e50;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+  }
+  
+  .timelinePhases {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .phaseCard {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .phaseHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .phaseBadge {
+    background: #3498db;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+  }
+  
+  .phaseDuration {
+    color: #7f8c8d;
+    font-size: 0.875rem;
+  }
+  
+  .phaseFocus {
+    color: #34495e;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* Treatment Phases Styles */
+  .treatmentPhases {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .phaseSection {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .phaseTitle {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .objectivesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .objectivePill {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .proceduresGrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .timelinePhases, .proceduresGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .strategyContainer {
+    gap: 1.5rem;
+  }
+
+  .timelineSection {
+    padding: 1rem;
+  }
+
+  .timelineTitle {
+    font-size: 1.1rem;
+  }
+
+  .timelinePhases {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .phaseCard {
+    padding: 0.75rem;
+  }
+
+  .phaseHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .phaseBadge {
+    font-size: 0.8rem;
+  }
+
+  .phaseDuration {
+    font-size: 0.8rem;
+  }
+
+  .treatmentPhases {
+    gap: 1.5rem;
+  }
+
+  .phaseSection {
+    padding: 1rem;
+  }
+
+  .phaseTitle {
+    font-size: 1rem;
+  }
+
+  .objectivesList {
+    gap: 0.4rem;
+  }
+
+  .objectivePill {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .proceduresGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineTitle {
+    font-size: 1rem;
+  }
+
+  .phaseCard {
+    padding: 0.5rem;
+  }
+
+  .phaseHeader {
+    gap: 0.3rem;
+  }
+
+  .phaseBadge {
+    font-size: 0.75rem;
+  }
+
+  .phaseFocus {
+    font-size: 0.85rem;
+  }
+
+  .phaseSection {
+    padding: 0.75rem;
+  }
+
+  .phaseTitle {
+    font-size: 0.95rem;
+  }
+
+  .objectivePill {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

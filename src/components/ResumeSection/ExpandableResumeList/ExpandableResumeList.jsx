@@ -10,7 +10,6 @@ const ExpandableResumeList = ({ title, items }) => {
     <ul className={styles.listItems}>
       {items.map((course, index) => (
         <li key={index} className={styles.listItem}>
-          <CheckCircle size={18} className={styles.icon} /> 
           <CourseItem key={index} course={course} />
         </li>
       ))}

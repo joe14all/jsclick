@@ -74,22 +74,29 @@
     justify-content: flex-start;
     z-index: 1;
 }
+.backImageContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    height: 20%;
+    width: 100%;
+    padding: 0;
+}
 
 /* Optional: Subtle entrance fade */
 .back img {
     height: auto;
     object-fit: contain;
-    margin-bottom: 15px;
-    opacity: 0.1;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1;
     transition: opacity 0.5s ease;
 }
 
 .back h3 {
     font-size: 1.1rem;
     margin-bottom: 15px;
+    margin-top: 0;
     color: #007bff;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -131,7 +138,7 @@
     }
 
     .front p, .back p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .front img {

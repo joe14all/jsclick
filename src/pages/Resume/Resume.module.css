@@ -2,11 +2,11 @@
 
 /* Main container */
 .resumeCvSection {
-    padding: 4rem 2rem;
+    padding: 2rem 0;
     background: linear-gradient(135deg, #f7f9fc, #eef2f7);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 3rem;
+
   }
   
   /* Center container */

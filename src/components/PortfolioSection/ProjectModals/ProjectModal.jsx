@@ -33,6 +33,7 @@ const ProjectModal = ({ project, onClose }) => {
               setActiveSlide={setActiveSlide}
             />
           </div>
+          
 
           {/* Case Study Details */}
           <div className={styles.detailsWrapper}>

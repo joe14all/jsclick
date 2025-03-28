@@ -17,7 +17,9 @@ const AchievementItem = ({ image, title, year, description, backImage }) => {
       </div>
       
       <div className={styles.back}>
+        <div className={styles.backImageContainer}>
         <img src={backImage} alt={title} className={styles.backImage} />
+        </div>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

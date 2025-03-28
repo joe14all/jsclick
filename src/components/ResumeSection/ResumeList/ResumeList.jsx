@@ -1,8 +1,10 @@
 // components/ResumeSection/ResumeList/ResumeList.jsx
 import { CheckCircle } from 'lucide-react'; 
+import AnimatedSection from '../../AnimatedSection/AnimatedSection';
 import styles from './ResumeList.module.css';
 
 const ResumeList = ({ title, items }) => (
+  <AnimatedSection>
   <li className={styles.resumeListSection}>
     <h4 className={styles.sectionTitle}>{title}</h4>
     <ul className={styles.listItems}>
@@ -14,6 +16,7 @@ const ResumeList = ({ title, items }) => (
       ))}
     </ul>
   </li>
+  </AnimatedSection>
 );
 
 export default ResumeList;

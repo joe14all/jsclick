@@ -1,6 +1,6 @@
 /* === ResumeList.module.css === */
 
-/* Container for each section (Education, Certifications, etc.) */
+
 .resumeListSection {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -9,11 +9,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .resumeListSection:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  }
+
   
   /* Section Title */
   .sectionTitle {
@@ -43,15 +39,14 @@
     gap: 0.75rem;
     font-size: 1.05rem;
     color: #333;
-    padding: 0.75rem 1rem;
     border-radius: 12px;
     background: #f9fafc;
     transition: background 0.3s ease, transform 0.2s ease;
   }
   
   .listItem:hover {
-    background: #eef3fb;
-    transform: translateX(5px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   }
   
   /* Icon Style */

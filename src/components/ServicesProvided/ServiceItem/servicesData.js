@@ -63,8 +63,7 @@ const servicesData = [
     items: [
       "Root canal treatments (simple, complex)",
       "Retreatment of failed cases",
-      "Pulpotomy, pulpectomy",
-      "Apexification, apexogenesis",
+      "Utilizing dental Microscope",
       "Complex anatomy management",
       "Internal bleaching of non-vital teeth",
     ],
@@ -75,7 +74,7 @@ const servicesData = [
     items: [
       "Complete and partial dentures",
       "Implant-retained overdentures",
-      "Precision attachment prostheses",
+      "Lab workflow",
       "Immediate and interim dentures",
       "Rebasing, relining, and custom trays",
     ],
@@ -87,7 +86,6 @@ const servicesData = [
       "Scaling and root planing",
       "Flap surgery and pocket reduction",
       "Guided tissue regeneration",
-      "Soft tissue grafts (CTG, FGG)",
       "Laser-assisted periodontal therapy",
     ],
   },
@@ -117,11 +115,11 @@ const servicesData = [
     icon: AlignersImage,
     title: "Orthodontic Clear Aligners",
     items: [
-      "Comprehensive aligner therapy (Invisalign, others)",
+      "Comprehensive aligner therapy",
+      "Invisalign Provider",
+      "Clear Correct Provider",
       "Digital treatment planning",
       "IPR and attachment placement",
-      "Elastics and complex cases",
-      "Retention protocols (fixed, removable)",
     ],
   },
   {
@@ -131,8 +129,8 @@ const servicesData = [
       "Standardized intra/extra-oral imaging",
       "Professional lighting (softboxes, strobes)",
       "Case documentation and presentations",
-      "Retractor and mirror techniques",
-      "Clinical photo editing",
+
+      "Artistic photo editing",
     ],
   },
 ];

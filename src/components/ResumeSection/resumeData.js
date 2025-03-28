@@ -11,6 +11,12 @@ const resumeData = {
     "DDS | UCLA School of Dentistry (2019 - 2021)",
     "BDS | MISR International University (2008 - 2013)",
   ],
+  awards: [
+    "UCLA | Comprehensive Patient Care Award | UCLA",
+    "Excellence in Restorative Dentistry Award | UCLA",
+    "Excellence in Clinical Care Award | UCLA",
+    "High Honors Award | MIU",
+  ],
   certifications: [
     "Certified General Dentist in Ca, USA",
     "Certified General Dentist in Egypt",

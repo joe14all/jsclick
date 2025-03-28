@@ -1,0 +1,107 @@
+/* Procedure Card Container */
+.procedureCard {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  }
+  
+  .procedureCard:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Procedure Header */
+  .procedureHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .procedureHeader h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1a73e8;
+  }
+  
+
+  
+  /* Procedure Details */
+  .procedureDetails {
+    padding: 0 0.5rem;
+  }
+  
+  .procedureDetails div {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    color: #444;
+    list-style: none;
+    font-size: 0.9rem;
+  }
+  
+  .procedureDetails strong {
+    color: #2d3748;
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+  
+  /* Responsive Adjustments */
+
+@media (max-width: 768px) {
+  .procedureCard {
+    padding: 1rem;
+  }
+
+  .procedureHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .procedureHeader h5 {
+    font-size: 1rem;
+  }
+
+  .procedureCategory {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .procedureDetails {
+    padding: 0;
+  }
+
+  .nestedList {
+    padding-left: 15px;
+  }
+
+  .orderedList {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .procedureDetails div {
+    font-size: 0.85rem;
+  }
+
+  .procedureDetails strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .nestedList {
+    padding-left: 10px;
+  }
+
+  .orderedList {
+    padding-left: 15px;
+  }
+
+  .procedureCard {
+    margin: 1rem 0;
+    padding: 0.75rem;
+  }
+}
