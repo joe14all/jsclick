@@ -29,6 +29,7 @@ const renderNestedList = (data, depth = 0) => {
     { label: 'Timeline', data: procedure.timeline },
     { label: 'Metrics', data: procedure.metrics },
     { label: 'Materials', data: procedure.materials },
+  
     { label: 'Parameters', data: procedure.parameters },
     { label: 'Sequence', data: procedure.sequence },
     { label: 'Instruments', data: procedure.instruments },
@@ -39,6 +40,15 @@ const renderNestedList = (data, depth = 0) => {
     { label: 'Specs', data: procedure.specifications},
     { label: 'Protocol', data: procedure.protocol},
     { label: 'Activation', data: procedure.activation},
+    { label: 'Focus', data: procedure.focus},
+    { label: 'Evaluations', data: procedure.evaluations},
+    { label: 'Process', data: procedure.process},
+    { label: 'Mechanical', data: procedure.mechanical},
+    { label: 'Biological', data: procedure.biological},
+    { label: 'Esthetic considerations', data: procedure.esthetic},
+   
+    { label: 'Features', data: procedure.features},
+
 
 
   ];

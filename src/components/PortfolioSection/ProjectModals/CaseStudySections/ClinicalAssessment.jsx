@@ -54,7 +54,7 @@ const ClinicalAssessment = ({ data }) => {
         {assessmentGroups.map(({ label, value }) => (
           value && (
             <div key={label} className={styles.gridItem}>
-              <label className={styles.subtitleLabel}>{label}:</label>
+              <label className={styles.subtitleLabel}>{label}: </label>
               {renderList(value)}
             </div>
           )

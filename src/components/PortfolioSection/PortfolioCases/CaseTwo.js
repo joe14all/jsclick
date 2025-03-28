@@ -57,8 +57,8 @@ const caseTwo = {
             ],
           },
           clinicalAssessment: {
-            tooth: "🦷#2",
             findings: {
+              Tooth: "🦷#2",
               "Thermal Pulp Test": "Lingering cold response >15s",
               "Percussion test": "Localized tenderness",
               Mobility: "Miller Class 0",

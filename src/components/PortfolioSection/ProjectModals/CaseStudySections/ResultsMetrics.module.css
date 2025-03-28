@@ -75,7 +75,11 @@
       gap: 0.25rem;
     }
   }
-  .patientSatisfaction {
+  .patientSatisfaction,
+  .clinicalImprovement,
+  .proceduralSuccess,
+  .skillDevelopment
+   {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -83,7 +87,11 @@
     border-radius: 14px;
   }
   
-  .patientSatisfaction h5{
+  .patientSatisfaction h5,
+  .clinicalImprovement h5,
+  .proceduralSuccess h5,
+  .skillDevelopment h5 
+  {
     font-size: 1.4rem;
     color: #1a73e8;
     margin: 0;

@@ -83,6 +83,30 @@ const ResultsMetrics = ({ metrics }) => {
               <span className={styles.metricValue}>{metrics.proceduralSuccess.obturationQuality}/5</span>
             </div>
           )}
+          {metrics.proceduralSuccess.retentionImprovement && (
+          <div className={styles.metricRow}>
+            <span className={styles.metricText}>🔄 Retention </span>
+            <span className={styles.metricValue}>{metrics.proceduralSuccess.retentionImprovement}%</span>
+          </div>
+        )}
+        {metrics.proceduralSuccess.stabilityEnhancement && (
+          <div className={styles.metricRow}>
+            <span className={styles.metricText}>⚖️ Stability </span>
+            <span className={styles.metricValue}>{metrics.proceduralSuccess.stabilityEnhancement}%</span>
+          </div>
+        )}
+        {metrics.proceduralSuccess.estheticRefinement && (
+          <div className={styles.metricRow}>
+            <span className={styles.metricText}>🎨 Esthetic </span>
+            <span className={styles.metricValue}>{metrics.proceduralSuccess.estheticRefinement}%</span>
+          </div>
+        )}
+         {metrics.proceduralSuccess.fractureResistance && (
+          <div className={styles.metricRow}>
+            <span className={styles.metricText}>⛓️‍💥 Resistance</span>
+            <span className={styles.metricValue}>{metrics.proceduralSuccess.fractureResistance}%</span>
+          </div>
+        )}
         </div>
       )}
 

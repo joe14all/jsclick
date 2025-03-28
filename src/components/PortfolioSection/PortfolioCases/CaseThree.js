@@ -7,125 +7,121 @@ const caseThree = {
   categories: ["prosthodontics"],
   thumbnail: {
     img: DentureWaxUp1,
-    alt: "Definitive Wax-up",
-    modality: "Laboratory Documentation",
-    date: "2023-05-20",
+    alt: "Complete denture Wax-up",
   },
   caseStudy: {
     carousel: [
       {
         img: DentureWaxUp1,
-        alt: "Diagnostic Wax-up",
-        caption: "Initial Teeth Setup Verification",
+        alt: "Complete denture Wax-up",
         modality: "Laboratory Photography",
-        date: "2023-05-18",
-        tags: ["diagnostic", "wax-up", "setup"],
+        date: "2020-05-18",
+        tags: ["festooning", "wax-up", "setup"],
       },
       {
         img: DentureWaxUp2,
-        alt: "Definitive Prosthesis",
-        caption: "Processed Denture Try-in",
-        modality: "Clinical Photography",
-        date: "2023-06-01",
-        tags: ["final", "try-in", "aesthetics"],
+        alt: "Complete denture Wax-up",
+        modality: "Artistic Photography",
+        date: "2020-06-01",
+        tags: ["Denture", "try-in", "occlusion"],
       },
     ],
     sections: {
       overview: {
         title: "Patient Overview",
-        icon: "patient-file",
         content: {
           patientProfile: {
             demographic: {
-              age: 68,
-              gender: "male",
-              occupation: "Retired Chef",
+              age: "➞ 68 YO",
+              gender: "➞ Male",
+              occupation: "➞ Retired Chef",
             },
             medicalHistory: {
-              systemic: ["Type II Diabetes (controlled)"],
+              systemic: ["Type II Diabetes (well-controlled)"],
               dental: [
                 "Edentulous for 12 years",
-                "Previous denture use (2015-2022)",
+                "Previous complete denture use (2013-2020)",
               ],
             },
           },
           presentation: {
-            chiefComplaint: "Poor denture stability and chewing difficulty",
+            chiefComplaint:
+              "My dentures look very artificial. They used to stay in place, but recently they become loose, especially in social settings.",
             concerns: [
-              "Facial collapse appearance",
-              "Inability to eat solid foods",
+              "❗️ Poor retention and stability",
+              "❗️ Inadequate gingival (pink) aesthetics",
             ],
             expectations: [
-              "Improved chewing function",
-              "Natural facial support",
-              "Enhanced speech clarity",
+              "🔶 Enhanced masticatory efficiency",
+              "🔶 Natural gingival and tooth aesthetics",
+              "🔶 Improved denture retention and stability",
             ],
           },
           clinicalAssessment: {
             ridgeResorption: {
-              maxillary: "Class IV (Cawood & Howell)",
-              mandibular: "Class V (Cawood & Howell)",
+              Maxillary: "Moderate resorption - Class II (Cawood & Howell)",
+              Mandibular: "Severe resorption - Class III (Cawood & Howell)",
             },
             verticalDimension: {
-              rest: "62mm",
-              occlusion: "68mm",
+              Rest: "62mm",
+              Occlusion: "68mm",
             },
           },
         },
       },
+
       challenges: {
         title: "Clinical Challenges",
-        icon: "warning",
         content: [
           {
             id: "C1",
-            title: "Ridge Resorption",
-            category: "Structure",
+            title: "Denture Adaptation",
+            category: "Anatomy",
             details: {
               issues: [
-                "6mm maxillary ridge height",
-                "4mm mandibular ridge width",
+                "Inadequate peripheral seal compromising retention",
+                "Poor ridge adaptation",
               ],
               observations: [
-                "Reduced denture-bearing area (35%)",
-                "Increased mucosal mobility",
+                "Frequent displacement during function",
+                "Aesthetic concerns due to instability",
               ],
-              impact: "Compromised retention and stability",
+              impact:
+                "Reduced retention causing functional and psychological discomfort",
             },
             priority: "High",
           },
           {
             id: "C2",
-            title: "Aesthetic Restoration",
+            title: "Gingival Aesthetics",
             category: "Esthetics",
             details: {
               complications: [
-                "Loss of vertical dimension (8mm)",
-                "Collapsed lower facial height",
+                "Flat gingival contours lacking definition",
+                "Absence of papillary architecture",
               ],
               implications: [
-                "Phonetic challenges",
-                "Facial profile restoration needs",
+                "Compromised smile harmony and soft tissue support",
+                "Reduced patient confidence due to artificial appearance",
               ],
             },
-            priority: "Medium",
+            priority: "Critical",
           },
         ],
       },
       solutions: {
         title: "Prosthetic Protocol",
-        icon: "dental-drill",
         timeline: {
           phases: [
             {
               phase: 1,
               duration: "3 weeks",
-              focus: "Diagnostic & Preliminary",
+              focus: "Diagnostics & Jaw Relations",
             },
             {
               phase: 2,
               duration: "4 weeks",
-              focus: "Definitive Fabrication",
+              focus: "Clinician-Crafted Wax-Up & Processing",
             },
           ],
         },
@@ -133,100 +129,86 @@ const caseThree = {
           {
             phase: 1,
             title: "Foundation Phase",
-            objectives: [
-              "Restore vertical dimension",
-              "Establish neutral zone",
-            ],
+            objectives: ["Establish stable occlusion", "Define neutral zone"],
             procedures: [
               {
-                type: "Custom Tray Fabrication",
-                material: "Light-cured resin",
-                features: [
-                  "Peripheral seal development",
-                  "Post dam configuration",
-                ],
-                outcome: "Accurate border molding achieved",
+                type: "Custom Tray & Border Molding",
+                outcome: "Accurate functional adaptation",
               },
               {
                 type: "Jaw Relation Records",
-                technique: "Gothic arch tracing",
-                instruments: [
-                  "Facebow transfer",
-                  "Fully adjustable articulator",
-                ],
-                outcome: "Centric relation verified",
+                outcome: "Verified centric relation & vertical dimension",
               },
             ],
           },
           {
             phase: 2,
-            title: "Prosthetic Phase",
+            title: "Clinician-Sculpted Wax-Up & Festooning",
             objectives: [
-              "Optimal occlusal scheme",
-              "Natural tooth arrangement",
+              "Precision tooth arrangement",
+              "Natural gingival contours",
             ],
             procedures: [
               {
-                type: "Teeth Selection",
-                parameters: {
-                  anterior: "Mold 33 (Ivoclar)",
-                  posterior: "30° Anatomical",
-                  shade: "A3 (VITA Classical)",
-                },
-                outcome: "Age-appropriate characterization",
-              },
-              {
-                type: "Wax Try-in",
-                evaluations: [
-                  "Phonetic testing (/f/ and /v/ sounds)",
-                  "Facial support verification",
-                  "Occlusal plane orientation",
+                type: "Teeth Wax-Up",
+                focus: [
+                  "Hand-shaped festooning for natural emergence profile",
+                  "Refined gingival anatomy for enhanced esthetics",
                 ],
-                adjustments: ["Reduced vertical by 1mm"],
+                outcome: "Lifelike transition zones & improved smile harmony",
               },
               {
-                type: "Processing",
-                material: "Heat-cured PMMA",
-                technique: "Injection molding",
-                outcome: "0.2mm tissue compression",
+                type: "Wax Try-In",
+                evaluations: [
+                  "Phonetics & facial support",
+                  "Gingival curvature & symmetry",
+                ],
+                outcome: "Successful Try-in, ready to process",
+              },
+              {
+                type: "Laboratory Processing",
+                outcome: "Durable, high-quality prosthesis",
               },
             ],
           },
         ],
       },
+
       results: {
         title: "Treatment Outcomes",
-        icon: "success",
         metrics: {
-          functionalMetrics: {
-            retention: "Grade II (Kapur)",
-            masticatoryEfficiency: "78% improvement",
-            occlusalForce: "120N (vs 65N pre-treatment)",
+          proceduralSuccess: {
+            retentionImprovement: 90,
+            stabilityEnhancement: 95,
+            estheticRefinement: 98,
           },
           patientSatisfaction: {
-            comfort: 4.7,
-            aesthetics: 4.6,
-            function: 4.8,
+            aesthetic: 4.9,
+            functional: 4.7,
+            overall: 4.8,
           },
         },
         content: {
           achievements: [
-            "Restored 6mm vertical dimension",
-            "Complete denture stability achieved",
-            "Natural lip support restored",
+            "Enhanced festooning for natural gingival contours",
+            "Improved denture seal and retention",
+            "Balanced occlusion with stable prosthetic adaptation",
           ],
           patientFeedback: {
-            quote: "I can finally enjoy my meals again!",
-            improvementsNoted: ["Clearer speech", "No more denture adhesives"],
+            quote: "My dentures look and feel like my natural teeth!",
+            improvementsNoted: [
+              "Confident smile",
+              "Comfortable fit throughout the day",
+            ],
           },
           limitations: {
             noted: [
-              "0.5mm midline discrepancy",
-              "Slight cheek biting initially",
+              "Minor occlusal adjustment required",
+              "Slight initial speech adaptation",
             ],
             futureConsiderations: [
-              "6-month reline protocol",
-              "Nighttime wear regimen",
+              "Routine follow-up for tissue adaptation",
+              "Annual maintenance evaluation",
             ],
           },
         },

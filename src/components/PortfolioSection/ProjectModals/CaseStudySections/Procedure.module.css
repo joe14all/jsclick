@@ -6,9 +6,7 @@
   border-radius: 12px;
   }
   
-  .procedureCard:hover {
-    transform: translateY(-2px);
-  }
+
   
   /* Procedure Header */
   .procedureHeader {
