@@ -73,6 +73,7 @@ const renderNestedList = (data, depth = 0) => {
         
         {procedure.product && <div><strong>Product:</strong> {procedure.product}</div>}
         {procedure.software && <div><strong>Software:</strong> {procedure.software}</div>}
+        {procedure.material && <div><strong>Material:</strong> {procedure.material}</div>}
         {procedure.technique && <div><strong>Technique:</strong> {procedure.technique}</div>}
         {procedure.outcome && <div className={styles.procedureOutcome}><strong>Outcome ➞</strong> {procedure.outcome}</div>}
       </div>

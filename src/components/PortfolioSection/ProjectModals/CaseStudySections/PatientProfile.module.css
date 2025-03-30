@@ -82,6 +82,7 @@
   }
   .gridItem {
       grid-template-columns: 1fr;
+      gap:0.8rem
   }
   .subtitle {
       font-size: 1.2rem;
@@ -97,5 +98,9 @@
   }
   .nestedList li {
       font-size: 0.80rem;
+  }
+  .gridItem span {
+    font-size: 0.80rem;
+    line-height: 1;
   }
 }

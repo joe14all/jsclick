@@ -9,85 +9,77 @@ const caseFive = {
   categories: ["restorative", "cosmetic"],
   thumbnail: {
     img: AnteriorCompositePreOp,
-    alt: "Preoperative View #7",
-    modality: "Intraoral Photograph",
-    date: "2023-06-15",
+    alt: "Preoperative View #10",
   },
   caseStudy: {
     carousel: [
       {
         img: AnteriorCompositePreOp,
         alt: "Pre-Op Labial View",
-        caption: "Initial Caries Presentation #7",
-        modality: "Intraoral Photograph",
-        date: "2023-06-15",
+        caption: "Caries Presentation #10",
+        modality: "Intraoral - Labial",
+        date: "2020-06-08",
         tags: ["pre-op", "caries", "diagnostic"],
       },
       {
         img: AnteriorCompositeCavityPrep,
-        alt: "Cavity Preparation",
-        caption: "Minimal Invasive Preparation",
-        modality: "Magnified View",
-        date: "2023-06-15",
-        tags: ["prep", "isolation"],
+        alt: "Minimally Invasive Preparation",
+        caption: "Cavity Preparation & Shade Mock-Up #10",
+        modality: "Intraoral - Labial",
+        date: "2020-06-08",
+        tags: ["prep", "shade selection", "isolation"],
       },
       {
         img: AnteriorCompositePostOpRubberDam,
-        alt: "Restoration Placement",
-        caption: "Rubber Dam Isolation During Placement",
-        modality: "Clinical Photography",
-        date: "2023-06-15",
-        tags: ["procedure", "isolation"],
+        alt: "Composite Placement Under Isolation",
+        caption: "Unfinished Composite Prior to Rubber Dam Removal",
+        modality: "Intraoral - Labial",
+        date: "2020-06-08",
+        tags: ["composite", "isolation", "restoration"],
       },
       {
         img: AnteriorCompositePostOp,
-        alt: "Final Restoration",
-        caption: "Post-Operative Result",
-        modality: "Intraoral Photograph",
-        date: "2023-06-15",
-        tags: ["post-op", "result", "aesthetic"],
+        alt: "Final Composite Restoration",
+        caption: "Completed Aesthetic Composite Repair",
+        modality: "Intraoral - Labial",
+        date: "2020-06-08",
+        tags: ["post-op", "aesthetics", "restoration"],
       },
     ],
     sections: {
       overview: {
         title: "Patient Overview",
-        icon: "patient-file",
         content: {
           patientProfile: {
             demographic: {
-              age: 28,
-              gender: "female",
-              occupation: "Marketing Executive",
+              age: "➞ 24 YO",
+              gender: "➞ Male",
+              occupation: "➞ Student",
             },
             medicalHistory: {
               systemic: ["None significant"],
-              dental: [
-                "Regular recall patient",
-                "History of orthodontic treatment (2015-2017)",
-              ],
+              dental: ["Regular recall patient"],
             },
           },
           presentation: {
-            chiefComplaint: "Visible dark spot on front tooth",
-            concerns: [
-              "Aesthetic appearance when smiling",
-              "Sensitivity to cold beverages",
-            ],
+            chiefComplaint:
+              "I've always had this stained spot on my front tooth but never considered treatment, assuming it would be too expensive.",
+            concerns: ["Aesthetic appearance when smiling"],
             expectations: [
-              "Natural-looking repair",
-              "Minimal tooth structure removal",
-              "Long-lasting solution",
+              "🔶 Natural-looking repair",
+              "🔶 Cost effective treatment",
             ],
           },
           clinicalAssessment: {
             oralHygiene: "Good",
             periodontalStatus: "Healthy",
-            existingWork: {
-              restorations: ["Composite on #14"],
-              findings: [
-                "Caries lesion on facial surface #7",
-                "Lesion size: 2.1mm × 1.8mm",
-                "No pulpal involvement",
+            findings: {
+              Tooth: "🦷#10",
+              "Thermal Pulp Test": "Within normal limits",
+              Conditions: [
+                "❗️ Caries lesion on facial surface #10",
+                "❗️ Kidney-shaped enamel defect (1mm × 1mm)",
+                "❗️ Adjacent enamel showing undermining",
               ],
             },
           },
@@ -103,37 +95,21 @@ const caseFive = {
             category: "Esthetics",
             details: {
               issues: [
-                "Multiple enamel characteristics adjacent tooth (#8)",
-                "Surface texture matching",
-                "Incical translucency replication",
+                "Precise shade matching in a confined area",
+                "Adjacent enamel translucency and surface texture",
+                "Color stability post-polymerization",
               ],
               observations: [
-                "0.5mm color variation between dentin/enamel",
-                "Mesio-incisal halo effect present on adjacent teeth",
+                "Areas of enamel hypo-calcification",
+                "Small defect size limits layering options",
               ],
-              impact: "Critical for patient's professional image",
+              impact: "Essential for seamless blend in high-visibility zone",
             },
             priority: "High",
           },
-          {
-            id: "C2",
-            title: "Structural Integrity",
-            category: "Function",
-            details: {
-              complications: [
-                "Small cavity size (2mm)",
-                "Enamel rod direction preservation",
-                "Bonding surface area limitation",
-              ],
-              implications: [
-                "Risk of debonding in thin sections",
-                "Marginal leakage potential",
-              ],
-            },
-            priority: "Medium",
-          },
         ],
       },
+
       solutions: {
         title: "Treatment Protocol",
         icon: "dental-drill",
@@ -141,12 +117,12 @@ const caseFive = {
           phases: [
             {
               phase: 1,
-              duration: "35 minutes",
+              duration: "15 minutes",
               focus: "Diagnosis & Preparation",
             },
             {
               phase: 2,
-              duration: "55 minutes",
+              duration: "20 minutes",
               focus: "Restoration & Finishing",
             },
           ],
@@ -156,24 +132,28 @@ const caseFive = {
             phase: 1,
             title: "Preparatory Phase",
             objectives: [
-              "Minimal invasive access",
-              "Optimal isolation",
-              "Caries removal verification",
+              "Minimize enamel reduction",
+              "Ensure optimal isolation",
+              "Verify complete caries removal",
             ],
             procedures: [
               {
-                type: "Caries Removal",
-                code: "D2920",
-                teeth: ["#7"],
-                technique: "Micro-invasive preparation",
-                instruments: ["1.5mm round diamond bur"],
-                outcome:
-                  "Complete caries removal verified with caries detector",
+                type: "Isolation & Shade Mock-Up",
+                steps: [
+                  "Rubber dam placement",
+                  "Trial composite shades without bonding",
+                  "Final shade mapping",
+                ],
+                outcome: "Optimal moisture control and precise shade selection",
               },
               {
-                type: "Isolation",
-                method: "Rubber Dam Application",
-                outcome: "Absolute moisture control achieved",
+                type: "Caries Removal & Cavity Prep",
+                instruments: ["1.5mm round diamond bur", "30μm flame diamond"],
+                sequence: [
+                  "Selective caries removal",
+                  "Enamel beveling (sunburst technique)",
+                ],
+                outcome: "Caries-free prep with smooth enamel transition",
               },
             ],
           },
@@ -181,33 +161,32 @@ const caseFive = {
             phase: 2,
             title: "Restorative Phase",
             objectives: [
-              "Optical properties matching",
-              "Anatomical contour restoration",
-              "Occlusal harmony",
+              "Achieve seamless shade integration",
+              "Restore natural contour",
+              "Maintain occlusal harmony",
             ],
             procedures: [
               {
                 type: "Etching",
-                material: "35% Phosphoric Acid Gel",
-                duration: "15s enamel / 10s dentin",
-                outcome: "Proper etch pattern confirmed microscopically",
+                product: "35% Phosphoric Acid Gel",
+                technique: "30s Selective enamel etching",
+                outcome: "Well-defined etch pattern",
               },
               {
                 type: "Adhesive Application",
-                product: "Universal Adhesive System",
-                technique: "Selective enamel etching",
-                outcome: "Uniform adhesive layer verified",
+                product: "Universal Bisco Adhesive System",
+                technique: "2 layers applied with adequate drying and thinning",
+                outcome: "Uniform adhesive layer confirmed",
               },
               {
                 type: "Composite Layering",
                 material: "Nanohybrid Composite (VITA A2/B1)",
-                technique: "Three-layer stratification",
+                technique: "Two-layer stratification",
                 steps: [
-                  "Dentin shade placement",
-                  "Body shade application",
-                  "Incical halo characterization",
+                  "Dentin shade placement (0.5mm sub-dentin thickness)",
+                  "Enamel overlay",
                 ],
-                outcome: "Optical depth matching adjacent dentition",
+                outcome: "Natural translucency and depth",
               },
               {
                 type: "Finishing & Polishing",
@@ -216,46 +195,39 @@ const caseFive = {
                   "Composite polishing discs",
                   "Diamond polishing paste",
                 ],
-                outcome:
-                  "Surface roughness Ra = 0.2μm (matching natural enamel)",
+                outcome: "Gloss finish with enamel-like texture",
               },
             ],
           },
         ],
       },
+
       results: {
         title: "Treatment Outcomes",
-        icon: "success",
         metrics: {
           patientSatisfaction: {
-            aesthetic: 4.8,
-            comfort: 4.7,
-            overall: 4.9,
-          },
-          clinicalMetrics: {
-            marginalAdaptation: "Alpha score",
-            surfaceLuster: "Grade 1",
-            occlusalWear: "0.02mm (6-month recall)",
+            aesthetic: 4.7,
+            overall: 4.7,
           },
         },
         content: {
           achievements: [
-            "Seamless visual integration",
-            "Post-op sensitivity: None reported",
-            "Marginal integrity maintained at 6 months",
+            "Indistinguishable shade match",
+            "No post-op sensitivity reported",
+            "Stable shade and margins at 6-month recall",
           ],
           patientFeedback: {
-            quote: "I can't even tell which tooth was repaired!",
-            improvementsNoted: ["Confidence in smiling", "No cold sensitivity"],
+            quote: "I should have done this years ago!",
+            improvementsNoted: [
+              "Increased confidence in smiling",
+              "Quick, cost-effective solution",
+            ],
           },
           limitations: {
-            noted: [
-              "Slight overcontour at gingival margin (0.1mm)",
-              "20μm surface texture variation under SEM",
-            ],
+            noted: ["Restoration slightly visible when dehydrated"],
             futureConsiderations: [
-              "Annual photographic monitoring",
-              "Potential for enamel microabrasion if discoloration recurs",
+              "Annual assessment",
+              "Polishing touch-up if discoloration develops",
             ],
           },
         },
