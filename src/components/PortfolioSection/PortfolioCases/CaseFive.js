@@ -87,7 +87,6 @@ const caseFive = {
       },
       challenges: {
         title: "Clinical Challenges",
-        icon: "warning",
         content: [
           {
             id: "C1",
@@ -112,7 +111,6 @@ const caseFive = {
 
       solutions: {
         title: "Treatment Protocol",
-        icon: "dental-drill",
         timeline: {
           phases: [
             {

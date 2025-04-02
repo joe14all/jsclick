@@ -1,50 +1,50 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './CaseStudyCarousel.module.css';
 
 const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
   const intervalRef = useRef(null);
-  const timeoutRef = useRef(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null); // Track hovered dot
 
   const startAutoSlide = () => {
+    clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setActiveSlide(prev => (prev + 1) % images.length);
     }, 5000);
   };
 
-  const pauseAndResumeAutoSlide = () => {
-    // Clear existing timers
+  const pauseAutoSlide = () => {
     clearInterval(intervalRef.current);
-    clearTimeout(timeoutRef.current);
-    
-    // Restart auto-slide after 10 seconds
-    timeoutRef.current = setTimeout(startAutoSlide, 10000);
   };
 
   useEffect(() => {
     startAutoSlide();
-    return () => {
-      clearInterval(intervalRef.current);
-      clearTimeout(timeoutRef.current);
-    };
+    return () => clearInterval(intervalRef.current);
   }, [images.length]);
 
   const handlePrev = () => {
     setActiveSlide((prev) => (prev - 1 + images.length) % images.length);
-    pauseAndResumeAutoSlide();
+    startAutoSlide();
   };
 
   const handleNext = () => {
     setActiveSlide((prev) => (prev + 1) % images.length);
-    pauseAndResumeAutoSlide();
+    startAutoSlide();
   };
 
   const goToSlide = (index) => {
     setActiveSlide(index);
-    pauseAndResumeAutoSlide();
+    startAutoSlide();
   };
 
   return (
     <div className={styles.carouselContainer}>
+      {/* Hover Preview Caption */}
+      {hoveredIndex !== null && (
+        <div className={styles.hoverPreview}>
+          {images[hoveredIndex]?.caption}
+        </div>
+      )}
+
       {/* Dots on top */}
       <div className={styles.dots}>
         {images.map((_, idx) => (
@@ -52,6 +52,8 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
             key={idx}
             className={`${styles.dot} ${idx === activeSlide ? styles.active : ''}`}
             onClick={() => goToSlide(idx)}
+            onMouseEnter={() => setHoveredIndex(idx)} // Show preview caption
+            onMouseLeave={() => setHoveredIndex(null)} // Hide preview caption
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
@@ -69,7 +71,12 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
             style={{ transform: `translateX(-${activeSlide * 100}%)` }}
           >
             {images.map((item, index) => (
-              <div key={index} className={styles.carouselItem}>
+              <div 
+                key={index} 
+                className={styles.carouselItem}
+                onMouseEnter={pauseAutoSlide}
+                onMouseLeave={startAutoSlide} // Restart immediately
+              >
                 {item.video ? (
                   <video
                     src={item.video}

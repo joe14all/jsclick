@@ -107,6 +107,11 @@
   color: #0d47a1;
 }
 
+.categoryTag[data-category="logistics"] {
+  background: rgba(30, 136, 229, 0.15);
+  color: #0d47a1;
+}
+
 .categoryTag[data-category="restoration"] {
   background: rgba(239, 108, 0, 0.15);
   color: #e65100;
@@ -122,7 +127,7 @@
   color: #bf360c;
 }
 
-.categoryTag[data-category="biomimetics"] {
+.categoryTag[data-category="biology"] {
   background: rgba(0, 172, 193, 0.15);
   color: #00838f;
 }
@@ -138,6 +143,10 @@
 }
 
 .categoryTag[data-category="imaging"] {
+  background: rgba(255, 111, 0, 0.15);
+  color: #dd2c00;
+}
+.categoryTag[data-category="prosthodontics"] {
   background: rgba(255, 111, 0, 0.15);
   color: #dd2c00;
 }

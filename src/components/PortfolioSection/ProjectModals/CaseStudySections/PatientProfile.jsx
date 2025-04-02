@@ -52,6 +52,7 @@ const PatientProfile = ({ data }) => {
         { label: '🏥 Systemic Conditions', value: data.medicalHistory?.systemic },
         { label: '🦷 Dental History', value: data.medicalHistory?.dental },
         { label: '🔪 Previous Surgeries', value: data.medicalHistory?.surgeries },
+        { label: '🏥 Hospitalizations', value: data.medicalHistory?.hospitalizations },
         { label: '🤧 Allergies', value: data.medicalHistory?.allergies },
         { label: '💊 Current Medications', value: data.medicalHistory?.medications },
       ],

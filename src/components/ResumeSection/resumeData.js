@@ -12,7 +12,7 @@ const resumeData = {
     "BDS | MISR International University (2008 - 2013)",
   ],
   awards: [
-    "UCLA | Comprehensive Patient Care Award | UCLA",
+    "Comprehensive Patient Care Award | UCLA",
     "Excellence in Restorative Dentistry Award | UCLA",
     "Excellence in Clinical Care Award | UCLA",
     "High Honors Award | MIU",

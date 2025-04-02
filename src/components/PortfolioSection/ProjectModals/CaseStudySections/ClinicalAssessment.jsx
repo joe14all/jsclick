@@ -20,7 +20,7 @@ const ClinicalAssessment = ({ data }) => {
         <ul className={styles.nestedList} style={{ marginLeft: `${depth * 10}px` }}>
           {Object.entries(items).map(([key, value], index) => (
             <li key={index}>
-              <span className={styles.nestedLabel}>{key}:</span>{' '}
+              <span className={styles.nestedLabel}>{key}</span>{' '}
               {Array.isArray(value) || typeof value === 'object' ? renderList(value, depth + 1) : value}
             </li>
           ))}
@@ -35,11 +35,15 @@ const ClinicalAssessment = ({ data }) => {
     { label: 'Oral Hygiene', value: data.oralHygiene },
     { label: 'Periodontal Status', value: data.periodontalStatus },
     { label: 'Existing Work', value: data.existingWork },
+    { label: 'Periodontal Findings', value: data.periodontalFindings },
     { label: 'Existing Conditions', value: data.existingConditions },
     { label: 'Clinical Findings', value: data.findings },
     { label: 'Radiographic Features', value: data.radiographicFeatures },
     { label: 'Gingival Architecture', value: data.gingivalArchitecture },
     { label: 'Existing Restorations', value: data.existingRestorations },
+    { label: 'Endodontic Status', value: data.endodonticStatus },
+    { label: 'Restorative Status', value: data.restorativeStatus },
+    { label: 'Prosthodontics Status', value: data.prosthodonticStatus },
     { label: 'Ridge Resorption', value: data.ridgeResorption },
     { label: 'Vertical Dimension', value: data.verticalDimension },
     { label: 'Prosthodontic Factors', value: data.prosthodonticFactors },
