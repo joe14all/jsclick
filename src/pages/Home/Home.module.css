@@ -23,3 +23,15 @@
     z-index: -1;
   }
   
+
+/* Fix for mobile responsiveness */
+@media (max-width: 768px) {
+  .parallaxBackground {
+      position: absolute; /* Switch from fixed to absolute */
+      background-attachment: scroll; /* Prevent zoomed-in effect */
+      background-size: contain; /* Adjust sizing */
+      min-height: 100vh;
+  }
+
+
+}

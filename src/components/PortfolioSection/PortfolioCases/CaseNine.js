@@ -13,45 +13,52 @@ const caseNine = {
     carousel: [
       {
         img: ShadeMatchingImage,
-        alt: "Close up View of Shade Matching",
+        alt: "Shade matching for composite restoration",
         caption: "Pre-treatment shade analysis",
-        modality: "Intraoral Close-up",
+        modality: "Composite - Intraoral",
         tags: ["shade-matching", "pre-op"],
       },
       {
         img: CompositeResultImage,
-        alt: "Occlusal View of Composite Veneers",
-        caption: "Post-treatment aesthetic result",
-        modality: "Occlusal View",
-        tags: ["post-op", "aesthetic-result"],
+        alt: "Pre- and post-op composite veneer outcome",
+        caption: "Pre-op / Post-op comparison",
+        modality: "Composite - Intraoral",
+        tags: ["pre-op", "post-op"],
       },
     ],
+
     sections: {
       overview: {
-        title: "Patient Overview",
         content: {
           patientProfile: {
             demographic: {
-              age: 24,
-              gender: "female",
+              age: "➞ 24 years",
+              gender: "➞ Female",
+              occupation: "➞ Student",
             },
             medicalHistory: {
-              systemic: ["None reported"],
-              dental: ["No significant history"],
+              systemic: ["ASA I"],
+              dental: ["Routine dental care with hometown provider"],
             },
           },
           presentation: {
-            chiefComplaint: "I don't like the shape of my laterals",
-            concerns: ["Asymmetric lateral incisors", "Budget limitations"],
+            chiefComplaint:
+              "I feel these two teeth look too small compared to the rest (pointing at lateral incisors).",
+            concerns: [
+              "❗️ Undersized lateral incisors",
+              "❗️ Budget limitations",
+            ],
             expectations: [
-              "Improved smile aesthetics",
-              "Cost-effective solution",
+              "🔶 Improved smile aesthetics",
+              "🔶 Affordable treatment option",
             ],
           },
           clinicalAssessment: {
-            existingRestorations: {
-              teeth: ["#7", "#10"],
-              condition: ["Natural dentition with morphological discrepancies"],
+            oralHygiene: "Good",
+            periodontalStatus: "Healthy",
+            findings: {
+              teeth: ["🦷 #7", "🦷 #10"],
+              condition: ["Natural dentition with size discrepancies"],
             },
           },
         },

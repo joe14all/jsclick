@@ -3,18 +3,23 @@ import styles from './CaseStudyCarousel.module.css';
 
 const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
   const intervalRef = useRef(null);
-  const [hoveredIndex, setHoveredIndex] = useState(null); // Track hovered dot
+  const [hoveredIndex, setHoveredIndex] = useState(null); 
+  const [isPlaying, setIsPlaying] = useState(true);
+const [isHovered, setIsHovered] = useState(false); 
 
-  const startAutoSlide = () => {
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setActiveSlide(prev => (prev + 1) % images.length);
-    }, 5000);
-  };
 
-  const pauseAutoSlide = () => {
-    clearInterval(intervalRef.current);
-  };
+const startAutoSlide = () => {
+  if (!isPlaying) return;
+  clearInterval(intervalRef.current);
+  intervalRef.current = setInterval(() => {
+    setActiveSlide(prev => (prev + 1) % images.length);
+  }, 5000);
+};
+
+const pauseAutoSlide = () => {
+  clearInterval(intervalRef.current);
+};
+
 
   useEffect(() => {
     startAutoSlide();
@@ -37,7 +42,14 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
   };
 
   return (
-    <div className={styles.carouselContainer}>
+<div 
+  className={styles.carouselContainer}
+  onMouseEnter={() => setIsHovered(true)}
+  onMouseLeave={() => {
+    setIsHovered(false);
+    if (isPlaying) startAutoSlide(); // Restart if playing
+  }}
+>
       {/* Hover Preview Caption */}
       {hoveredIndex !== null && (
         <div className={styles.hoverPreview}>
@@ -66,6 +78,22 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
         </button>
 
         <div className={styles.carouselViewport}>
+        {isHovered && (
+  <button
+    className={`${styles.playPauseButton}`}
+    onClick={() => {
+      setIsPlaying(prev => {
+        const next = !prev;
+        if (next) startAutoSlide();
+        else pauseAutoSlide();
+        return next;
+      });
+    }}
+    aria-label={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
+  >
+    {isPlaying ? '❚❚' : '▶'}
+  </button>
+)}
           <div
             className={styles.carouselInner}
             style={{ transform: `translateX(-${activeSlide * 100}%)` }}
@@ -96,6 +124,7 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
                 )}
                 
                 <div className={styles.imageMetadata}>
+                  
                   {item.modality && (
                     <span className={styles.modalityBadge}>
                       {item.modality}

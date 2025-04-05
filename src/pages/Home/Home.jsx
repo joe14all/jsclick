@@ -24,7 +24,7 @@ const Home = () => {
     <MainLayout isHomePage={true} currentPage="Home" activeSection={activeSection}>
       {/* Parallax Background */}
       <div className={styles.parallaxBackground}></div>
-      <div className={styles.parallaxOverlay}></div> {/* Optional for darkness */}
+      <div className={styles.parallaxOverlay}></div> 
 
       {/* Sections */}
       <Hero />

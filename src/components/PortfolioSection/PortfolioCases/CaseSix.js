@@ -49,7 +49,6 @@ const caseSix = {
     sections: {
       overview: {
         title: "Simulation Overview",
-        icon: "training",
         content: {
           simulationContext: {
             program: "UCLA General Clinic - Clinical Simulation",
@@ -214,8 +213,6 @@ const caseSix = {
         ],
       },
       results: {
-        title: "Training Outcomes",
-        icon: "success-chart",
         metrics: {
           proceduralSuccess: {
             anatomyPreservation: "98",
