@@ -1,9 +1,47 @@
 /* Main container */
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  min-height: 80vh; /* 👈 This sets the minimum height to 80% of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+.topSection {
+  padding: 0rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top:-50px;
+  z-index: 50;
+  background-color: #fff;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .topSection {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items:center;
+  }
+}
+
 
 /* Heading */
 .heading {
@@ -31,10 +69,11 @@
 /* Portfolio Grid */
 .portfolioGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2rem;
-  padding-bottom: 2rem;
+  padding:2rem;
+  padding-top: 0rem;
 }
 
 /* No Projects Found Message */
@@ -58,4 +97,19 @@
   .portfolioGrid {
     gap: 1rem;
   }
+  .topSection{
+    position: relative;
+  }
 }
+@media (max-width: 1024px) {
+  .portfolioGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

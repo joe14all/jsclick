@@ -49,6 +49,7 @@ const ClinicalAssessment = ({ data }) => {
     { label: 'Prosthodontic Factors', value: data.prosthodonticFactors },
     { label: 'Oral Condition', value: data.oralCondition },
     { label: 'Diagnostic Data', value: data.diagnosticData },
+    
   ];
 
   return (

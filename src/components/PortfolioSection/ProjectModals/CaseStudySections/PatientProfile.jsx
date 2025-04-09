@@ -58,6 +58,14 @@ const PatientProfile = ({ data }) => {
       ],
     },
     {
+      category: 'Psychological',
+      items: [
+        { label: '🧠 State', value: data.psychological?.state },         
+        { label: '😟 Concerns', value: data.psychological?.concerns },      
+        { label: '🛡️ Coping strategy', value: data.psychological?.copingStrategy },
+      ],
+    },    
+    {
       category: 'Social History',
       items: [
         { label: '🚬 Smoking', value: data.habits?.smoking },
@@ -72,7 +80,7 @@ const PatientProfile = ({ data }) => {
       <h4 className={styles.subtitle}>🦷 Patient Profile</h4>
       {profileSections.map(({ category, items }) => {
         const filteredItems = items.filter(({ value }) => value);
-        if (filteredItems.length === 0) return null; // Skip empty sections
+        if (filteredItems.length === 0) return null; 
   
         return (
           <div key={category} className={styles.categorySection}>

@@ -29,6 +29,12 @@ const ResultsMetrics = ({ metrics }) => {
               <span className={styles.metricValue}>{metrics.patientSatisfaction.painRelief}/5</span>
             </div>
           )}
+          {metrics.patientSatisfaction.psychological && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>🧠 Psychological</span>
+              <span className={styles.metricValue}>{metrics.patientSatisfaction.psychological}/5</span>
+            </div>
+          )}
           {metrics.patientSatisfaction.overall && (
             <div className={styles.metricRow}>
               <span className={styles.metricText}>🌟 Overall</span>

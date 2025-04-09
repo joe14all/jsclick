@@ -1,7 +1,6 @@
 /* Main container */
 .caseStudyDetails {
   padding: 0 2rem 0 0 ;
-  background: #fff;
   border-radius: 16px;
 
   margin: 2rem auto;
@@ -129,7 +128,6 @@ blockquote {
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .caseStudyDetails {
-
     margin-top: 3rem;
   }}
 @media (max-width: 768px) {
@@ -155,7 +153,7 @@ blockquote {
   .caseStudyDetails {
     padding: 1rem;
     border-radius: 12px;
-    margin-top: 6rem;
+    margin-top: 2rem;
 
   }
 

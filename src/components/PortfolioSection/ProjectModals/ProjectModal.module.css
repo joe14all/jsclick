@@ -75,6 +75,7 @@
 .carouselWrapper {
   width: 45%;
   position: sticky;
+
   top: 1rem;
   height: 100%;
   padding: 2rem;
@@ -85,6 +86,7 @@
   flex: 1;
   overflow-y: auto;
   padding-right: 1rem;
+
   height: 100%;
 }
 

@@ -1,7 +1,7 @@
 import styles from './ProjectItem.module.css';
 
 const ProjectItem = ({ project, onProjectSelect }) => {
-  if (!project) return null; // ✅ Prevents errors if project is undefined
+  if (!project) return null;
 
   return (
     <div 

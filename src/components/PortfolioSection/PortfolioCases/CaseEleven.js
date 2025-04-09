@@ -5,222 +5,343 @@ import OccWaxup from "../../../assets/images/immediatedenture/occWaxup.jpg";
 
 const caseEleven = {
   id: 11,
-  title: "Immediate Upper Denture",
+  title: "Immediate Denture Transition",
   categories: ["prosthodontics"],
   thumbnail: {
     img: FrontalCast,
-    alt: "Cast Frontal View",
+    alt: "Pre-extraction Diagnostic Cast",
   },
   caseStudy: {
     carousel: [
       {
         img: FrontalCast,
-        alt: "Cast Frontal View",
-        caption: "Pre-extraction diagnostic cast",
-        modality: "Laboratory Model",
+        caption: "Diagnostic cast Frontal",
+        alt: "Dentulous arch preservation",
+        modality: "Lab Photography",
         tags: ["pre-op", "diagnostic"],
+        date: "07-4-2020",
       },
       {
         img: FrontalWaxup,
-        alt: "Wax up Frontal View",
-        caption: "Anterior teeth setup",
-        modality: "Wax Trial",
-        tags: ["setup", "esthetic-preview"],
+        caption: "Teeth setup Frontal",
+        alt: "Transitional tooth arrangement",
+        modality: "Lab Photography",
+        tags: ["wax-up", "bio-mimic"],
+        date: "07-14-2020",
       },
       {
         img: OccCast,
-        alt: "Cast Occlusal View",
-        caption: "Occlusal relationship record",
-        modality: "Articulated Cast",
-        tags: ["occlusion", "bite-registration"],
+        caption: "Diagnostic cast Occlusal",
+        alt: "Occlusal relationship recording",
+        modality: "Lab Photography",
+        tags: ["diagnostic", "occlusion", "immediate-planning"],
+        date: "07-4-2020",
       },
       {
         img: OccWaxup,
-        alt: "Wax up Occlusal View",
-        caption: "Posterior occlusal scheme",
-        modality: "Functional Wax-up",
-        tags: ["occlusion", "denture-design"],
+        caption: "Teeth setup Frontal",
+        alt: "Compromised posterior arrangement",
+        modality: "Lab Photography",
+        tags: ["wax-up", "bio-mimic"],
+        date: "07-14-2020",
       },
     ],
     sections: {
       overview: {
-        title: "Patient Overview",
+        title: "Clinical Presentation",
         content: {
           patientProfile: {
             demographic: {
-              age: 68,
-              gender: "Male",
+              age: "➞ 58 YO",
+              gender: "➞ Female",
+              occupation: "➞ Retired Teacher",
+            },
+            psychological: {
+              state: "High dental anxiety",
+              concerns: [
+                "Fear of being toothless",
+                "Social embarrassment during transition",
+                "Uncertainty about facial appearance",
+              ],
+              copingStrategy: [
+                "Multi-visit counseling",
+                "Transitional wax-up preview",
+              ],
             },
             medicalHistory: {
-              systemic: ["Controlled hypertension"],
-              dental: ["Advanced periodontitis", "Multiple mobile teeth"],
+              systemic: ["Hypertension controlled"],
+              dental: [
+                "Fully dentulous (terminal dentition)",
+                "Generalized Stage IV periodontitis",
+              ],
             },
           },
           presentation: {
             chiefComplaint:
-              "Need to replace upper teeth without being without teeth",
+              "My front teeth keep getting looser and I want to avoid looking toothless",
             concerns: [
-              "Fear of edentulous appearance",
-              "Functional impairment",
+              "❗️ Fear of edentulous appearance",
+              "❗️ Anxiety about transition period",
+              "❗️ Immediate functional needs",
             ],
             expectations: [
-              "Same-day tooth replacement",
-              "Natural appearance preservation",
-              "Immediate function",
+              "🔶 No visible toothless period",
+              "🔶 Familiar tooth arrangement",
+              "🔶 Immediate function post-extraction",
             ],
           },
           clinicalAssessment: {
-            existingRestorations: {
-              teeth: ["#3-#14"],
-              condition: [
-                "Grade III mobility",
-                "Vertical bone loss",
-                "Failed FPDs",
+            oralHygiene: { Poor: "no floss or interproximal cleaning." },
+            periodontalStatus: {
+              Generalized: "Stage IV",
+              Grade: "C",
+            },
+            periodontalFindings: {
+              "Plaque Free Percentage": "20%",
+              "Bleeding Percentage": "80%",
+              "Probing Depths": "4-6mm",
+              "Furcation Involvement": {
+                "Class II": ["🦷#3 ➞ B", "🦷#14 ➞ B&D"],
+              },
+              Mobility: "2-3",
+              "Gingival Status": "Generalized moderate",
+            },
+
+            existingConditions: {
+              "Missing Teeth": [
+                "🦷#1",
+                "🦷#2",
+                "🦷#5",
+                "🦷#13",
+                "🦷#15",
+                "🦷#16",
+                "🦷#17",
+                "🦷#31",
+              ],
+              "Tooth Conditions": {
+                "🦷#3": "➞ Subgingival fracture of P cusps",
+                "🦷#4": "➞ M Drifting",
+                "🦷#7": "➞ MBL chip",
+                "🦷#9": "➞ Advanced B Decay",
+              },
+
+              "Other Findings": [
+                "➞ Mid- line Diastema",
+                "➞ Irregular arch form",
+                "➞ Irregular occlusal line",
               ],
             },
           },
         },
       },
       challenges: {
-        title: "Clinical Challenges",
         content: [
           {
-            id: "C1",
-            title: "Ridge Contour Prediction",
-            category: "Prosthodontic",
+            id: "IDC1",
+            title: "Psychological Transition",
+            category: "logistics",
             details: {
               issues: [
-                "Alveolar resorption variability",
-                "Soft tissue rebound effect",
+                "Patient anxiety about edentulism",
+                "Unrealistic expectations of immediate function",
+                "Attachment to existing tooth position despite pathology",
               ],
-              impact: "Potential for poor denture fit post-healing",
+              impact:
+                "Required careful communication and acceptance of transitional occlusal compromise",
             },
-            priority: "High",
+            priority: "high",
           },
           {
-            id: "C2",
-            title: "Aesthetic Replication",
-            category: "Esthetics",
+            id: "IDC2",
+            title: "Biological Uncertainty",
+            category: "Biology",
             details: {
               issues: [
-                "Matching existing tooth morphology",
-                "Color consistency",
+                "Unpredictable post-extraction ridge changes",
+                "No try-in phase possible",
+                "Need for tissue conditioning space",
               ],
-              impact: "Patient's strong preference for familiar appearance",
+              impact:
+                "Required overcontoured flange design and delayed final reline",
             },
-            priority: "Medium",
+            priority: "critical",
           },
           {
-            id: "C3",
-            title: "Immediate Retention",
-            category: "Function",
+            id: "IDC3",
+            title: "Occlusal Compromise",
+            category: "occlusion",
             details: {
-              issues: ["Bony undercut utilization", "Mucosal displacement"],
-              impact: "Risk of early denture displacement",
+              issues: [
+                "Maintaining existing tooth positions",
+                "Lack of posterior occlusal balance",
+                "Immediate post-op vertical dimension maintenance",
+              ],
+              impact:
+                "Acceptable short-term compromise for psychological benefit",
             },
-            priority: "High",
+            priority: "medium",
           },
         ],
       },
       solutions: {
-        title: "Treatment Strategy",
+        title: "Immediate Denture Protocol",
         timeline: {
           phases: [
             {
               phase: 1,
-              duration: "5 days",
-              focus: "Prosthesis Fabrication",
+              duration: "Day 1",
+              focus: "Pre-extraction Records & Planning",
             },
             {
               phase: 2,
-              duration: "1 visit",
-              focus: "Extractions & Delivery",
+              duration: "Day 7",
+              focus: "Denture Construction (No Try-In)",
+            },
+            {
+              phase: 3,
+              duration: "Day 14",
+              focus: "Extraction & Immediate Delivery",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Denture Development",
+            title: "Pre-Extraction Modeling",
             objectives: [
-              "Accurate tooth positioning",
-              "Functional occlusal scheme",
-              "Retention features",
+              "Preserve existing occlusal relationships",
+              "Design tissue chambers",
+              "Psychological preparation",
             ],
             procedures: [
               {
-                type: "Diagnostic Wax-up",
-                outcome: "Replicated existing tooth positions",
-                steps: [
-                  "Primary impression",
-                  "Custom tray fabrication",
-                  "Border molding",
-                ],
+                type: "Final Dentulous Impressions",
+                material: "Alginate",
+                outcome: "Definitive pre-extraction cast",
               },
               {
-                type: "Bite Registration",
-                technique: "Centric relation record",
-                outcome: "1.5mm freeway space",
+                type: "Tooth Position Mapping",
+                technique: "Direct cast measurement",
+                outcome: "Maintained facial support landmarks",
               },
             ],
           },
           {
             phase: 2,
-            title: "Surgical-Prosthetic Phase",
+            title: "Accelerated Fabrication",
             objectives: [
-              "Atraumatic extractions",
-              "Immediate insertion",
-              "Occlusal adjustment",
+              "Biomimetic tooth arrangement",
+              "Tissue conditioning design",
+              "Occlusal transition planning",
             ],
             procedures: [
               {
-                type: "Extractions",
-                teeth: ["#3-#14"],
-                technique: "Sectional removal",
-                outcome: "Minimal ridge trauma",
+                type: "Anterior Setup",
+                technique: "Direct duplication of existing positions",
+                material: "Biofunctional acrylic teeth",
+                outcome: "Familiar aesthetics for patient adaptation",
               },
               {
-                type: "Denture Delivery",
-                steps: [
-                  "Intraoral adjustment",
-                  "Pressure-indicating paste",
-                  "Retention check",
+                type: "Posterior Design",
+                parameters: [
+                  "Shallow cusp anatomy",
+                  "Reduced occlusal table",
+                  "Tissue displacement compensation",
                 ],
-                outcome: "4-lb insertion force",
+              },
+            ],
+          },
+          {
+            phase: 3,
+            title: "Surgical-Prosthetic Integration",
+            objectives: [
+              "Atraumatic extraction",
+              "Immediate delivery",
+              "Post-op management",
+            ],
+            procedures: [
+              {
+                type: "Extraction Protocol",
+                technique: "Full arch clearance",
+                considerations: [
+                  "Alveolar preservation",
+                  "Socket grafting with collagen",
+                  "Denture liner application",
+                ],
+              },
+              {
+                type: "Delivery Protocol",
+                steps: [
+                  "Check fitting",
+                  "Minor occlusal adjustments",
+                  "Post-op instructions",
+                ],
+              },
+              {
+                type: "Follow-up Schedule",
+                schedule: [
+                  "24-hour check",
+                  "72-hour adjustment",
+                  "1-week adjustment",
+                  "4-week reline",
+                ],
               },
             ],
           },
         ],
       },
       results: {
-        title: "Treatment Outcomes",
+        title: "Transition Outcomes",
         metrics: {
           patientSatisfaction: {
-            aesthetic: 4.6,
-            functional: 4.2,
-            overall: 4.4,
+            aesthetic: 4.8,
+            psychological: 4.9,
+            functional: 3.9,
+            overall: 4.5,
           },
         },
         content: {
           achievements: [
-            "Immediate functional restoration",
-            "Psychological comfort maintained",
-            "6-month retention stability",
+            "Seamless transition from dentulous state",
+            "Immediate phonetics preservation",
+            "Successful psychological adaptation",
+            "Aesthetic continuity maintained",
           ],
-          patientFeedback: {
-            quote: "It feels like my own teeth from day one",
-            improvementsNoted: [
-              "Confidence in social interactions",
-              "Normal speech restored",
+          limitations: {
+            noted: [
+              "Temporary posterior occlusal instability",
+              "Initial masticatory efficiency reduced by 40%",
+              "Midline deviation preserved from original dentition",
+            ],
+            corrections: [
+              "Planned occlusal refinement at 4-week reline",
+              "Tissue conditioning liner protocol initiated",
+              "Gradual posterior table expansion planned",
             ],
           },
-          limitations: {
-            noted: ["2-week soft diet required", "Minor pressure spots"],
-            futureConsiderations: ["6-month reline", "Implant consideration"],
+          technicalSuccess: {
+            dentureStability: {
+              maxilla: "🟡 Acceptable",
+            },
+            dentureRetention: {
+              maxilla: "🟡 Acceptable",
+            },
+            dentureSupport: {
+              maxilla: "🟡 Acceptable",
+            },
+          },
+          patientFeedback: {
+            quote:
+              "Thank you for making this transition much smother that what I expected!",
+            improvementsNoted: [
+              "Social confidence maintained",
+              "Immediate chewing ability",
+            ],
           },
         },
       },
     },
   },
 };
+
 export default caseEleven;

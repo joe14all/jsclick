@@ -46,8 +46,11 @@ const renderNestedList = (data, depth = 0) => {
     { label: 'Mechanical', data: procedure.mechanical},
     { label: 'Biological', data: procedure.biological},
     { label: 'Esthetic considerations', data: procedure.esthetic},
-   
     { label: 'Features', data: procedure.features},
+    { label: 'Checks', data: procedure.checks},
+    { label: 'Schedule', data: procedure.schedule},
+    { label: 'Considerations', data: procedure.considerations},
+
 
 
 

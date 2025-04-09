@@ -68,38 +68,29 @@
     font-size: 0.75rem;
     font-weight: 600;
     margin-top: 0.25rem;
+    text-transform: lowercase;
+
+
   }
   
  /* Category Tags */
-.categoryTag[data-category="esthetics"] {
+ .categoryTag[data-category="esthetics"] {
   background: rgba(236, 64, 122, 0.15);
   color: #c2185b;
 }
 
-.categoryTag[data-category="function"] {
-  background: rgba(41, 121, 255, 0.15);
-  color: #1565c0;
-}
-
 .categoryTag[data-category="structure"] {
-  background: rgba(106, 27, 154, 0.15);
+  background: rgba(142, 36, 170, 0.15);
   color: #6a1b9a;
 }
 
-.categoryTag[data-category="technique"] {
-  background: rgba(0, 151, 167, 0.15);
-  color: #006064;
+.categoryTag[data-category="restoration"] {
+  background: rgba(255, 138, 101, 0.15);
+  color: #d84315;
 }
-
-.categoryTag[data-category="anatomy"] {
-  background: rgba(124, 179, 66, 0.15);
-  color: #33691e;
-}
-
-/* Additional Relevant Categories */
-.categoryTag[data-category="biomechanics"] {
-  background: rgba(255, 193, 7, 0.15);
-  color: #ff8f00;
+.categoryTag[data-category="function"] {
+  background: rgba(33, 150, 243, 0.15);
+  color: #1565c0;
 }
 
 .categoryTag[data-category="occlusion"] {
@@ -107,49 +98,67 @@
   color: #0d47a1;
 }
 
-.categoryTag[data-category="logistics"] {
-  background: rgba(30, 136, 229, 0.15);
-  color: #0d47a1;
-}
-
-.categoryTag[data-category="restoration"] {
-  background: rgba(239, 108, 0, 0.15);
-  color: #e65100;
-}
-
-.categoryTag[data-category="diagnostics"] {
-  background: rgba(94, 53, 177, 0.15);
-  color: #4a148c;
+.categoryTag[data-category="biomechanics"] {
+  background: rgba(255, 202, 40, 0.15);
+  color: #f9a825;
 }
 
 .categoryTag[data-category="ergonomics"] {
-  background: rgba(216, 67, 21, 0.15);
-  color: #bf360c;
+  background: rgba(255, 112, 67, 0.15);
+  color: #e64a19;
 }
 
-.categoryTag[data-category="biology"] {
+.categoryTag[data-category="technique"] {
   background: rgba(0, 172, 193, 0.15);
-  color: #00838f;
+  color: #006064;
 }
-
-.categoryTag[data-category="periodontics"] {
+.categoryTag[data-category="anatomy"] {
   background: rgba(139, 195, 74, 0.15);
   color: #558b2f;
 }
+
+.categoryTag[data-category="biology"] {
+  background: rgba(77, 182, 172, 0.15);
+  color: #00796b;
+}
+
+.categoryTag[data-category="periodontics"] {
+  background: rgba(174, 213, 129, 0.15);
+  color: #33691e;
+}
+.categoryTag[data-category="biomimetics"] {
+  background: rgba(129, 199, 132, 0.15); /* soft green */
+  color: #2e7d32;
+}
+
 
 .categoryTag[data-category="surgery"] {
   background: rgba(229, 57, 53, 0.15);
   color: #b71c1c;
 }
+.categoryTag[data-category="diagnostics"] {
+  background: rgba(103, 58, 183, 0.15);
+  color: #512da8;
+}
 
 .categoryTag[data-category="imaging"] {
-  background: rgba(255, 111, 0, 0.15);
-  color: #dd2c00;
+  background: rgba(255, 152, 0, 0.15);
+  color: #e65100;
 }
+
 .categoryTag[data-category="prosthodontics"] {
-  background: rgba(255, 111, 0, 0.15);
-  color: #dd2c00;
+  background: rgba(255, 87, 34, 0.15);
+  color: #bf360c;
 }
+.categoryTag[data-category="logistics"] {
+  background: rgba(120, 144, 156, 0.15);
+  color: #37474f;
+}
+.categoryTag[data-category="financial"] {
+  background: rgba(149, 117, 205, 0.15); /* subtle violet for contrast in logistics group */
+  color: #512da8;
+}
+
   
   /* Challenge Content */
   .challengeContent {

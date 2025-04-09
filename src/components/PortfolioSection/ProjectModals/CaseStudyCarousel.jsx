@@ -5,11 +5,11 @@ const CaseStudyCarousel = ({ images, activeSlide, setActiveSlide }) => {
   const intervalRef = useRef(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); 
   const [isPlaying, setIsPlaying] = useState(true);
-const [isHovered, setIsHovered] = useState(false); 
+  const [isHovered, setIsHovered] = useState(false); 
 
 
 const startAutoSlide = () => {
-  if (!isPlaying) return;
+ 
   clearInterval(intervalRef.current);
   intervalRef.current = setInterval(() => {
     setActiveSlide(prev => (prev + 1) % images.length);
@@ -47,9 +47,23 @@ const pauseAutoSlide = () => {
   onMouseEnter={() => setIsHovered(true)}
   onMouseLeave={() => {
     setIsHovered(false);
-    if (isPlaying) startAutoSlide(); // Restart if playing
+    if (isPlaying) startAutoSlide(); 
   }}
 >
+<button
+            className={`${styles.compactPlayPause}`}
+            onClick={() => {
+              setIsPlaying(prev => {
+                const next = !prev;
+                if (next) startAutoSlide();
+                else pauseAutoSlide();
+                return next;
+              });
+            }}
+            aria-label={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
+          >
+            {isPlaying ? '❚❚' : '▶'}
+          </button>
       {/* Hover Preview Caption */}
       {hoveredIndex !== null && (
         <div className={styles.hoverPreview}>
@@ -79,21 +93,21 @@ const pauseAutoSlide = () => {
 
         <div className={styles.carouselViewport}>
         {isHovered && (
-  <button
-    className={`${styles.playPauseButton}`}
-    onClick={() => {
-      setIsPlaying(prev => {
-        const next = !prev;
-        if (next) startAutoSlide();
-        else pauseAutoSlide();
-        return next;
-      });
-    }}
-    aria-label={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
-  >
-    {isPlaying ? '❚❚' : '▶'}
-  </button>
-)}
+          <button
+            className={`${styles.playPauseButton}`}
+            onClick={() => {
+              setIsPlaying(prev => {
+                const next = !prev;
+                if (next) startAutoSlide();
+                else pauseAutoSlide();
+                return next;
+              });
+            }}
+            aria-label={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
+          >
+            {isPlaying ? '❚❚' : '▶'}
+          </button>
+        )}
           <div
             className={styles.carouselInner}
             style={{ transform: `translateX(-${activeSlide * 100}%)` }}
@@ -103,7 +117,7 @@ const pauseAutoSlide = () => {
                 key={index} 
                 className={styles.carouselItem}
                 onMouseEnter={pauseAutoSlide}
-                onMouseLeave={startAutoSlide} // Restart immediately
+                onMouseLeave={startAutoSlide} 
               >
                 {item.video ? (
                   <video
@@ -162,6 +176,8 @@ const pauseAutoSlide = () => {
           ›
         </button>
       </div>
+      
+
     </div>
   );
 };

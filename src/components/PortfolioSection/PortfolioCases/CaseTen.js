@@ -12,10 +12,12 @@ import MasterOcc from "../../../assets/images/completeDenture/masterOcc.jpg";
 import RimsOcc from "../../../assets/images/completeDenture/rimsOcc.jpg";
 import TryinOcc from "../../../assets/images/completeDenture/tryinOcc.jpg";
 import FinishedOcc from "../../../assets/images/completeDenture/finished-occ.jpg";
+import MaxDelVideo from "../../../assets/images/completeDenture/MaxRetention.mp4";
+import MandDelVideo from "../../../assets/images/completeDenture/MandRetention.mp4";
 
 const caseTen = {
   id: 10,
-  title: "Complete Denture - Lab workFlow",
+  title: "Lab workflow - Complete Denture",
   categories: ["prosthodontics"],
   thumbnail: {
     img: MasterOcc,
@@ -25,176 +27,232 @@ const caseTen = {
     carousel: [
       {
         video: OcclusalVideo,
-        alt: "Start to Finish Video",
-        caption: "Masticatory function validation",
-        modality: "Lab Photography",
-        tags: ["work fLow ", "occlusal", "bi-maxillary"],
+        caption: "Start-to-finish video",
+        alt: "Masticatory function validation",
+        modality: "Sequence Video",
+        tags: ["workflow", "process", "overview"],
+        date: "03-01-2021",
       },
-
       {
         img: PrimaryFrontal,
-        alt: "Study Cast frontal view",
-        caption: "Initial tissue capture",
+        caption: "Study cast frontal",
+        alt: "Initial tissue capture",
         modality: "Lab Photography",
-        tags: ["cast", "study"],
+        tags: ["study-cast", "diagnostic", "initial"],
+        date: "01-15-2021",
       },
       {
         img: TraysFrontal,
-        alt: "Custom tray frontal view",
-        caption: "Custom tray frontal View",
+        caption: "Custom tray frontal",
+        alt: "Tissue-specific adaptation",
         modality: "Lab Photography",
-        tags: ["tray", "custom"],
+        tags: ["custom-tray", "impression"],
+        date: "01-22-2021",
       },
       {
         img: MasterFrontal,
-        alt: "Master cast frontal view",
-        caption: "Definitive cast analysis",
+        caption: "Master cast frontal",
+        alt: "Definitive morphology",
         modality: "Lab Photography",
-        tags: ["cast", "definitive"],
+        tags: ["master", "undercuts", "anatomy"],
+        date: "01-29-2021",
       },
       {
         img: MountedFrontal,
-        alt: "Mounted casts frontal view",
-        caption: "Articulator mounting",
+        caption: "Master cast w/ plates 45 degree",
+        alt: "Spatial relationship transfer",
         modality: "Lab Photography",
-        tags: ["articulator", "mounting"],
+        tags: ["mounting", "plates", "relationship"],
+        date: "02-06-2021",
       },
       {
         img: RimsFrontal,
-        alt: "Occlusal rims frontal view",
-        caption: "VDO establishment",
+        caption: "Occlusal rims frontal",
+        alt: "Vertical dimension assessment",
         modality: "Lab Photography",
-        tags: ["vdo", "rims"],
+        tags: ["occlusal-rims", "vdo"],
+        date: "02-06-2021",
       },
       {
         img: TryinFrontal,
-        alt: "Try-in frontal view",
-        caption: "Aesthetic validation",
+        caption: "Prosthesis wax up frontal",
+        alt: "Aesthetic verification",
         modality: "Lab Photography",
-        tags: ["try-in", "aesthetics"],
+        tags: ["wax-up", "try-in", "teeth"],
+        date: "02-13-2021",
       },
       {
         img: FinishedFrontal,
-        alt: "Final restoration frontal view",
-        caption: "Completed denture delivery",
+        caption: "Final prothesis frontal",
+        alt: "Prosthetic delivery",
         modality: "Lab Photography",
-        tags: ["final", "delivery"],
+        tags: ["final", "delivery", "acrylic"],
+        date: "03-01-2021",
       },
       {
         img: PrimaryOcc,
-        alt: "Primary cast occlusal view",
-        caption: "Ridge anatomy recording",
+        caption: "Study cast occlusal",
+        alt: "Diagnostic impression",
         modality: "Lab Photography",
-        tags: ["anatomy", "diagnostic"],
+        tags: ["study-cast", "anatomy", "baseline"],
+        date: "02-20-2021",
       },
       {
         img: TraysOcc,
-        alt: "Custom tray occlusal view",
-        caption: "Tissue-specific extension",
+        caption: "Custom tray occlusal",
+        alt: "Border-molded adaptation",
         modality: "Lab Photography",
-        tags: ["trays", "custom"],
+        tags: ["custom-tray", "extension"],
+        date: "02-25-2021",
       },
       {
         img: MasterOcc,
-        alt: "Master cast occlusal view",
-        caption: "Definitive ridge details",
+        caption: "Master cast occlusal",
+        alt: "Surface detail replication",
         modality: "Lab Photography",
-        tags: ["cast", "master"],
+        tags: ["extension", "post-dam", "island"],
+        date: "02-06-2021",
       },
       {
         img: RimsOcc,
-        alt: "Occlusal rims view",
-        caption: "Occlusal plane orientation",
+        caption: "Occlusal rims occlusal",
+        alt: "Horizontal alignment",
         modality: "Lab Photography",
-        tags: ["occlusion", "plane"],
+        tags: ["occlusal-rims", "alignment"],
+        date: "02-06-2021",
       },
       {
         img: TryinOcc,
-        alt: "Try-in occlusal view",
-        caption: "Functional validation",
+        caption: "Prosthesis wax up occlusal",
+        alt: "Occlusal harmony",
         modality: "Lab Photography",
-        tags: ["try-in", "function"],
+        tags: ["wax-up", "try-in"],
+        date: "02-13-2021",
       },
       {
         img: FinishedOcc,
-        alt: "Final occlusal view",
-        caption: "Balanced occlusion",
+        caption: "Final prothesis occlusal",
+        alt: "Prosthetic harmony",
         modality: "Lab Photography",
-        tags: ["final", "occlusion"],
+        tags: ["final-prosthesis", "acrylic"],
+        date: "03-01-2021",
+      },
+      {
+        video: MaxDelVideo,
+        caption: "Maxillary prothesis retention",
+        alt: "Maxillary prothesis retention",
+        modality: "Clinical functional Video",
+        tags: ["retention", "insertion", "removal"],
+        date: "03-01-2021",
+      },
+      {
+        video: MandDelVideo,
+        caption: "Mandibular prothesis retention",
+        alt: "Mandibular prothesis retention",
+        modality: "Clinical functional Video",
+        tags: ["retention", "insertion", "removal"],
+        date: "03-01-2021",
       },
     ],
+
     sections: {
       overview: {
         title: "Clinical Presentation",
         content: {
           patientProfile: {
             demographic: {
-              age: 60,
-              gender: "male",
+              age: "➞ 63 YO",
+              gender: "➞ Male",
             },
             medicalHistory: {
-              systemic: ["Osteoporosis (managed)"],
-              dental: ["Edentulous >5 years"],
+              systemic: ["ASA I"],
+              houseClassification: "Indifferent",
+              dental: ["Edentulous >10 years", "Didn't wear a denture before"],
             },
           },
           presentation: {
-            chiefComplaint: "Inability to chew and facial collapse",
+            chiefComplaint:
+              "I have lost my teeth throughout years and I didn't have money to replace",
             concerns: [
-              "Compromised nutrition",
-              "Facial esthetic deterioration",
-              "Previous denture instability",
+              "❗️ Compromised nutrition",
+              "❗️ Facial esthetic deterioration",
+              "❗️ Speech difficulties",
             ],
             expectations: [
-              "Stable prosthesis",
-              "Natural facial support",
-              "Functional restoration",
+              "🔶 Stable prosthesis",
+              "🔶 Natural facial support",
+              "🔶 Functional restoration",
             ],
           },
           clinicalAssessment: {
-            oralCondition: {
-              ridgeClassification: {
-                maxilla: "Class IV (Seibert)",
-                mandible: "Class III (Seibert)",
+            prosthodonticStatus: {
+              "PDI Classification": {
+                "Class III": "Highest class",
+                "": {
+                  "Class III": [
+                    "➞ Bone Height-Mandibular: 11-15 mm",
+                    "➞ Maxillomandibular Relationships: Class III",
+                    "➞ Psychosocial: Moderate",
+                  ],
+
+                  "Class I": [
+                    "➞ Morphology-Maxilla: Type A",
+                    "➞ Muscle Attachments-Mandibular: Type A",
+                  ],
+                },
               },
-              mucosa: "Fibrous mobile tissue",
-            },
-            diagnosticData: {
-              VDOloss: "8mm",
-              interarchSpace: "18mm",
             },
           },
         },
       },
       challenges: {
-        title: "Prosthetic Complexities",
         content: [
           {
             id: "PC1",
-            title: "Anatomical Limitations",
-            category: "Support",
+            title: "Long-term Edentulism",
+            category: "Biology",
             details: {
               issues: [
-                "Severe ridge resorption",
-                "Displaceable mucosa",
-                "Insufficient vestibular depth",
+                "Edentulous for over 10 years",
+                "No history of denture use",
+                "Progressive bone resorption",
+                "Mandibular bone height limited to 11–15 mm",
               ],
-              impact: "Compromised denture stability",
+              impact:
+                "Compromises support and retention of prosthesis, increases complexity of treatment, and affects long-term prognosis.",
             },
-            priority: "Critical",
+            priority: "critical",
           },
           {
             id: "PC2",
-            title: "Functional Restoration",
-            category: "Occlusion",
+            title: "Compromised Oral Function & Esthetics",
+            category: "function",
             details: {
               issues: [
-                "Loss of vertical dimension",
-                "Adapted neuromuscular pattern",
-                "Reduced occlusal force capacity",
+                "Impaired mastication affecting nutrition",
+                "Facial esthetic deterioration due to lack of support",
+                "Speech difficulties linked to tooth and ridge loss",
+                "Moderate psychosocial impact (PDI classification)",
               ],
-              impact: "Risk of occlusal disharmony",
+              impact:
+                "Affects quality of life, self-image, and social interactions; necessitates comprehensive prosthetic planning to restore function and appearance.",
             },
-            priority: "High",
+            priority: "high",
+          },
+          {
+            id: "PC3",
+            title: "Anatomical & Skeletal Discrepancies",
+            category: "anatomy",
+            details: {
+              issues: [
+                "Maxillomandibular relationship: Class III",
+                "Indifferent House classification (poor neuromuscular control)",
+                "Muscle attachment & ridge morphology require consideration during impression and retention phases",
+              ],
+              impact:
+                "Adds complexity to occlusal schemes, denture base extension, and requires careful management of spatial relationships to ensure denture stability.",
+            },
+            priority: "high",
           },
         ],
       },
@@ -204,88 +262,114 @@ const caseTen = {
           phases: [
             {
               phase: 1,
-              duration: "Diagnostic Phase",
-              focus: "Biological Params",
+              duration: "Week 1–2",
+              focus: "Diagnostic Planning & Foundation Records",
             },
             {
               phase: 2,
-              duration: "Technical Phase",
-              focus: "Denture Fabrication",
+              duration: "Week 3–5",
+              focus: "Definitive Modeling & Prosthetic Setup",
             },
             {
               phase: 3,
-              duration: "Adaptation Phase",
-              focus: "Neuromuscular Training",
+              duration: "Week 6–7",
+              focus: "Finalization & Delivery Optimization",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Foundation Establishment",
+            title: "Diagnostic Phase & Record Base Development",
             objectives: [
-              "Neutral zone capture",
-              "VDO restoration",
-              "Support optimization",
+              "Capture ridge anatomy",
+              "Stabilize base plates",
+              "Analyze jaw relation",
             ],
             procedures: [
               {
-                type: "Custom Tray Fabrication",
-                material: "Light-cure resin",
-                technique: "Border molding",
-                outcome: "Definitive tissue registration",
+                type: "Preliminary Casts",
+                material: "Alginate",
+                technique: "Pour study casts to examine ridge anatomy",
+                outcome: "Base model for custom tray fabrication",
               },
               {
-                type: "Occlusal Registration",
-                method: "Gothic arch tracing",
-                verification: ["Interocclusal check records"],
+                type: "Custom Trays",
+                material: "self-cured acrylic",
+                outcome:
+                  "Tray supports accurate border molding and detail capture",
+              },
+              {
+                type: "Master Impressions",
+                material: "PVS (medium & light body)",
+                technique:
+                  "Functional impression capturing anatomical landmarks",
+                outcome:
+                  "Definitive casts with full extension and accurate tissue detail",
               },
             ],
           },
           {
             phase: 2,
-            title: "Prosthesis Construction",
+            title: "Jaw Relation & Esthetic Functional Try-In",
             objectives: [
-              "Balanced occlusion",
-              "Optimal aesthetics",
-              "Denture base adaptation",
+              "Establish VDO",
+              "Restore facial contour",
+              "Balance occlusion",
             ],
             procedures: [
               {
-                type: "Tooth Arrangement",
-                system: "Lingualized occlusion",
-                parameters: ["30° cusp angle", "1mm anterior overlap"],
+                type: "Record Bases & Occlusal Rims",
+                material: "Baseplate wax with acrylic base",
+                technique: "Adjusted for esthetic support and phonetics",
+                outcome: "Validated maxillo-mandibular record",
               },
               {
-                type: "Processing",
-                technique: "Injection molding",
-                material: "High-impact acrylic",
+                type: "Teeth Setup",
+                system: "Anatomic acrylic teeth (e.g. Vita, Ivoclar)",
+                parameters: [
+                  "Posterior unilateral crossbite configuration",
+                  "Esthetics matched to midline and smile curve",
+                  "Balanced occlusion planning",
+                ],
+              },
+              {
+                type: "Wax Try-In",
+                technique: "Facial esthetics checked, phonetics evaluated",
+                material: "Full-contour wax",
+                outcome: "Functional validation before processing",
               },
             ],
           },
           {
             phase: 3,
-            title: "Patient Adaptation",
+            title: "Processing, Finishing & Delivery",
             objectives: [
-              "Neuromuscular re-education",
-              "Prosthesis optimization",
-              "Maintenance protocol",
+              "Finalize processing",
+              "Polish for comfort",
+              "Verify adaptation",
             ],
             procedures: [
               {
-                type: "Insertion Protocol",
+                type: "Processing",
+                technique: "Compression mold",
+                material: "Heat-cured acrylic",
+                outcome: "Precision fit with long-term material integrity",
+              },
+              {
+                type: "Polishing & Delivery",
                 checks: [
-                  "Equal pressure distribution",
-                  "Border extension verification",
-                  "Phonetic validation",
+                  "Border integrity & pressure points",
+                  "Occlusion adjustment post-processing",
+                  "Retention and stability in oral environment",
                 ],
               },
               {
-                type: "Post-insertion Care",
+                type: "Post-Insertion Protocol",
                 schedule: [
-                  "24h adjustment",
-                  "1-week follow-up",
-                  "Gradual loading protocol",
+                  "48-hour follow-up for tissue response",
+                  "1-week review for function and retention",
+                  "Monthly evaluation during adaptation",
                 ],
               },
             ],
@@ -295,34 +379,53 @@ const caseTen = {
       results: {
         title: "Treatment Outcomes",
         metrics: {
-          functionalGains: {
-            masticatoryEfficiency: "82% improvement",
-            occlusalForce: "35N ± 5N",
-          },
           patientSatisfaction: {
-            comfort: 4.5,
-            aesthetics: 4.7,
-            function: 4.6,
+            aesthetic: 4.5,
+            functional: 4.7,
+            overall: 4.6,
           },
         },
         content: {
           achievements: [
-            "0.5mm even pressure distribution",
-            "Stable VDO maintenance",
-            "Complete phonetic restoration",
+            "Balanced occlusion achieved on articulator",
+            "Restored facial esthetics and lip support",
+            "Optimized vertical dimension with improved phonetics",
+            "Stable retention of maxillary denture",
+            "Satisfactory functional adaptation within 2 weeks",
           ],
+          limitations: {
+            noted: [
+              "Mandibular special tray slightly underextended",
+              "Class III skeletal pattern complicated posterior occlusion",
+              "Slight midline deviation during wax try-in",
+            ],
+            corrections: [
+              "Special tray underextention compensated with green stick during final impression",
+              "Tooth arrangement adjusted for crossbite compensation",
+              "Midline adjusted during final waxing session",
+            ],
+          },
           technicalSuccess: {
             dentureStability: {
-              maxilla: "Cohen score 2",
-              mandible: "Cohen score 3",
+              maxilla: "🟢 Excellent",
+              mandible: "🟡 Acceptable",
+            },
+            dentureRetention: {
+              maxilla: "🟢 Excellent",
+              mandible: "🟢 Excellent",
+            },
+            dentureSupport: {
+              maxilla: "🟢 Excellent",
+              mandible: "🟡 Acceptable",
             },
           },
           patientFeedback: {
-            quote: "I can finally eat apples again!",
-          },
-          longTermMaintenance: {
-            "6-month": "0.2mm tissue compression",
-            "12-month": "Stable occlusal contacts",
+            quote: "I can finally smile with teeth again!",
+            improvementsNoted: [
+              "Improved chewing efficiency",
+              "Clearer speech and pronunciation",
+              "Confidence in smiling",
+            ],
           },
         },
       },
