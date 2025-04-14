@@ -7,61 +7,61 @@ import CastOcc from "../../../assets/images/surveyCrown/castOcc.jpg";
 
 const caseTwelve = {
   id: 12,
-  title: "Survey Crown for RPD Support",
+  title: "Surveyed Crown",
   categories: ["restorative", "prosthodontics"],
   thumbnail: {
     img: PrepOcc,
-    alt: "Cast Preparation Occlusal View",
+    caption: "Surveyed Crown",
   },
   caseStudy: {
     carousel: [
       {
         img: PrepOcc,
-        alt: "Cast Prep Occlusal View",
-        caption: "Initial Tooth Preparation",
-        modality: "Cast Occlusal",
+        caption: "Surveyed Prep Occlusal",
+        alt: "Post-preparation Survey Analysis",
+        modality: "Lab Photography",
         date: "2023-05-10",
-        tags: ["pre-op", "preparation"],
+        tags: ["finish-line", "prep", "draw"],
       },
       {
         img: PreopBuccal,
-        alt: "Prep Buccal View",
-        caption: "Buccal Surface Analysis",
-        modality: "Cast Buccal",
+        caption: "Surveyed Prep Buccal",
+        alt: "Buccal Bulge Development",
+        modality: "Lab Photography",
         date: "2023-05-10",
-        tags: ["diagnostic"],
+        tags: ["axial", "prep", "draw"],
       },
       {
         img: WaxupBuccal,
-        alt: "Waxup Buccal View",
-        caption: "Provisional Design Validation",
-        modality: "Wax-up Buccal",
+        caption: "Wax-up Buccal View",
+        alt: "Supra-bulge Contour Formation",
+        modality: "Lab Photography",
         date: "2023-05-17",
-        tags: ["wax-up", "design"],
+        tags: ["wax-up", "contour", "emergence-profile"],
       },
       {
         img: WaxupOcc,
-        alt: "Waxup Occlusal View",
-        caption: "Occlusal Plane Development",
-        modality: "Wax-up Occlusal",
+        caption: "Wax-up Occlusal",
+        alt: "Occlusal Rest Seat Design",
+        modality: "Lab Photography",
         date: "2023-05-17",
-        tags: ["wax-up", "occlusion"],
+        tags: ["wax-up", "anatomy"],
       },
       {
         img: WaxupLingual,
-        alt: "Waxup Lingual View",
-        caption: "Lingual Contour Optimization",
-        modality: "Wax-up Lingual",
+        caption: "Wax-up Lingual View",
+        alt: "Proximal Guide Plane Creation",
+        modality: "Lab Photography",
         date: "2023-05-17",
-        tags: ["wax-up", "retention"],
+        tags: ["wax-up", "contour"],
       },
       {
         img: CastOcc,
-        alt: "Final Cast Occlusal View",
-        caption: "Completed Framework",
-        modality: "Cast Occlusal",
+        caption: "Master Cast Survey",
+        alt: "Final Wax-up Verification",
+        modality: "Lab Photography",
         date: "2023-05-24",
-        tags: ["post-op", "framework"],
+        tags: ["surveyed", "master-cast"],
       },
     ],
     sections: {
@@ -70,72 +70,93 @@ const caseTwelve = {
         content: {
           patientProfile: {
             demographic: {
-              age: 58,
-              gender: "female",
-              occupation: "Educator",
+              age: "➞ 61 YO",
+              gender: "➞ Male",
+              occupation: "➞ Restaurant Owner",
             },
             medicalHistory: {
-              systemic: ["Hypertension (controlled)"],
-              dental: ["Partial edentulism", "Existing non-restorable molar"],
+              systemic: ["Hypertension"],
+              dental: [
+                "Partial edentoulism (Class III mod I)",
+                "Recurrent #30 MOD amalgam failure",
+                "Non-ideal abutment contours",
+              ],
             },
           },
           presentation: {
             chiefComplaint:
-              "My partial denture feels unstable and looks unnatural when I smile",
+              "My back tooth keeps breaking and my partial doesn't snap in like it used to",
             concerns: [
-              "Compromised chewing function",
-              "Aesthetic concerns in posterior region",
+              "❗️ Repeated fracture of large filling in #30",
+              "❗️ Decreasing RPD retention",
+              "❗️ Food trapping around abutment",
             ],
             expectations: [
-              "Stable prosthesis retention",
-              "Natural-looking restoration",
+              "🔶 Optimizing abutment #30 for a new RPD",
+              "🔶 Easier cleaning around abutment",
+              "🔶 Durable chewing surface",
             ],
           },
           clinicalAssessment: {
             existingConditions: {
-              teeth: ["#19"],
-              findings: [
-                "Non-restorable carious lesion",
-                "Inadequate retentive contours",
-                "Miller Class II mobility",
+              "Abutment Tooth (#30)": [
+                "➞ MOD amalgam (60% tooth structure)",
+                "➞ Inadequate buccal contour for RPD",
               ],
+              "RPD Design": {
+                "Missing Teeth": ["🦷#20", "🦷#28", "🦷#29"],
+                "Rest Locations": [
+                  "🦷#27 ➞ Cingulum rest",
+                  "🦷#18 ➞ Mesial Occlusal rest",
+                  "🦷#19 ➞ Distal Occlusal rest",
+                  "🦷#21 ➞ Mesial occlusal rest",
+                ],
+                "Existing Issues": [
+                  "Poor reciprocation on #30",
+                  "Inadequate buccal contour",
+                ],
+              },
             },
             prosthodonticFactors: {
-              ridgeRelationship: "Kennedy Class II modification 1",
-              interarchSpace: "3mm adequate clearance",
+              "Survey Findings": [
+                "➞ 0 mm undercut on mesio-buccal",
+                "➞ 4° tilt required for common path",
+                "➞ Ideal clasp position: mid-buccal",
+              ],
             },
           },
         },
       },
       challenges: {
-        title: "Technical Complexities",
         content: [
           {
-            id: "C1",
-            title: "Biomechanical Optimization",
-            category: "Prosthodontics",
+            id: "SC1",
+            title: "Abutment Rehabilitation",
+            category: "structure",
             details: {
               issues: [
-                "Divergent tooth long axes",
-                "Inadequate guiding planes",
-                "Limited interproximal space for clasp assembly",
+                "Large MOD preparation with minimal remaining walls",
+                "Existing buccal contour inadequate for RPD",
               ],
-              impact: "Critical for RPD longevity and patient comfort",
+              impact:
+                "Required simultaneous structural rehabilitation and prosthodontic optimization",
             },
-            priority: "High",
+            priority: "critical",
           },
+
           {
-            id: "C2",
-            title: "Aesthetic-Force Balance",
-            category: "Biomechanics",
+            id: "SC2",
+            title: "Occluso-Prosthetic Harmony",
+            category: "occlusion",
             details: {
               issues: [
-                "High occlusal load zone",
-                "Visible metal components in smile line",
+                "Balancing natural crown occlusion with RPD",
+                "Creating adequate rest seat depth without over-prep",
+                "Restoring tooth natural taper ",
               ],
-              observations: ["Required metal-ceramic compromise"],
+              impact: "Critical for both crown longevity and RPD function",
             },
-            priority: "Medium",
+            priority: "high",
           },
         ],
       },
@@ -144,55 +165,91 @@ const caseTwelve = {
           phases: [
             {
               phase: 1,
-              duration: "2 visits",
-              focus: "Diagnostic Planning & Tooth Preparation",
+              duration: "Day 1-3",
+              focus: "Diagnostic Surveying & Preparation",
             },
             {
               phase: 2,
-              duration: "3 visits",
-              focus: "Definitive Impression & Framework Try-in",
+              duration: "Day 4-7",
+              focus: "Manual Wax-up & Casting",
+            },
+            {
+              phase: 3,
+              duration: "Day 8",
+              focus: "RPD Framework Adjustment",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Diagnostic Phase",
+            title: "Guided Tooth Preparation",
             objectives: [
               "Establish optimal path of insertion",
-              "Determine favorable crown contours",
-              "Preserve residual tooth structure",
+              "Create suprabulge contour",
+              "Develop guiding planes",
             ],
             procedures: [
               {
-                type: "Diagnostic Wax-up",
-                outcome: "0.5mm functional cusp reduction blueprint",
+                type: "Surveyor-Guided Prep",
+                instruments: ["Ney surveyor", "Undercut gauges"],
+                parameters: [
+                  "10° axial convergence",
+                  "1mm suprabulge ",
+                  "1mm shoulder margin",
+                ],
               },
               {
-                type: "Surveyor Analysis",
-                outcome: "6° distal tilt correction achieved",
+                type: "Prep Stent Fabrication",
+                material: "Autopolymerizing resin",
+                features: ["Guide plane replication", "Occlusal index key"],
               },
             ],
           },
           {
             phase: 2,
-            title: "Fabrication Phase",
+            title: "Manual Crown Fabrication",
             objectives: [
-              "Precise metal-ceramic junction placement",
-              "Optimal occlusal scheme integration",
-              "Passive framework fit verification",
+              "Precision wax-up",
+              "Optimal metal thickness",
+              "RPD compatibility",
             ],
             procedures: [
               {
-                type: "Crown Fabrication",
-                outcome: "Au-Pd alloy with porcelain occlusal",
+                type: "Crown Wax-up",
+                steps: [
+                  "Surveyor-verified guide planes",
+                  "Proximal contact verification",
+                  "Occlusal anatomy carving",
+                ],
+                instruments: ["#7 wax spatula", "Digital waxer"],
               },
               {
-                type: "Framework Fit Test",
-                technique: "Pressure-indicating paste",
+                type: "Casting Process",
+                material: "Type IV gold",
+                parameters: [
+                  "2mm occlusal reduction",
+                  "0.3mm coping thickness",
+                  "M Occlusal rest seat",
+                ],
+              },
+            ],
+          },
+          {
+            phase: 3,
+            title: "Prosthetic Integration",
+            objectives: [
+              "Passive RPD fit",
+              "Optimal clasp engagement",
+              "Occlusal verification",
+            ],
+            procedures: [
+              {
+                type: "Delivery Protocol",
                 steps: [
-                  "Three-screw test implementation",
-                  "16μm fit accuracy achieved",
+                  "Surveyor-verified seating",
+                  "Articulating paper check",
+                  "Clasp tension adjustment",
                 ],
               },
             ],
@@ -200,33 +257,56 @@ const caseTwelve = {
         ],
       },
       results: {
-        title: "Prosthetic Outcomes",
-        icon: "success",
+        title: "Treatment Outcomes",
         metrics: {
           patientSatisfaction: {
-            aesthetic: 4.3,
+            aesthetic: 4.0,
             functional: 4.8,
-            overall: 4.5,
-          },
-          biomechanicalPerformance: {
-            retentionForce: "12N",
-            dislodgementResistance: "Class I",
+            overall: 4.4,
           },
         },
         content: {
           achievements: [
-            "0.25mm precision fit of framework",
-            "35% improvement in chewing efficiency",
-            "Elimination of prosthesis rock",
+            "Successful RPD retention improvement",
+            "No recurrent caries at 6-month recall",
+            "Optimal emergence profile for hygiene",
+            "Harmonized occlusal contacts",
           ],
-          patientFeedback: {
-            quote:
-              "I can finally eat without worrying about my denture moving!",
-            improvementsNoted: ["Restored confidence in public speaking"],
-          },
           limitations: {
-            noted: ["Slight metal visibility at high smile line"],
-            futureConsiderations: ["Buccal veneer option for aesthetic zone"],
+            noted: [
+              "Slight metal visibility on buccal",
+              "0.5mm overcontour on distal",
+              "Increased plaque retention score (1.8)",
+            ],
+            corrections: [
+              "Added oral hygiene instruction",
+              "Modified flossing technique",
+              "Dietary counseling",
+            ],
+          },
+          technicalSuccess: {
+            crownFit: {
+              marginal: "🟢 Excellent",
+              axial: "🟢 Excellent",
+              contacts: "🟢 Excellent",
+            },
+            dentureRetention: {
+              mandible: "🟢 Excellent",
+            },
+            dentureStability: {
+              mandible: "🟢 Excellent",
+            },
+            dentureSupport: {
+              mandible: "🟢 Excellent",
+            },
+          },
+          patientFeedback: {
+            quote: "My partial clicks into place better than ever!",
+            improvementsNoted: [
+              "Chewing tough foods confidently",
+              "No more food packing",
+              "Easy to clean around crown",
+            ],
           },
         },
       },

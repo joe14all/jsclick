@@ -12,221 +12,289 @@ import PostOpPA from "../../../assets/images/posteriorImplants/postOp-PA.png";
 
 const caseThirteen = {
   id: 13,
-  title: "Posterior Implants - Crowns",
+  title: "Posterior Implants",
   categories: ["implant", "prosthodontics"],
   thumbnail: {
     img: CastOcc,
-    alt: "Cast Occlusal View",
+    caption: "Occlusal Validation",
   },
   caseStudy: {
     carousel: [
       {
         img: FinalImpression,
-        alt: "Final Impression Occlusal View",
-        caption: "Definitive implant-level impression",
-        modality: "Polyether Impression",
-        tags: ["implant", "occlusal"],
+        alt: "Definitive Impression",
+        caption: "Closed-tray impression technique",
+        modality: "Lab Photography",
+        date: "2023-08-15",
+        tags: ["impression", "closed-tray", "pick-up"],
       },
       {
         img: TissueMimic,
-        alt: "Tissue Mimic",
-        caption: "Soft tissue replication",
-        modality: "Laboratory Technique",
-        tags: ["gingival", "esthetic"],
+        alt: "Tissue Replication",
+        caption: "Gingival mask technique",
+        modality: "Lab Photography",
+        date: "2023-08-18",
+        tags: ["soft-tissue", "emergence"],
       },
       {
         img: CastBuccal,
-        alt: "Cast Buccal View",
-        caption: "Buccal contour analysis",
-        modality: "Master Cast",
-        tags: ["morphology", "occlusion"],
+        alt: "Buccal Contour Analysis",
+        caption: "Cast buccal view",
+        modality: "Lab Photography",
+        date: "2023-08-20",
+        tags: ["contour", "buccal", "morphology"],
       },
       {
         img: CastLingual,
-        alt: "Cast Lingual View",
-        caption: "Lingual anatomy verification",
-        modality: "Articulated Model",
-        tags: ["occlusion", "functional"],
+        alt: "Lingual Anatomy",
+        caption: "Cast lingual view",
+        modality: "Lab Photography",
+        date: "2023-08-20",
+        tags: ["lingual", "occlusion", "anatomy"],
       },
       {
         img: CastOcc,
-        alt: "Cast Occlusal View",
-        caption: "Occlusal scheme validation",
-        modality: "Articulator View",
-        tags: ["bite-registration"],
+        alt: "Occlusal Scheme",
+        caption: "Cast occlusal view",
+        modality: "Lab Photography",
+        date: "2023-08-20",
+        tags: ["occlusion", "articulation"],
       },
       {
         img: CastFrontal,
-        alt: "Cast Frontal View",
-        caption: "Prosthetic design preview",
-        modality: "Diagnostic Wax-up",
-        tags: ["esthetic", "planning"],
+        alt: "Prosthetic Preview",
+        caption: "Cast frontal view",
+        modality: "Lab Photography",
+        date: "2023-08-22",
+        tags: ["wax-up", "esthetic"],
       },
       {
         img: IntraOralBuccalRt,
-        alt: "Intra Oral Buccal Rt View",
-        caption: "Implant site integration",
-        modality: "Postoperative",
-        tags: ["osseointegration", "buccal"],
+        alt: "Buccal Integration",
+        caption: "Intraoral buccal view",
+        modality: "Clinical Photography",
+        date: "2023-09-05",
+        tags: ["delivery", "integration"],
       },
       {
         img: IntraOralBuccalLt,
-        alt: "Intra Oral Buccal Lt View",
-        caption: "Contralateral anatomy reference",
-        modality: "Clinical View",
-        tags: ["comparison", "occlusion"],
+        alt: "Buccal Integration",
+        caption: "Intraoral buccal view",
+        modality: "Clinical Photography",
+        date: "2023-09-05",
+        tags: ["delivery", "integration"],
       },
       {
         img: IntraOralLtOcc,
-        alt: "Intra Oral Occlusal Lt View",
-        caption: "Occlusal relationship verification",
-        modality: "Functional Check",
-        tags: ["bite", "articulation"],
+        alt: "Occlusal Verification",
+        caption: "Intraoral occlusal view",
+        modality: "Clinical Photography",
+        date: "2023-09-05",
+        tags: ["occlusion", "function"],
       },
       {
         img: FrontalView,
-        alt: "IntraOral Frontal View",
-        caption: "Final prosthetic result",
-        modality: "Smile View",
-        tags: ["esthetic-result", "final"],
+        alt: "Final Restoration",
+        caption: "Intraoral frontal view",
+        modality: "Clinical Photography",
+        date: "2023-09-05",
+        tags: ["esthetic", "final"],
       },
       {
         img: PostOpPA,
-        alt: "Post Op PA Lt Side",
-        caption: "Implant positioning verification",
-        modality: "Periapical Radiograph",
-        tags: ["radiograph", "bone-level"],
+        alt: "Radiographic Verification",
+        caption: "Radiographic bone-implant interface",
+        modality: "Radiography",
+        date: "2023-09-05",
+        tags: ["bone", "integration"],
       },
     ],
     sections: {
       overview: {
-        title: "Patient Overview",
+        title: "Clinical Scenario",
         content: {
           patientProfile: {
             demographic: {
-              age: 58,
-              gender: "male",
+              age: "➞ 58 YO",
+              gender: "➞ Male",
+              occupation: "➞ Artist",
             },
             medicalHistory: {
-              systemic: ["Controlled diabetes"],
-              dental: ["Long-term RPD use (5 years)"],
+              systemic: ["Controlled HIV"],
+              dental: [
+                "Class I RPD (5 years)",
+                "Non-restorable #30",
+                "Moderate bruxism",
+              ],
             },
           },
           presentation: {
-            chiefComplaint: "RPD discomfort and functional limitations",
-            concerns: ["Chewing inefficiency", "RPD instability"],
+            chiefComplaint:
+              "I have heard about implants as an option before but , I wasn't prepared financially for it",
+            concerns: [
+              "❗️ RPD-induced gingival inflammation",
+              "❗️ Inadequate masticatory function",
+              "❗️ Esthetic compromise",
+            ],
             expectations: [
-              "Fixed restoration",
-              "Natural function restoration",
-              "Eliminate removable appliance",
+              "🔶 Fixed posterior solution",
+              "🔶 Natural chewing ability",
+              "🔶 No removable appliance",
             ],
           },
           clinicalAssessment: {
-            existingRestorations: {
-              teeth: ["#3"],
-              condition: [
-                "Adequate bone volume",
-                "Healthy peri-implant tissues",
+            existingConditions: {
+              "Edentulous Area (#30)": [
+                "➞ 9mm residual bone height",
+                "➞ 7mm ridge width",
+                "➞ Keratinized tissue: 3mm",
               ],
+              "Edentulous Area (#20-19)": [
+                "➞ 9mm residual bone height",
+                "➞ 7mm ridge width",
+                "➞ Keratinized tissue: 3mm",
+              ],
+              "Occlusal Factors": {
+                "Interarch Space": "➞ 8mm vertical",
+                "Opposing Dentition": "➞ Porcelain-fused-metal crown",
+                "Parafunctional Habits": "➞ Nighttime clenching",
+              },
             },
-            occlusion: {
-              classification: "Class I",
-              verticalDimension: "Maintained",
+            implantFactors: {
+              "Surgical Protocol": "Delayed loading (4 months)",
+              "Implant Specs": [
+                "➞ 4.3x10mm tissue-level",
+                "➞ 35Ncm insertion torque",
+                "➞ ISQ 72",
+              ],
             },
           },
         },
       },
       challenges: {
-        title: "Clinical Challenges",
         content: [
           {
-            id: "C1",
-            title: "Occlusal Load Management",
-            category: "Implantology",
+            id: "PI1",
+            title: "Biomechanical Loading",
+            category: "mechanics",
             details: {
               issues: [
-                "Single posterior implant support",
-                "Lever arm forces on cantilever",
+                "Cantilever forces on single implant",
+                "Bruxism-related overload risk",
+                "Limited bone density (D3)",
               ],
-              impact: "Risk of mechanical failure",
+              impact: "Potential screw loosening/component fracture",
             },
-            priority: "High",
+            priority: "critical",
           },
           {
-            id: "C2",
-            title: "Interarch Space Utilization",
-            category: "Prosthodontics",
+            id: "PI2",
+            title: "Prosthetic Space Management",
+            category: "design",
             details: {
               issues: [
-                "Limited mesiodistal space",
-                "Vertical height constraints",
+                "8mm interocclusal space limitation",
+                "Harmonizing with existing RPD",
+                "Emergence profile development",
               ],
-              impact: "Prosthetic design compromise",
+              observations: [
+                "Required custom abutment design",
+                "Monolithic material selection crucial",
+              ],
             },
-            priority: "Medium",
+            priority: "high",
+          },
+          {
+            id: "PI3",
+            title: "Biologic Integration",
+            category: "biology",
+            details: {
+              issues: [
+                "Maintaining peri-implant keratinized tissue",
+                "Subgingival contour optimization",
+                "Diabetic healing factors",
+              ],
+              impact: "Critical for long-term tissue stability",
+            },
+            priority: "high",
           },
         ],
       },
       solutions: {
-        title: "Treatment Strategy",
+        title: "Implant Rehabilitation Protocol",
         timeline: {
           phases: [
             {
               phase: 1,
-              duration: "2 weeks",
-              focus: "Diagnostic Planning",
+              duration: "Week 1-2",
+              focus: "Diagnostic Planning & Surgical Guide",
             },
             {
               phase: 2,
-              duration: "4 months",
-              focus: "Implant Integration",
+              duration: "Month 2-5",
+              focus: "Implant Integration & Healing",
             },
             {
               phase: 3,
-              duration: "2 weeks",
-              focus: "Prosthetic Rehabilitation",
+              duration: "Week 6-7",
+              focus: "Prosthetic Finalization",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Preoperative Planning",
+            title: "Prosthetically-Driven Planning",
             objectives: [
-              "3D bone volume assessment",
-              "Occlusal scheme design",
-              "Prosthetically driven implant placement",
+              "3D implant positioning",
+              "Surgical guide fabrication",
+              "Provisional design",
             ],
             procedures: [
               {
                 type: "CBCT Analysis",
-                outcome: "8.2mm bone width verified",
-                steps: [
-                  "DICOM data acquisition",
-                  "Virtual implant placement",
-                  "Surgical guide fabrication",
+                parameters: [
+                  "1mm safety margin from IAN",
+                  "4.3mm implant selection",
+                  "30° angled correction",
+                ],
+                outcome: "3D-printed surgical guide",
+              },
+              {
+                type: "Wax-up Design",
+                features: [
+                  "2mm occlusal reduction",
+                  "4mm emergence diameter",
+                  "Custom abutment blueprint",
                 ],
               },
             ],
           },
           {
             phase: 2,
-            title: "Implant Placement",
+            title: "Guided Surgery & Healing",
             objectives: [
-              "Optimal primary stability",
+              "Atraumatic placement",
               "Soft tissue preservation",
-              "Provisionalization",
+              "Osseointegration monitoring",
             ],
             procedures: [
               {
-                type: "Guided Surgery",
+                type: "Surgical Protocol",
                 technique: "Flapless approach",
-                outcome: "45Ncm insertion torque",
+                steps: [
+                  "Tissue punch technique",
+                  "Sequential osteotomy",
+                  "35Ncm torque final",
+                ],
               },
               {
-                type: "Healing Abutment",
-                dimensions: "5.0mm diameter",
-                outcome: "Soft tissue shaping achieved",
+                type: "Healing Phase",
+                protocol: [
+                  "4-month integration period",
+                  "Monthly soft tissue checks",
+                  "ISQ monitoring",
+                ],
               },
             ],
           },
@@ -235,19 +303,27 @@ const caseThirteen = {
             title: "Definitive Restoration",
             objectives: [
               "Passive fit verification",
-              "Occlusal harmony",
+              "Occlusal scheme optimization",
               "Esthetic integration",
             ],
             procedures: [
               {
-                type: "Custom Zirconia Abutment",
-                cement: "Resin-modified glass ionomer",
-                outcome: "15μm marginal gap",
+                type: "Custom Abutment",
+                material: "Titanium base",
+                specs: [
+                  "2° taper",
+                  "1mm subgingival margin",
+                  "6mm abutment height",
+                ],
               },
               {
-                type: "Monolithic Zirconia Crown",
-                shade: "A2",
-                outcome: "0.2mm occlusal adjustment",
+                type: "Crown Fabrication",
+                material: "Monolithic zirconia",
+                features: [
+                  "0.5mm occlusal table reduction",
+                  "Shade A2 with characterization",
+                  "Central fossa load distribution",
+                ],
               },
             ],
           },
@@ -257,32 +333,52 @@ const caseThirteen = {
         title: "Treatment Outcomes",
         metrics: {
           patientSatisfaction: {
-            aesthetic: 4.8,
+            aesthetic: 4.5,
             functional: 4.9,
-            overall: 4.8,
+            overall: 4.7,
+          },
+          technicalMetrics: {
+            "Marginal Bone Loss": "0.3mm (1-year)",
+            "Occlusal Contact": "20μm accuracy",
+            "Probing Depth": "≤3mm",
           },
         },
         content: {
           achievements: [
-            "100% RPD elimination on right side",
-            "580MPa fracture resistance",
-            "Implant stability quotient (ISQ): 82",
+            "Successful RPD elimination",
+            "98% masticatory efficiency restoration",
+            "Optimal papilla preservation",
+            "Zero screw loosening incidents",
           ],
-          patientFeedback: {
-            quote: "It feels like natural teeth again",
-            improvementsNoted: [
-              "Improved masticatory efficiency",
-              "Enhanced taste perception",
-            ],
-          },
           limitations: {
             noted: [
-              "Contralateral RPD still present",
-              "Annual maintenance required",
+              "Slight titanium translucency",
+              "2mm increased occlusal table",
+              "Nightguard compliance required",
             ],
-            futureConsiderations: [
-              "Left side implant planning",
-              "Nightguard provision",
+            corrections: [
+              "Added characterization staining",
+              "Occlusal adjustment protocol",
+              "Patient education program",
+            ],
+          },
+          technicalSuccess: {
+            implantStability: {
+              ISQ: "78 (1-year)",
+              BoneLoss: "🟢 Excellent",
+            },
+            crownPerformance: {
+              marginalFit: "🟢 Excellent",
+              occlusion: "🟡 Acceptable",
+              esthetics: "🟢 Excellent",
+            },
+          },
+          patientFeedback: {
+            quote: "I can finally eat nuts without worrying!",
+            improvementsNoted: [
+              "Natural chewing sensation",
+              "Easy to clean",
+              "No more gum sores",
             ],
           },
         },
@@ -290,4 +386,5 @@ const caseThirteen = {
     },
   },
 };
+
 export default caseThirteen;

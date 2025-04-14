@@ -17,7 +17,7 @@ import SinusLiftVideo from "../../../assets/images/sinusLift/Sinuslift.mp4";
 const caseSixteen = {
   id: 16,
   title: "Maxillary Sinus Lift Procedure",
-  categories: ["surgery", "implant"],
+  categories: ["surgery", "implant", "digital"],
   thumbnail: {
     img: ThumbnailImage,
     alt: "3D Reconstruction of Atrophic Maxilla",

@@ -8,6 +8,22 @@ const OutcomesGrid = ({ data }) => {
   const hasTechnicalSuccess = data?.technicalSuccess?.dentureStability;
 
   if (!hasAchievements && !hasFeedback && !hasLimitations && !hasTechnicalSuccess) return null;
+  const renderDentureItem = (label, data) => {
+    if (!data) return null;
+  
+    const { maxilla, mandible } = data;
+  
+    return (
+      <section>
+        <strong>{label}:</strong>
+        <ul>
+          {maxilla && <li><strong>Maxilla:</strong> {maxilla}</li>}
+          {mandible && <li><strong>Mandible:</strong> {mandible}</li>}
+        </ul>
+      </section>
+    );
+  };
+  
 
   return (
     <div className={styles.outcomesGrid}>
@@ -38,53 +54,38 @@ const OutcomesGrid = ({ data }) => {
         </div>
       )}
 
-{hasTechnicalSuccess && (
-  <div className={styles.outcomeSection}>
-    <h5>Technical Success</h5>
+      {hasTechnicalSuccess && (
+        <div className={styles.outcomeSection}>
+          <h5>Technical Success</h5>
 
-    {data.technicalSuccess.dentureStability && (
-      <div>
-        <strong>Stability:</strong>
-        <ul>
-          {data.technicalSuccess.dentureStability.maxilla && (
-            <li><strong>Maxilla:</strong> {data.technicalSuccess.dentureStability.maxilla}</li>
-          )}
-          {data.technicalSuccess.dentureStability.mandible && (
-            <li><strong>Mandible:</strong> {data.technicalSuccess.dentureStability.mandible}</li>
-          )}
-        </ul>
-      </div>
-    )}
+          <section>
+            <strong>Denture</strong>
+            <div className={styles.outcomeGroup}>
+              {renderDentureItem("Stability", data.technicalSuccess.dentureStability)}
+              {renderDentureItem("Retention", data.technicalSuccess.dentureRetention)}
+              {renderDentureItem("Support", data.technicalSuccess.dentureSupport)}
+            </div>
+          </section>
 
-    {data.technicalSuccess.dentureRetention && (
-      <div>
-        <strong>Retention:</strong>
-        <ul>
-          {data.technicalSuccess.dentureRetention.maxilla && (
-            <li><strong>Maxilla:</strong> {data.technicalSuccess.dentureRetention.maxilla}</li>
+          {data.technicalSuccess.crownFit && (
+            <section>
+              <strong>Crown Fit</strong>
+              <ul>
+                {data.technicalSuccess.crownFit.marginal && (
+                  <li><strong>Marginal:</strong> {data.technicalSuccess.crownFit.marginal}</li>
+                )}
+                {data.technicalSuccess.crownFit.axial && (
+                  <li><strong>Axial:</strong> {data.technicalSuccess.crownFit.axial}</li>
+                )}
+                 {data.technicalSuccess.crownFit.contacts && (
+                  <li><strong>Contacts:</strong> {data.technicalSuccess.crownFit.contacts}</li>
+                )}
+              </ul>
+            </section>
           )}
-          {data.technicalSuccess.dentureRetention.mandible && (
-            <li><strong>Mandible:</strong> {data.technicalSuccess.dentureRetention.mandible}</li>
-          )}
-        </ul>
-      </div>
-    )}
+        </div>
+      )}
 
-    {data.technicalSuccess.dentureSupport && (
-      <div>
-        <strong>Support:</strong>
-        <ul>
-          {data.technicalSuccess.dentureSupport.maxilla && (
-            <li><strong>Maxilla:</strong> {data.technicalSuccess.dentureSupport.maxilla}</li>
-          )}
-          {data.technicalSuccess.dentureSupport.mandible && (
-            <li><strong>Mandible:</strong> {data.technicalSuccess.dentureSupport.mandible}</li>
-          )}
-        </ul>
-      </div>
-    )}
-  </div>
-)}
 
 
       {hasLimitations && (
