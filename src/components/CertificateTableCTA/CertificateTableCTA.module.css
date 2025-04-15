@@ -1,0 +1,176 @@
+.container {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .modalTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tableWrapper {
+    overflow-x: auto;
+  }
+  .sortableHeader {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .headerContent {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    font-size: 0.95rem;
+  }
+  
+  .tableHead th {
+    padding: 1rem;
+    background-color: #f9fafb;
+    color: #333;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+    white-space: nowrap;
+  }
+  
+  .tableRow {
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .tableRow:hover {
+    background-color: #f6f8fa;
+  }
+  
+  .table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+    vertical-align: top;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  
+  .skillTag {
+    background-color: #e5f3ff;
+    color: #0366d6;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  .emptyState {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #777;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px dashed #ddd;
+  }
+  
+  .emptyIcon {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+  }
+  .summary {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background-color: #f7f9fc;
+    border: 1px solid #e1e7ef;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .summary h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1e1e1e;
+  }
+  
+  .summary ul {
+    padding-left: 1rem;
+    list-style: disc;
+  }
+  
+  .summary li {
+    margin-bottom: 0.5rem;
+  }
+  .summaryGrid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  .summaryCard {
+    background-color: #f7f9fc;
+    border: 1px solid #e1e7ef;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  
+  .summaryCard h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #333;
+  }
+  
+  .summaryCard p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0366d6;
+    margin: 0;
+  }
+  
+  .summaryList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .summaryList li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.25rem;
+  }
+  .countHighlight {
+    color: #0366d6;
+    font-weight: 500;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .modalTitle {
+      font-size: 1.4rem;
+    }
+  
+    .table {
+      font-size: 0.85rem;
+    }
+  
+    .skillTag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+  

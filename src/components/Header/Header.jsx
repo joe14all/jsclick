@@ -24,6 +24,7 @@ const Header = ({ isHomePage = false, currentPage = '', activeSection = '' }) =>
     { name: 'About', path: '/about' },
     { name: 'Resume', path: '/resume' },
     { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Other Experience', path: '/other-experience' }, 
     { name: 'Contact', path: '/contact' }
   ];
 

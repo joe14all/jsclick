@@ -14,24 +14,24 @@ const caseFifteen = {
     carousel: [
       {
         img: PreOPImage,
-        alt: "Pre-Operative Radiograph",
-        caption: "Periapical lesion with existing crown",
+        caption: "Pre-Operative Radiograph",
+        alt: "4-5mm Periapical Lesion with Underfilled MB1 & Missed ML",
         modality: "Periapical Radiograph",
-        tags: ["pre-op", "crown", "infection"],
+        tags: ["pre-op", "crown", "infection", "underfilled MB1", "missed ML"],
       },
       {
         img: PostOp1Image,
-        alt: "Post-Operative Radiograph",
-        caption: "Completed retreatment obturation",
+        caption: "Post-Operative Radiograph",
+        alt: "Completed Obturation with ML Negotiation (Minor Overfill)",
         modality: "Periapical Radiograph",
-        tags: ["post-op", "obturation"],
+        tags: ["post-op", "obturation", "bioceramic", "overfill"],
       },
       {
         img: PostOp2Image,
-        alt: "Final Restoration Radiograph",
-        caption: "Definitive crown placement",
+        caption: "Post Op - M Shift",
+        alt: "Zirconia Crown with Optimal Marginal Adaptation",
         modality: "Periapical Radiograph",
-        tags: ["post-op", "restoration"],
+        tags: ["post-op", "obturation", "bioceramic", "overfill", "shift"],
       },
     ],
     sections: {
@@ -48,7 +48,7 @@ const caseFifteen = {
               dental: [
                 "Previous RCT (3 years prior)",
                 "Crown placement #19",
-                "Adjacent premolar with post",
+                "Adjacent premolar (#18) with post",
               ],
             },
           },
@@ -69,17 +69,22 @@ const caseFifteen = {
             existingRestorations: {
               teeth: ["#19"],
               condition: [
-                "Full coverage crown",
-                "Inadequate obturation",
-                "Periapical radiolucency",
+                "Full coverage PFM crown",
+                "MB1 underfilled (2mm short)",
+                "ML missed",
+                "Distal canal partially treated",
               ],
             },
             pulpTest: {
               vitality: "Non-vital",
-              percussion: "Positive response",
+              percussion: "Positive response (+++)",
             },
             imagingFindings: {
-              CBCT: ["3mm periapical lesion", "MB2 canal identified"],
+              CBCT: [
+                "4-5mm periapical lesion (ICOI Class 2B)",
+                "ML canal confirmed 1mm palatal to MB1",
+                "Apical bifurcation present",
+              ],
             },
           },
         },
@@ -93,11 +98,11 @@ const caseFifteen = {
             category: "Restorative",
             details: {
               issues: [
-                "Existing PFM crown integrity",
+                "PFM crown marginal leakage",
                 "Limited access through crown",
-                "Risk of structural compromise",
+                "Risk of crown fracture during access",
               ],
-              impact: "Potential need for new crown fabrication",
+              impact: "Potential need for crown replacement",
             },
             priority: "High",
           },
@@ -107,11 +112,11 @@ const caseFifteen = {
             category: "Access",
             details: {
               issues: [
-                "Post in premolar (#20)",
+                "Post in #18 obstructing line of sight",
                 "Limited working space",
-                "Risk of post fracture",
+                "Risk of post fracture during instrumentation",
               ],
-              impact: "Compromised instrumentation access",
+              impact: "Compromised visibility for ML negotiation",
             },
             priority: "Medium",
           },
@@ -121,11 +126,11 @@ const caseFifteen = {
             category: "Anatomy",
             details: {
               issues: [
-                "Calcified MB2 canal",
-                "Apical bifurcation",
-                "Previous ledging",
+                "Calcified ML canal (confirmed via CBCT)",
+                "Apical bifurcation with lateral anastomoses",
+                "Previous ledging in distal canal",
               ],
-              impact: "Incomplete disinfection risk",
+              impact: "Increased risk of incomplete disinfection",
             },
             priority: "High",
           },
@@ -152,28 +157,28 @@ const caseFifteen = {
             phase: 1,
             title: "Minimally Invasive Retreatment",
             objectives: [
-              "Crown preservation attempt",
-              "Post removal in #20",
+              "Crown access without fracture",
+              "Post removal in #18",
               "Complete biofilm removal",
             ],
             procedures: [
               {
                 type: "CBCT Guidance",
-                outcome: "3D anatomy mapping",
-                technique: "Limited FOV scan",
+                outcome: "3D anatomy mapping (ML located 1mm palatal)",
+                technique: "Limited FOV scan (5x5cm)",
               },
               {
                 type: "Ultrasonic Post Removal",
                 steps: [
-                  "Piezoelectric tip activation",
+                  "Piezoelectric tip activation (Kavo Piezon Master)",
                   "Conservative dentin preservation",
-                  "Fiber post removal",
+                  "Carbon fiber post removal",
                 ],
-                outcome: "Adequate access achieved",
+                outcome: "Unobstructed access achieved",
               },
               {
                 type: "Laser Disinfection",
-                parameters: ["Er:YAG 2940nm", "15Hz pulse rate"],
+                parameters: ["Er:YAG 2940nm", "15Hz pulse rate", "2W power"],
                 outcome: "Biofilm reduction in complex anatomy",
               },
             ],
@@ -190,14 +195,19 @@ const caseFifteen = {
               {
                 type: "Bioceramic Obturation",
                 product: "EndoSequence BC Sealer",
-                technique: "Single-cone technique",
-                outcome: "3D adaptation confirmed",
+                technique: "Single-cone + Warm vertical compaction",
+                outcome:
+                  "3D adaptation confirmed (minor overfill in distal apex)",
               },
               {
                 type: "CAD/CAM Crown",
-                material: "Zirconia",
-                features: ["Bruxer design", "Extended margin coverage"],
-                outcome: "Optimal marginal seal",
+                material: "Monolithic zirconia",
+                features: [
+                  "Bruxer design",
+                  "Extended margin coverage",
+                  "Internal chamfer finish",
+                ],
+                outcome: "Optimal marginal seal (gap ≤50μm)",
               },
             ],
           },
@@ -218,17 +228,22 @@ const caseFifteen = {
         },
         content: {
           achievements: [
-            "Successful crown preservation",
+            "Crown replaced with zirconia (original PFM compromised)",
             "Complete symptom resolution",
             "Adjacent post maintained",
           ],
           patientFeedback: {
             quote: "I can finally chew without hesitation",
+            improvementsNoted: [
+              "Normal occlusion restored",
+              "No sensitivity episodes",
+            ],
           },
           limitations: {
             noted: [
-              "Slight crown margin discrepancy",
-              "Residual dentin thickness 1.2mm",
+              "Minor overfill in distal canal (0.3mm)",
+              "Residual dentin thickness 1.2mm (buccal)",
+              "PFM crown margins replaced due to leakage",
             ],
             futureConsiderations: [
               "Night guard fabrication",

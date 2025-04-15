@@ -1,0 +1,247 @@
+.sectionContainer {
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #6c63ff, #48c6ef);
+  display: block;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.subsection {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  border: 1px solid #e6e6e6;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2a2a2a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.subsection:hover {
+  transform: translateY(-6px);
+}
+
+.subsectionTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  border-left: 5px solid #6c63ff;
+  padding-left: 1rem;
+  color: #1a1a1a;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.subsectionImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.subsectionImage:hover {
+  transform: scale(1.02);
+}
+.certificateTitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+
+.subsectionContent {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+.subsectionContent p {
+  margin-bottom: 1rem;
+}
+
+.subsectionList {
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+.listItem {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.listItem::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #48c6ef;
+  font-size: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #f0f0f0;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sectionCTAs {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  min-width: 160px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: #6c63ff;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #574fd6;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.alternate {
+  flex-direction: row-reverse;
+}
+
+.alternate .imageContainer {
+  flex: 0 0 45%;
+}
+
+.alternate .subsectionContent {
+  flex: 1;
+}
+.certificatesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.certificateItem {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.certificateItem:hover {
+  transform: scale(1.05);
+}
+
+.certificateThumb {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modalWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreenPdf {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.closeButton:hover {
+  color: #ffdddd;
+}
+
+
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+
+  .subsection {
+    padding: 1.5rem;
+  }
+
+  .subsectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .alternate {
+    flex-direction: column;
+  }
+}

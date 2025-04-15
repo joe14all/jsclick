@@ -3,27 +3,35 @@ import PostOpImage from "../../../assets/images/MolarRetreatment/PostOp.jpg";
 
 const caseFourteen = {
   id: 14,
-  title: "Molar Retreatment - Missed Canal",
-  categories: ["endodontics"],
+  title: "Maxillary Molar Retreatment",
+  categories: ["endodontics", "retreatment"],
   thumbnail: {
     img: PostOpImage,
-    alt: "Post-treatment obturation",
+    alt: "3D Obturation with MB2 Negotiation",
   },
   caseStudy: {
     carousel: [
       {
         img: PreOpImage,
-        alt: "Pre-Operative Radiograph",
-        caption: "Pre-treatment infection evidence",
+        caption: "Preoperative Radiograph",
+        alt: "Residual Apical Periodontitis (5-6mm Radiolucency)",
         modality: "Periapical Radiograph",
-        tags: ["pre-op", "infection"],
+        date: "2023-05-09",
+        tags: [
+          "pre-op",
+          "digital",
+          "infection",
+          "missed MB2",
+          "underfilled MB1",
+        ],
       },
       {
         img: PostOpImage,
-        alt: "Post-Operative Radiograph",
-        caption: "Post-treatment obturation",
+        caption: "Postoperative Obturation",
+        alt: "Four-Canal Obturation with Bioceramics (MB2 Negotiated to WL)",
         modality: "Periapical Radiograph",
-        tags: ["post-op", "success"],
+        date: "2023-06-20",
+        tags: ["post-op", "CBCT-guided", "bioceramic", "apical seal"],
       },
     ],
     sections: {
@@ -32,111 +40,114 @@ const caseFourteen = {
         content: {
           patientProfile: {
             demographic: {
-              age: 42,
-              gender: "female",
+              age: "➞ 42 YO",
+              gender: "➞ Female",
+              occupation: "➞ Executive",
             },
             medicalHistory: {
-              systemic: ["Non-contributory"],
-              dental: ["Previous RCT (5 years prior)"],
+              systemic: ["ASA I", "Non-smoker"],
+              dental: [
+                "Previous RCT ➞ 2018 (General dentist)",
+                "CRRM ➞ High risk (Multiple retreatments)",
+              ],
             },
           },
           presentation: {
-            chiefComplaint: "Persistent dull ache in upper molar",
-            concerns: ["Chewing sensitivity", "Palpation tenderness"],
+            chiefComplaint:
+              "Chronic dull ache exacerbated by mastication with previous failed endodontic therapy",
+            concerns: [
+              "Recurrent sinus tract",
+              "Vertical root fracture suspicion",
+            ],
             expectations: [
-              "Infection resolution",
-              "Tooth preservation",
-              "Pain elimination",
+              "🔶 Definitive infection resolution",
+              "🔶 Functional restoration",
+              "🔶 Minimally invasive approach",
             ],
           },
           clinicalAssessment: {
-            existingRestorations: {
-              teeth: ["#3"],
-              condition: [
-                "Complex canal anatomy",
-                "Residual apical radiolucency",
-                "Previous inadequate obturation",
-              ],
+            findings: {
+              Tooth: "🦷#3",
+              "Thermal Pulp Test": "Non-vital",
+              "Percussion Test": "Localized tenderness++",
+              Mobility: "Miller Class I",
+              "Periodontal Status": "PD ≤4mm (Buccal pocket 5mm with exudate)",
             },
-            pulpTest: {
-              vitality: "Non-responsive",
-              percussion: "Tender",
+            radiographicFeatures: {
+              "Apical Lesion": "5-6mm radiolucency (ICOI Class 2B)",
+              "Canal Configuration": "Vertucci Type II (MB1-MB2) ",
+              "Existing Obturation": "MB1 Underfilled (3mm short), MB2 Missed",
             },
           },
         },
       },
       challenges: {
         title: "Clinical Challenges",
+        icon: "⚠️",
         content: [
           {
             id: "C1",
-            title: "Canal System Complexity",
+            title: "Missed MB2 Canal Management",
             category: "Anatomy",
             details: {
               issues: [
-                "MB2 canal presence suspected",
-                "Calcified canals",
-                "Gutta-percha remnants",
+                "Calcified MB2 orifice (C-shaped groove anatomy)",
+                "Dentinal map formation ➞ 0.5mm apical to MB1",
+                "Distal canals partially treated in prior RCT",
               ],
-              impact: "Risk of incomplete disinfection",
+              impact: "Persistent infection reservoir risk",
             },
-            priority: "High",
-          },
-          {
-            id: "C2",
-            title: "Adjacent Post Complication",
-            category: "Restorative",
-            details: {
-              issues: [
-                "Post in #4 complicating access",
-                "Risk of coronal fracture",
-                "Limited visualization",
-              ],
-              impact: "Iatrogenic damage risk",
-            },
-            priority: "Medium",
+            priority: "Critical",
           },
         ],
       },
       solutions: {
-        title: "Treatment Strategy",
+        title: "Retreatment Protocol",
         timeline: {
           phases: [
             {
               phase: 1,
-              duration: "2 visits",
-              focus: "Retreatment & Disinfection",
+              duration: "2 visits (7 days apart)",
+              focus: "Debridement & Calcium Hydroxide Medication",
             },
             {
               phase: 2,
               duration: "1 visit",
-              focus: "Definitive Obturation",
+              focus: "Bioceramic Obturation & Coronal Seal",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Canal Re-instrumentation",
+            title: "Debridement Phase",
             objectives: [
-              "MB2 canal localization",
-              "Residual GP removal",
-              "Apical patency establishment",
+              "Existing GP removal",
+              "Patency establishment",
+              "MB2 negotiation",
             ],
             procedures: [
               {
                 type: "CBCT Analysis",
-                outcome: "Confirmed MB2 anatomy",
-                technique: "Limited FOV scan",
+                parameters: [
+                  "Limited FOV (5x5cm)",
+                  "90μm voxel size",
+                  "Accuitomo 170",
+                ],
+                outcome:
+                  "MB2 confirmed 1.5mm palatal to MB1; Distal canals identified",
               },
               {
                 type: "Ultrasonic Retreatment",
-                steps: [
-                  "Coronal access refinement",
-                  "GP removal with rotary files",
-                  "17% EDTA irrigation",
+                instruments: ["ProUltra ENDO-2 tip", "Woodpecker RCT unit"],
+                sequence: [
+                  "Coronal zap ➞ 25% power",
+                  "GP removal ➞ H-file watch-winding",
                 ],
-                outcome: "All canals patent",
+                irrigation: [
+                  "Solvent protocol: Chloroform 0.5ml/canal",
+                  "17% EDTA + 2% CHX final rinse",
+                ],
               },
             ],
           },
@@ -144,21 +155,33 @@ const caseFourteen = {
             phase: 2,
             title: "Three-Dimensional Obturation",
             objectives: [
-              "Fluid-tight seal",
-              "Apical delta penetration",
-              "Coronal restoration",
+              "Hydraulic condensation",
+              "Apical control zone creation",
+              "Corono-apical seal",
             ],
             procedures: [
               {
-                type: "Bioceramic Sealer",
-                product: "TotalFill BC Sealer",
-                technique: "Warm vertical compaction",
-                outcome: "Homogeneous fill verified",
+                type: "Bioceramic Obturation",
+                technique: "Single-cone + Warm vertical compaction",
+                parameters: [
+                  "BC Sealer ➞ 3min working time",
+                  "System B ➞ 200°C, 5s dwell",
+                ],
+                qualityControl: [
+                  "Obturation length ±0.5mm from apex",
+                  "Sealer extrusion monitoring",
+                ],
               },
               {
-                type: "Composite Restoration",
-                material: "Bulk-fill composite",
-                outcome: "Occlusal seal achieved",
+                type: "Immediate Restoration",
+                materials: [
+                  "Bulk-fill composite (SDR)",
+                  "Universal adhesive (Scotchbond)",
+                ],
+                protocol: [
+                  "2mm horizontal matrix",
+                  "C-factor reduction technique",
+                ],
               },
             ],
           },
@@ -166,29 +189,42 @@ const caseFourteen = {
       },
       results: {
         title: "Treatment Outcomes",
+        icon: "✅",
         metrics: {
           patientSatisfaction: {
             painRelief: 4.9,
             functional: 4.7,
             overall: 4.8,
           },
+          proceduralSuccess: {
+            anatomyPreservation: 92,
+            complicationRate: 5,
+            obturationQuality: 4.7,
+          },
         },
         content: {
           achievements: [
-            "Complete symptom resolution",
-            "12-month radiographic success",
+            "MB2 negotiated to WL (21.5mm)",
+            "0% post-op flare-up",
+            "Complete sinus tract resolution",
           ],
           patientFeedback: {
-            quote: "The tooth feels completely normal now",
+            quote: "Finally pain-free after years of discomfort",
+            improvementsNoted: [
+              "Normal occlusion restored",
+              "No swelling episodes",
+            ],
           },
           limitations: {
             noted: [
-              "Adjacent premolar requires active survillance",
-              "Need for crown placement",
+              "0.2mm sealer extrusion in MB apex",
+              "Remaining dentin thickness 1.3mm (buccal)",
+              "Minor overfill in distal canal",
             ],
             futureConsiderations: [
-              "Full coverage restoration in 6 months",
-              "Annual radiographic monitoring",
+              "Full-coverage crown within 8 weeks",
+              "6/12/24-month PA recall protocol",
+              "Oral microbiome analysis (HOMIM)",
             ],
           },
         },
