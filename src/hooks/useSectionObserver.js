@@ -8,8 +8,8 @@ const useSectionObserver = (sectionIds) => {
     const isMobile = window.innerWidth < 768;
     const options = {
       root: null,
-      rootMargin: isMobile ? "-10% 0px -65% 0px" : "-10% 0px -50% 0px", // Adjust for mobile
-      threshold: isMobile ? 0.05 : 0.3, // Lower threshold for mobile
+      rootMargin: isMobile ? "-15% 0px -40% 0px" : "-20% 0px -20% 0px",
+      threshold: isMobile ? 0.05 : 0.3,
     };
 
     const observer = new IntersectionObserver((entries) => {

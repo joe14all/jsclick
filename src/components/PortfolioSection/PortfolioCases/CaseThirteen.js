@@ -3,6 +3,7 @@ import TissueMimic from "../../../assets/images/posteriorImplants/tissueMimc.jpg
 import CastBuccal from "../../../assets/images/posteriorImplants/castBuccal.jpg";
 import CastLingual from "../../../assets/images/posteriorImplants/castLingual.jpg";
 import CastOcc from "../../../assets/images/posteriorImplants/castOcc.jpg";
+import CastBite from "../../../assets/images/posteriorImplants/castBite.jpg";
 import CastFrontal from "../../../assets/images/posteriorImplants/castFrontal.jpg";
 import IntraOralBuccalRt from "../../../assets/images/posteriorImplants/IntraOralBuccal.jpg";
 import IntraOralBuccalLt from "../../../assets/images/posteriorImplants/IntraOralBuccalLt.jpg";
@@ -25,7 +26,7 @@ const caseThirteen = {
         alt: "Definitive Impression",
         caption: "Closed-tray impression technique",
         modality: "Lab Photography",
-        date: "2023-08-15",
+        date: "2021-04-20",
         tags: ["impression", "closed-tray", "pick-up"],
       },
       {
@@ -33,7 +34,7 @@ const caseThirteen = {
         alt: "Tissue Replication",
         caption: "Gingival mask technique",
         modality: "Lab Photography",
-        date: "2023-08-18",
+        date: "2021-05-06",
         tags: ["soft-tissue", "emergence"],
       },
       {
@@ -41,7 +42,7 @@ const caseThirteen = {
         alt: "Buccal Contour Analysis",
         caption: "Cast buccal view",
         modality: "Lab Photography",
-        date: "2023-08-20",
+        date: "2021-05-06",
         tags: ["contour", "buccal", "morphology"],
       },
       {
@@ -49,31 +50,39 @@ const caseThirteen = {
         alt: "Lingual Anatomy",
         caption: "Cast lingual view",
         modality: "Lab Photography",
-        date: "2023-08-20",
-        tags: ["lingual", "occlusion", "anatomy"],
+        date: "2021-05-06",
+        tags: ["lingual", "emergence", "anatomy"],
       },
       {
         img: CastOcc,
         alt: "Occlusal Scheme",
         caption: "Cast occlusal view",
         modality: "Lab Photography",
-        date: "2023-08-20",
-        tags: ["occlusion", "articulation"],
+        date: "2021-05-06",
+        tags: ["anatomy", "occlusal-table"],
       },
       {
         img: CastFrontal,
         alt: "Prosthetic Preview",
         caption: "Cast frontal view",
         modality: "Lab Photography",
-        date: "2023-08-22",
+        date: "2021-05-06",
         tags: ["wax-up", "esthetic"],
+      },
+      {
+        img: CastBite,
+        alt: "Bite",
+        caption: "Cast occlusal view",
+        modality: "Lab Photography",
+        date: "2021-05-06",
+        tags: ["occlusion", "articulation"],
       },
       {
         img: IntraOralBuccalRt,
         alt: "Buccal Integration",
         caption: "Intraoral buccal view",
         modality: "Clinical Photography",
-        date: "2023-09-05",
+        date: "2021-05-14",
         tags: ["delivery", "integration"],
       },
       {
@@ -81,7 +90,7 @@ const caseThirteen = {
         alt: "Buccal Integration",
         caption: "Intraoral buccal view",
         modality: "Clinical Photography",
-        date: "2023-09-05",
+        date: "2021-05-14",
         tags: ["delivery", "integration"],
       },
       {
@@ -89,7 +98,7 @@ const caseThirteen = {
         alt: "Occlusal Verification",
         caption: "Intraoral occlusal view",
         modality: "Clinical Photography",
-        date: "2023-09-05",
+        date: "2021-05-14",
         tags: ["occlusion", "function"],
       },
       {
@@ -97,7 +106,7 @@ const caseThirteen = {
         alt: "Final Restoration",
         caption: "Intraoral frontal view",
         modality: "Clinical Photography",
-        date: "2023-09-05",
+        date: "2021-05-14",
         tags: ["esthetic", "final"],
       },
       {
@@ -105,7 +114,7 @@ const caseThirteen = {
         alt: "Radiographic Verification",
         caption: "Radiographic bone-implant interface",
         modality: "Radiography",
-        date: "2023-09-05",
+        date: "2021-01-23",
         tags: ["bone", "integration"],
       },
     ],
@@ -120,12 +129,8 @@ const caseThirteen = {
               occupation: "➞ Artist",
             },
             medicalHistory: {
-              systemic: ["Controlled HIV"],
-              dental: [
-                "Class I RPD (5 years)",
-                "Non-restorable #30",
-                "Moderate bruxism",
-              ],
+              systemic: ["Controlled HIV", "Viral Load: undetectable"],
+              dental: ["Class I RPD (5 years)", "Partially edentulous"],
             },
           },
           presentation: {
@@ -143,192 +148,205 @@ const caseThirteen = {
             ],
           },
           clinicalAssessment: {
+            oralHygiene: { fair: "Patient is encouraged to improve his OHI." },
+            periodontalStatus: {
+              Generalized: "Stage II",
+              Grade: "A",
+            },
+            periodontalFindings: {
+              "Plaque Free Percentage": "50%",
+              "Bleeding Percentage": "10%",
+              "Probing Depths": "2-3mm",
+              "Recession Range": "1-4mm",
+              Mobility: "0",
+              "Gingival Status": "Generalized mild",
+            },
             existingConditions: {
-              "Edentulous Area (#30)": [
-                "➞ 9mm residual bone height",
-                "➞ 7mm ridge width",
-                "➞ Keratinized tissue: 3mm",
+              "Missing Teeth": [
+                "🦷#17",
+                "🦷#18",
+                "🦷#19",
+                "🦷#20",
+                "🦷#21",
+                "🦷#28",
+                "🦷#30",
+                "🦷#31",
+                "🦷#32",
               ],
-              "Edentulous Area (#20-19)": [
+              "Edentulous Areas (#21 & #28)": ["➞  Space collapsed"],
+              "Edentulous Area (#30)": [
+                "➞ 10mm residual bone height",
+                "➞ 7mm ridge width",
+                "➞ Keratinized tissue: 2mm",
+              ],
+              "Edentulous Areas (#19-20)": [
                 "➞ 9mm residual bone height",
                 "➞ 7mm ridge width",
                 "➞ Keratinized tissue: 3mm",
               ],
               "Occlusal Factors": {
-                "Interarch Space": "➞ 8mm vertical",
-                "Opposing Dentition": "➞ Porcelain-fused-metal crown",
+                "Occlusal Relationship": "➞ Posterior cross bite",
+
+                "Opposing Dentition":
+                  "➞ Porcelain-fused-metal crown & natural dentition",
                 "Parafunctional Habits": "➞ Nighttime clenching",
               },
-            },
-            implantFactors: {
-              "Surgical Protocol": "Delayed loading (4 months)",
-              "Implant Specs": [
-                "➞ 4.3x10mm tissue-level",
-                "➞ 35Ncm insertion torque",
-                "➞ ISQ 72",
-              ],
             },
           },
         },
       },
+
       challenges: {
         content: [
           {
             id: "PI1",
-            title: "Biomechanical Loading",
-            category: "mechanics",
+            title: "Post-Implant Periodontal Health Management",
+            category: "periodontics",
             details: {
               issues: [
-                "Cantilever forces on single implant",
-                "Bruxism-related overload risk",
-                "Limited bone density (D3)",
+                "Generalized Stage II periodontitis with mild gingival inflammation",
+                "Fair oral hygiene (OHI) requiring enhancement",
+                "Inadequate keratinized tissue in edentulous areas (#30: 2mm; #19-20: 3mm)",
               ],
-              impact: "Potential screw loosening/component fracture",
+              impact:
+                "Increased susceptibility to peri-implantitis and marginal bone loss without strict maintenance protocols.",
             },
-            priority: "critical",
+            priority: "High",
           },
           {
             id: "PI2",
-            title: "Prosthetic Space Management",
-            category: "design",
+            title: "Fixed Prosthesis Planning in Limited Bone Volume",
+            category: "prosthodontics",
             details: {
               issues: [
-                "8mm interocclusal space limitation",
-                "Harmonizing with existing RPD",
-                "Emergence profile development",
+                "Collapsed edentulous spaces (#21, #28)",
+                "Limited residual bone height (9mm) and ridge width (7mm)",
+                "Soft tissue recession and proximity of adjacent teeth",
               ],
-              observations: [
-                "Required custom abutment design",
-                "Monolithic material selection crucial",
-              ],
+              impact: "Possibility of cantilever prosthesis design",
             },
-            priority: "high",
+            priority: "High",
           },
           {
             id: "PI3",
-            title: "Biologic Integration",
-            category: "biology",
+            title: "Occlusal Management and Parafunctional Habits",
+            category: "occlusion",
             details: {
               issues: [
-                "Maintaining peri-implant keratinized tissue",
-                "Subgingival contour optimization",
-                "Diabetic healing factors",
+                "Posterior crossbite affecting interarch harmony",
+                "Nocturnal clenching habit",
               ],
-              impact: "Critical for long-term tissue stability",
+              impact:
+                "Uneven occlusal load increases the risk of prosthetic fractures and implant overloading.",
             },
-            priority: "high",
+            priority: "Medium",
           },
         ],
       },
+
       solutions: {
-        title: "Implant Rehabilitation Protocol",
         timeline: {
           phases: [
             {
               phase: 1,
-              duration: "Week 1-2",
-              focus: "Diagnostic Planning & Surgical Guide",
+              duration: "4–6 weeks",
+              focus: "Periodontal pre-conditioning & diagnostic planning",
             },
             {
               phase: 2,
-              duration: "Month 2-5",
-              focus: "Implant Integration & Healing",
+              duration: "6–8 months",
+              focus: "Implant surgery & osseointegration phase",
             },
             {
               phase: 3,
-              duration: "Week 6-7",
-              focus: "Prosthetic Finalization",
+              duration: "2–3 months",
+              focus: "Prosthetic delivery & occlusal equilibration",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Prosthetically-Driven Planning",
+            title: "Periodontal Conditioning & Case Planning",
             objectives: [
-              "3D implant positioning",
-              "Surgical guide fabrication",
-              "Provisional design",
+              "Resolve gingival inflammation",
+              "Verify bone dimensions via CBCT",
+              "Design prosthetically-driven wax-up for implant planning",
             ],
             procedures: [
               {
-                type: "CBCT Analysis",
-                parameters: [
-                  "1mm safety margin from IAN",
-                  "4.3mm implant selection",
-                  "30° angled correction",
-                ],
-                outcome: "3D-printed surgical guide",
+                type: "Non-surgical periodontal therapy",
+                parameters: ["Periodontal Maintenance"],
+                outcome:
+                  "Bleeding index reduced to 5% and plaque control improved to 80%",
               },
               {
-                type: "Wax-up Design",
+                type: "CAD/CAM Surgical Guide",
                 features: [
-                  "2mm occlusal reduction",
-                  "4mm emergence diameter",
-                  "Custom abutment blueprint",
+                  "CBCT-based digital planning",
+                  "Prosthetically-driven guide design",
+                  "Sleeve support for accurate drill angulation",
+                  "Soft tissue punch alignment",
+                  "Pre-op simulation for surgical predictability",
                 ],
               },
             ],
           },
           {
             phase: 2,
-            title: "Guided Surgery & Healing",
+            title: "Surgical Implant Placement Protocol",
             objectives: [
-              "Atraumatic placement",
-              "Soft tissue preservation",
-              "Osseointegration monitoring",
+              "Achieve optimal primary stability in narrow alveolar ridges",
+              "Address collapsed edentulous areas with strategic implant placement",
             ],
             procedures: [
               {
-                type: "Surgical Protocol",
-                technique: "Flapless approach",
+                type: "Two-stage implant surgery",
+                technique: "Crestal flap reflection approach",
                 steps: [
-                  "Tissue punch technique",
-                  "Sequential osteotomy",
-                  "35Ncm torque final",
+                  "Implant #30 & #19: 4.1mm × 10mm (Straumann BLT) placed at 35Ncm torque",
+                  "Implant #19: Two 3.3mm × 10mm (Straumann BLT) implants placed at 35Ncm torque",
+                  "Healing abutments (3.5mm height) secured",
                 ],
               },
               {
-                type: "Healing Phase",
+                type: "Impression protocol",
                 protocol: [
-                  "4-month integration period",
-                  "Monthly soft tissue checks",
-                  "ISQ monitoring",
+                  "Open-tray polyether (Impregum) impression at 8-week interval",
+                  "Verification jig used to confirm multi-unit accuracy",
                 ],
               },
             ],
           },
           {
             phase: 3,
-            title: "Definitive Restoration",
+            title: "Definitive Prosthetic Restoration",
             objectives: [
-              "Passive fit verification",
-              "Occlusal scheme optimization",
-              "Esthetic integration",
+              "Restore masticatory function and correct crossbite",
+              "Design occlusion to buffer parafunctional stress",
             ],
             procedures: [
               {
-                type: "Custom Abutment",
-                material: "Titanium base",
-                specs: [
-                  "2° taper",
-                  "1mm subgingival margin",
-                  "6mm abutment height",
+                type: "Implant-supported bridge",
+                material: "Porcelain-fused-to-metal on UCLA abutment",
+                features: [
+                  "0.5mm uniform framework thickness",
+                  "Occlusal contacts limited to deep bite—no lateral interferences",
                 ],
               },
               {
-                type: "Crown Fabrication",
-                material: "Monolithic zirconia",
+                type: "Occlusal guard",
+                material: "Hard acrylic (3mm thickness)",
                 features: [
-                  "0.5mm occlusal table reduction",
-                  "Shade A2 with characterization",
-                  "Central fossa load distribution",
+                  "Full-arch maxillary coverage",
+                  "Flat occlusal surface for load distribution during clenching",
                 ],
               },
             ],
           },
         ],
       },
+
       results: {
         title: "Treatment Outcomes",
         metrics: {
@@ -340,26 +358,24 @@ const caseThirteen = {
           technicalMetrics: {
             "Marginal Bone Loss": "0.3mm (1-year)",
             "Occlusal Contact": "20μm accuracy",
-            "Probing Depth": "≤3mm",
+            "Probing Depth": "≤4mm",
           },
         },
         content: {
           achievements: [
-            "Successful RPD elimination",
-            "98% masticatory efficiency restoration",
-            "Optimal papilla preservation",
-            "Zero screw loosening incidents",
+            "Elimination of removable partial denture (RPD)",
+            "Restoration of 98% chewing efficiency",
+            "Excellent papilla preservation",
+            "No incidents of screw loosening",
           ],
           limitations: {
             noted: [
-              "Slight titanium translucency",
-              "2mm increased occlusal table",
-              "Nightguard compliance required",
+              "Wider mesial space between tooth #22 and implant crown #20",
+              "Long-term compliance with nightguard use required",
             ],
             corrections: [
-              "Added characterization staining",
-              "Occlusal adjustment protocol",
-              "Patient education program",
+              "Enhanced patient instruction on interproximal cleaning",
+              "Educational reinforcement for long-term maintenance",
             ],
           },
           technicalSuccess: {
@@ -368,17 +384,17 @@ const caseThirteen = {
               BoneLoss: "🟢 Excellent",
             },
             crownPerformance: {
-              marginalFit: "🟢 Excellent",
-              occlusion: "🟡 Acceptable",
-              esthetics: "🟢 Excellent",
+              contacts: "🟢 Excellent",
+              esthetics: "🟡 Acceptable",
+              occlusion: "🟢 Excellent",
             },
           },
           patientFeedback: {
             quote: "I can finally eat nuts without worrying!",
             improvementsNoted: [
-              "Natural chewing sensation",
-              "Easy to clean",
-              "No more gum sores",
+              "Feels natural when chewing",
+              "Simple maintenance and hygiene",
+              "No more irritation from gums",
             ],
           },
         },

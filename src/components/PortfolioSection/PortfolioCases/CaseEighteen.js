@@ -13,236 +13,174 @@ const caseEighteen = {
     carousel: [
       {
         img: View2Image,
-        alt: "RPD Occlusal View",
-        caption: "Major connector design",
-        modality: "Clinical Photography",
-        tags: ["framework", "design", "occlusal"],
+        caption: "RPD Occlusal View",
+        alt: "Major connector design",
+        modality: "Laboratory Photography",
+        tags: ["Survey", "design", "RPD"],
       },
       {
         img: View1Image,
-        alt: "RPD Lateral View",
-        caption: "Retentive element placement",
-        modality: "Clinical Photography",
-        tags: ["retention", "prosthesis", "lingual"],
+        caption: "RPD Lateral View",
+        alt: "Retentive element placement",
+        modality: "Laboratory Photography",
+        tags: ["Survey", "design", "RPD"],
       },
     ],
     sections: {
       overview: {
         title: "Clinical Scenario",
         content: {
-          patientProfile: {
-            demographic: {
-              age: 62,
-              gender: "male",
-            },
-            medicalHistory: {
-              systemic: ["Non-smoker", "Well-controlled diabetes"],
-              dental: ["Partial edentulism (Kennedy Class II)"],
-            },
+          simulationContext: {
+            program: "UCLA General Clinic – Clinical Simulation",
+            objective:
+              "Perform surveying and design of a Removable Partial Denture (RPD)",
+            difficultyLevel: "Low",
+            modelType: "Poured Cast Model",
           },
-          presentation: {
-            chiefComplaint: "Difficulty chewing and aesthetic concerns",
-            concerns: [
-              "Existing prosthesis instability",
-              "Tissue irritation",
-              "Compromised masticatory efficiency",
+          proceduralFocus: {
+            keySkills: [
+              "Identifying appropriate path of insertion",
+              "Marking survey lines and undercuts",
+              "Selecting suitable major and minor connectors",
+              "Designing retentive, support, and bracing elements",
             ],
-            expectations: [
-              "Stable retention",
-              "Natural aesthetics",
-              "Comfortable function",
+            successCriteria: [
+              "Framework design follows biomechanical principles",
+              "All components harmonize with existing oral structures",
+              "Retention and support are maximized without compromising comfort",
+              "Design is clearly marked and accurately transferred to the lab form",
             ],
-          },
-          clinicalAssessment: {
-            oralCondition: {
-              "Remaining Teeth": ["#22", "#23", "#27", "#28"],
-              "Abutment Status": [
-                "Adequate periodontal support",
-                "2mm clinical crown height",
-                "Satisfactory occlusal plane",
-              ],
-            },
-            diagnosticData: {
-              "🦷 Study Modals": ["Modified Kennedy classification"],
-              Radiograph: ["Uniform bone level - 2mm crestal bone loss"],
-            },
           },
         },
       },
+
       challenges: {
         title: "Design Complexities",
         content: [
           {
             id: "DC1",
-            title: "Biomechanical Equilibrium",
-            category: "Force Distribution",
+            title: "Biomechanical Balance",
+            category: "Biomechanical",
             details: {
               issues: [
-                "Differential support (tooth-tissue borne)",
-                "Lever arm effect management",
-                "Occlusal load balancing",
+                "Managing forces in tooth-tissue supported areas",
+                "Preventing rotational movement around fulcrum lines",
               ],
-              impact: "Risk of abutment overload",
+              impact: "Potential for abutment stress and tissue irritation",
             },
             priority: "Critical",
           },
           {
             id: "DC2",
-            title: "Aesthetic-Conflict",
-            category: "Anterior Zone",
+            title: "Aesthetic-Retention Compromise",
+            category: "esthetics",
             details: {
               issues: [
-                "I-bar vs circumferential clasp dilemma",
-                "Prosthesis border visibility",
-                "Lip support requirements",
+                "Balancing clasp visibility with adequate retention",
+                "Preserving facial aesthetics while ensuring prosthesis stability",
               ],
-              impact: "Patient self-consciousness risk",
+              impact: "Reduced patient satisfaction due to visible components",
             },
             priority: "High",
           },
         ],
       },
+
       solutions: {
         title: "Prosthetic Strategy",
         timeline: {
           phases: [
             {
               phase: 1,
-              duration: "Diagnostic Phase",
-              focus: "Treatment Planning",
+              duration: "Preclinical Phase",
+              focus: "Surveying & Design Planning",
             },
             {
               phase: 2,
-              duration: "Technical Phase",
-              focus: "Digital Design & Fabrication",
-            },
-            {
-              phase: 3,
-              duration: "Delivery Phase",
-              focus: "Patient Adaptation",
+              duration: "Design Execution",
+              focus: "Framework Blueprint Finalization",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Biomechanical Planning",
+            title: "RPD Surveying & Planning",
             objectives: [
-              "Optimal support distribution",
-              "Path of insertion determination",
-              "Aesthetic component positioning",
+              "Establish a clear path of insertion",
+              "Identify ideal undercut locations",
+              "Design components in harmony with soft and hard tissues",
             ],
             procedures: [
               {
-                type: "Digital Surveying",
-                software: "3Shape Dental System",
-                parameters: [
-                  "0.25mm undercut target",
-                  "Guiding plane optimization",
+                type: "Manual Surveying",
+                tools: ["Surveyor arm", "Analyzing rod", "Undercut gauge"],
+                keySteps: [
+                  "Tilt cast to optimize guiding planes",
+                  "Mark survey lines and undercuts",
+                  "Record path of insertion",
                 ],
-                outcome: "Ideal clasp position mapping",
+                outcome: "Baseline anatomical map for design decisions",
               },
               {
-                type: "Design Validation",
-                method: "Diagnostic Wax-up",
-                evaluation: ["Silicone index verification"],
+                type: "Design Drafting",
+                method: "Pencil Mark-up on Cast",
+                components: [
+                  "Major connector location",
+                  "Clasp assemblies",
+                  "Rest seats and guiding planes",
+                ],
+                outcome: "Complete RPD design map ready for lab communication",
               },
             ],
           },
           {
             phase: 2,
-            title: "CAD/CAM Fabrication",
+            title: "Design Validation",
             objectives: [
-              "Precision framework fit",
-              "Non-interfering design",
-              "Durability assurance",
+              "Verify design for retention and support",
+              "Minimize aesthetic compromise",
+              "Ensure biomechanical stability",
             ],
             procedures: [
               {
-                type: "Framework Design",
-                components: [
-                  "Lingual plate major connector",
-                  "RPI clasp system",
-                  "Mesial occlusal rests",
-                ],
-                material: "Cobalt-Chromium Alloy",
-                technology: "SLM 3D Printing",
-              },
-              {
-                type: "Prosthesis Finalization",
-                steps: [
-                  "Acrylic resin base processing",
-                  "Tooth characterization",
-                  "Polishing protocol",
-                ],
-              },
-            ],
-          },
-          {
-            phase: 3,
-            title: "Clinical Implementation",
-            objectives: [
-              "Passive fit achievement",
-              "Occlusal harmony",
-              "Patient education",
-            ],
-            procedures: [
-              {
-                type: "Insertion Protocol",
-                checks: [
-                  "Framework adaptation <50μm",
-                  "Equal bilateral retention",
-                  "Disclusion in excursive movements",
+                type: "Design Review",
+                method: "Instructor or Peer Feedback",
+                considerations: [
+                  "Justification of component choices",
+                  "Visual harmony and minimal display",
+                  "Force distribution strategies",
                 ],
               },
               {
-                type: "Maintenance Plan",
-                schedule: [
-                  "24h adjustment",
-                  "1-week follow-up",
-                  "6-month recalls",
-                ],
-                instructions: [
-                  "Insertion/removal technique",
-                  "Hygiene maintenance protocol",
-                ],
+                type: "Final Approval",
+                step: "Design transfer to lab form",
+                notes: "Ensure clarity and completeness for lab processing",
               },
             ],
           },
         ],
       },
+
       results: {
-        title: "Treatment Outcomes",
         metrics: {
-          functionalAssessment: {
-            chewingEfficiency: "89% improvement",
-            retentionForce: "1.5N ± 0.2N",
+          proceduralSuccess: {
+            pathOfInsertionClarity: "95%",
+            undercutIdentificationAccuracy: "92%",
+            designCompleteness: "100%",
           },
-          patientSatisfaction: {
-            comfort: 4.8,
-            aesthetics: 4.6,
-            function: 4.7,
+          skillDevelopment: {
+            surveyorHandlingProficiency: "High",
+            designRationaleArticulation: "Improved",
           },
         },
         content: {
           achievements: [
-            "0.3mm framework adaptation accuracy",
-            "Harmonious gingival interface",
-            "Balanced occlusal contacts",
+            "Accurate identification of favorable undercuts for clasp placement",
+            "Well-aligned guiding planes and rest seat positioning",
+            "Framework components designed in harmony with anatomical structures",
+            "Clear lab communication form with justified design rationale",
           ],
-          technicalSuccess: {
-            collaboration: [
-              "3 design iterations",
-              "4h chairside time reduction",
-            ],
-          },
-          patientFeedback: {
-            quote: "Feels more secure than my previous denture",
-          },
-          longTermMaintenance: {
-            "6-month": "No tissue pathology observed",
-            "12-month": "0.1mm crestal bone loss",
-          },
         },
       },
     },

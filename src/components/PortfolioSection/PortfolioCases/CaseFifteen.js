@@ -14,24 +14,27 @@ const caseFifteen = {
     carousel: [
       {
         img: PreOPImage,
-        caption: "Pre-Operative Radiograph",
+        caption: "Pre-Op",
         alt: "4-5mm Periapical Lesion with Underfilled MB1 & Missed ML",
         modality: "Periapical Radiograph",
         tags: ["pre-op", "crown", "infection", "underfilled MB1", "missed ML"],
+        date: "2022-10-17",
       },
       {
         img: PostOp1Image,
-        caption: "Post-Operative Radiograph",
-        alt: "Completed Obturation with ML Negotiation (Minor Overfill)",
+        caption: "Post-Op",
+        alt: "Completed Obturation with ML Negotiation ",
         modality: "Periapical Radiograph",
-        tags: ["post-op", "obturation", "bioceramic", "overfill"],
+        tags: ["post-op", "obturation", "bioceramic"],
+        date: "2022-10-17",
       },
       {
         img: PostOp2Image,
-        caption: "Post Op - M Shift",
-        alt: "Zirconia Crown with Optimal Marginal Adaptation",
+        caption: "Post-Op  M Shift",
+        alt: "Completed Obturation with ML Negotiation ( M shift) ",
         modality: "Periapical Radiograph",
         tags: ["post-op", "obturation", "bioceramic", "overfill", "shift"],
+        date: "2022-10-17",
       },
     ],
     sections: {
@@ -40,50 +43,39 @@ const caseFifteen = {
         content: {
           patientProfile: {
             demographic: {
-              age: 45,
-              gender: "male",
+              age: "➞ 53 YO",
+              gender: "➞ Male",
+              occupation: "➞ Contractor",
             },
             medicalHistory: {
-              systemic: ["Hypertension (controlled)"],
+              systemic: ["ASA II", "Hypertension (controlled)"],
               dental: [
                 "Previous RCT (3 years prior)",
-                "Crown placement #19",
-                "Adjacent premolar (#18) with post",
+                "Crown placement #18 with post",
               ],
             },
           },
           presentation: {
             chiefComplaint: "Persistent discomfort in lower left molar",
             concerns: [
-              "Tenderness on percussion",
-              "Mild buccal swelling",
-              "Chewing discomfort",
+              "❗️ Tenderness on percussion",
+              "❗️ Mild buccal swelling",
+              "❗️ Chewing discomfort",
             ],
             expectations: [
-              "Complete infection resolution",
-              "Preservation of existing crown",
-              "Restoration of function",
+              "🔶 Complete infection resolution",
+              "🔶 Preservation of tooth",
+              "🔶 Restoration of function",
             ],
           },
           clinicalAssessment: {
-            existingRestorations: {
-              teeth: ["#19"],
-              condition: [
-                "Full coverage PFM crown",
-                "MB1 underfilled (2mm short)",
-                "ML missed",
-                "Distal canal partially treated",
-              ],
-            },
-            pulpTest: {
-              vitality: "Non-vital",
-              percussion: "Positive response (+++)",
-            },
-            imagingFindings: {
-              CBCT: [
-                "4-5mm periapical lesion (ICOI Class 2B)",
-                "ML canal confirmed 1mm palatal to MB1",
-                "Apical bifurcation present",
+            findings: {
+              Tooth: "🦷#18",
+              "Full coverage PFM crown": ["➞ Open D Margin"],
+              Canals: [
+                "➞ MB & ML under-filled ",
+                "➞ Distal missed",
+                "➞ Distal canal has threaded metal post",
               ],
             },
           },
@@ -94,160 +86,195 @@ const caseFifteen = {
         content: [
           {
             id: "C1",
-            title: "Crown Preservation",
-            category: "Restorative",
+            title: "Access",
+            category: "technique",
             details: {
               issues: [
                 "PFM crown marginal leakage",
                 "Limited access through crown",
                 "Risk of crown fracture during access",
               ],
-              impact: "Potential need for crown replacement",
+              impact: "Potential risk of perforation",
             },
-            priority: "High",
+            priority: "Critical",
           },
           {
             id: "C2",
-            title: "Adjacent Post Interference",
-            category: "Access",
+            title: "Canal Negotiation & Obstruction",
+            category: "anatomy",
             details: {
               issues: [
-                "Post in #18 obstructing line of sight",
-                "Limited working space",
-                "Risk of post fracture during instrumentation",
+                "Distal canal previously missed",
+                "Threaded metal post obstructing canal entry",
+                "Under-filled MB and ML canals with calcification risk",
               ],
-              impact: "Compromised visibility for ML negotiation",
-            },
-            priority: "Medium",
-          },
-          {
-            id: "C3",
-            title: "Canal System Complexity",
-            category: "Anatomy",
-            details: {
-              issues: [
-                "Calcified ML canal (confirmed via CBCT)",
-                "Apical bifurcation with lateral anastomoses",
-                "Previous ledging in distal canal",
-              ],
-              impact: "Increased risk of incomplete disinfection",
+              impact:
+                "Complex canal anatomy and obstructions compromise disinfection and complete obturation",
             },
             priority: "High",
           },
+          {
+            id: "C3",
+            title: "Restorative Prognosis",
+            category: "restoration",
+            details: {
+              issues: [
+                "Existing post limits re-treatment flexibility",
+                "Open distal margin jeopardizing coronal seal",
+              ],
+              impact:
+                "Long-term prognosis relies on achieving both apical and coronal seal ",
+            },
+            priority: "Moderate",
+          },
         ],
       },
+
       solutions: {
-        title: "Treatment Strategy",
         timeline: {
           phases: [
             {
               phase: 1,
-              duration: "2 visits",
-              focus: "Crown Access & Retreatment",
+              duration: "Day 1–3",
+              focus: "Post & Crown Removal, Canal Re-treatment",
             },
             {
               phase: 2,
-              duration: "1 visit",
-              focus: "Definitive Restoration",
+              duration: "Day 4–7",
+              focus: "Obturation & Definitive Restoration",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Minimally Invasive Retreatment",
+            title: "Access & Endodontic Retreatment",
             objectives: [
-              "Crown access without fracture",
-              "Post removal in #18",
-              "Complete biofilm removal",
+              "Safe removal of post and PFM crown",
+              "Locate and instrument all canals",
+              "Disinfect system thoroughly before obturation",
             ],
             procedures: [
               {
-                type: "CBCT Guidance",
-                outcome: "3D anatomy mapping (ML located 1mm palatal)",
-                technique: "Limited FOV scan (5x5cm)",
-              },
-              {
-                type: "Ultrasonic Post Removal",
-                steps: [
-                  "Piezoelectric tip activation (Kavo Piezon Master)",
-                  "Conservative dentin preservation",
-                  "Carbon fiber post removal",
+                type: "Crown & Post Removal",
+                instruments: [
+                  "T-bar",
+                  "Ultrasonic scaler",
+                  "Post extractor kit",
                 ],
-                outcome: "Unobstructed access achieved",
+                protocol: [
+                  "Section crown at CEJ to facilitate removal",
+                  "Apply ultrasonic energy to weaken cement interface",
+                  "Use reverse torque to disengage threaded post",
+                ],
+                mechanical: ["Avoid root fracture during post retrieval"],
+                outcome: "Crown and post removed without damage to root",
               },
               {
-                type: "Laser Disinfection",
-                parameters: ["Er:YAG 2940nm", "15Hz pulse rate", "2W power"],
-                outcome: "Biofilm reduction in complex anatomy",
+                type: "Temporary Crown Placement",
+                material: "Bis-acryl resin",
+                features: ["Protective sealing", "Maintains occlusal function"],
+                process: [
+                  "Fabricate chairside temporary crown",
+                  "Ensure marginal adaptation and light occlusion",
+                  "Cement with non-eugenol temporary luting agent",
+                ],
+              },
+              {
+                type: "Canal Re-instrumentation",
+                instruments: ["C+ files", "Hand K-files", "Rotary NiTi system"],
+                strategy: "Step-back technique with copious irrigation",
+                biological: ["NaOCl 5.25%", "EDTA rinse", "CHX final rinse"],
+                activation: ["Sonic agitation", "Paper point drying"],
+                checks: ["Working length via apex locator and radiographs"],
               },
             ],
           },
           {
             phase: 2,
-            title: "Restorative Rehabilitation",
+            title: "Obturation & Definitive Crown Fabrication",
             objectives: [
-              "Coronal seal establishment",
-              "Functional occlusion",
-              "Aesthetic integration",
+              "Three-dimensional canal obturation",
+              "Ensure coronal seal integrity",
+              "Fabricate and seat final crown",
             ],
             procedures: [
               {
-                type: "Bioceramic Obturation",
-                product: "EndoSequence BC Sealer",
-                technique: "Single-cone + Warm vertical compaction",
-                outcome:
-                  "3D adaptation confirmed (minor overfill in distal apex)",
+                type: "Obturation Protocol",
+                technique: "Warm vertical compaction",
+                materials: ["Gutta-percha", "Bioceramic sealer"],
+                parameters: [
+                  "All three canals obturated to WL",
+                  "No voids or overextension on radiograph",
+                ],
+                outcome: "Apical and coronal seal confirmed",
               },
               {
-                type: "CAD/CAM Crown",
-                material: "Monolithic zirconia",
-                features: [
-                  "Bruxer design",
-                  "Extended margin coverage",
-                  "Internal chamfer finish",
+                type: "Core Build-Up",
+                material: "Dual-cure composite resin",
+                strategy: "Reinforce remaining structure before crown prep",
+                protocol: [
+                  "Bonding agent application",
+                  "Layered bulk fill",
+                  "Occlusal and axial contouring",
                 ],
-                outcome: "Optimal marginal seal (gap ≤50μm)",
+              },
+              {
+                type: "Final Crown Fabrication",
+                materials: ["Zirconia", "Resin modified GI"],
+                instruments: ["Digital scanner"],
+                sequence: [
+                  "Tooth prep with 1.5mm occlusal reduction",
+                  "Digital or analog impression",
+                  "Lab-fabricated zirconia crown",
+                  "Cementation under isolation",
+                ],
+                checks: ["Occlusion", "Contact", "Marginal fit"],
+                outcome:
+                  "Final crown seated with functional and esthetic integration",
               },
             ],
           },
         ],
       },
+
       results: {
-        title: "Treatment Outcomes",
         metrics: {
           patientSatisfaction: {
             painRelief: 5.0,
             functional: 4.8,
             aesthetic: 4.7,
           },
-          radiographicSuccess: {
-            "3-month": "Lesion size reduction 80%",
-            "12-month": "Complete bone healing",
+          proceduralSuccess: {
+            anatomyPreservation: 100,
+            complicationRate: 2,
+            obturationQuality: 4.8,
           },
         },
         content: {
           achievements: [
-            "Crown replaced with zirconia (original PFM compromised)",
-            "Complete symptom resolution",
-            "Adjacent post maintained",
+            " Threaded post removed without root damage",
+            " Missed distal canal located and treated",
+            " All canals instrumented and obturated to working length",
+            " Temporary crown maintained function and comfort between visits",
+            " New zirconia crown provided strong marginal integrity and esthetics",
           ],
           patientFeedback: {
             quote: "I can finally chew without hesitation",
             improvementsNoted: [
-              "Normal occlusion restored",
-              "No sensitivity episodes",
+              " No more pain on biting",
+              " Chewing efficiency restored",
+              " Crown fits and feels natural",
             ],
           },
           limitations: {
             noted: [
-              "Minor overfill in distal canal (0.3mm)",
-              "Residual dentin thickness 1.2mm (buccal)",
-              "PFM crown margins replaced due to leakage",
+              "Initial access was technically challenging due to the metal post and prior crown",
+              "Slight gingival irritation during temporary phase (resolved after final cementation)",
             ],
             futureConsiderations: [
-              "Night guard fabrication",
-              "Annual radiographic follow-up",
+              "Periodic follow-up to monitor apical healing via radiographs",
+              "Oral hygiene reinforcement to maintain crown margins",
             ],
           },
         },

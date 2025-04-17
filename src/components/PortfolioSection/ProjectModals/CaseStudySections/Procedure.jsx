@@ -29,8 +29,10 @@ const renderNestedList = (data, depth = 0) => {
     { label: 'Timeline', data: procedure.timeline },
     { label: 'Metrics', data: procedure.metrics },
     { label: 'Materials', data: procedure.materials },
+    { label: 'System', data: procedure.system},
     { label: 'Parameters', data: procedure.parameters },
     { label: 'Sequence', data: procedure.sequence },
+    
     { label: 'Instruments', data: procedure.instruments },
     { label: 'Strategies', data: procedure.strategies },
     { label: 'Steps', data: procedure.steps },
@@ -49,7 +51,14 @@ const renderNestedList = (data, depth = 0) => {
     { label: 'Checks', data: procedure.checks},
     { label: 'Schedule', data: procedure.schedule},
     { label: 'Considerations', data: procedure.considerations},
+    { label: 'Quality Control', data: procedure.qualityControl},
+    { label: 'Irrigation', data: procedure.irrigation},
+    { label: 'Finishing', data: procedure.finishing },
+    { label: 'Tools', data: procedure.tools },
+    { label: 'Key Steps', data: procedure.keySteps },
+    { label: 'Components', data: procedure.components },
 
+  
 
 
 
@@ -77,6 +86,11 @@ const renderNestedList = (data, depth = 0) => {
         {procedure.software && <div><strong>Software:</strong> {procedure.software}</div>}
         {procedure.material && <div><strong>Material:</strong> {procedure.material}</div>}
         {procedure.technique && <div><strong>Technique:</strong> {procedure.technique}</div>}
+        {procedure.method && <div><strong>Method:</strong> {procedure.method}</div>}
+        {procedure.type && <div><strong>Type:</strong> {procedure.type}</div>}
+        {procedure.step && <div><strong>Step:</strong> {procedure.step}</div>}
+        {procedure.notes && <div><strong>Notes:</strong> {procedure.notes}</div>}
+        
         {procedure.outcome && <div className={styles.procedureOutcome}><strong>Outcome ➞</strong> {procedure.outcome}</div>}
       </div>
     </div>

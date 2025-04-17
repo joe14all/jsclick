@@ -48,7 +48,6 @@ const caseSix = {
     ],
     sections: {
       overview: {
-        title: "Simulation Overview",
         content: {
           simulationContext: {
             program: "UCLA General Clinic - Clinical Simulation",
@@ -99,7 +98,7 @@ const caseSix = {
             details: {
               issues: [
                 "Restricted straight-line access",
-                "High flexural stress on files",
+                "High flexure stress on files",
                 "Potential for inadequate apical preparation",
               ],
               impact:

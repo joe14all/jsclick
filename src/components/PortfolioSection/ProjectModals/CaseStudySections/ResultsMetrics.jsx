@@ -113,6 +113,25 @@ const ResultsMetrics = ({ metrics }) => {
             <span className={styles.metricValue}>{metrics.proceduralSuccess.fractureResistance}%</span>
           </div>
         )}
+            {metrics.proceduralSuccess.pathOfInsertionClarity && (
+      <div className={styles.metricRow}>
+        <span className={styles.metricText}>📐 Path of Insertion Clarity</span>
+        <span className={styles.metricValue}>{metrics.proceduralSuccess.pathOfInsertionClarity}</span>
+      </div>
+    )}
+    {metrics.proceduralSuccess.undercutIdentificationAccuracy && (
+      <div className={styles.metricRow}>
+        <span className={styles.metricText}>📊 Undercut Identification Accuracy</span>
+        <span className={styles.metricValue}>{metrics.proceduralSuccess.undercutIdentificationAccuracy}</span>
+      </div>
+    )}
+    {metrics.proceduralSuccess.designCompleteness && (
+      <div className={styles.metricRow}>
+        <span className={styles.metricText}>✅ Design Completeness</span>
+        <span className={styles.metricValue}>{metrics.proceduralSuccess.designCompleteness}</span>
+      </div>
+    )}
+   
         </div>
       )}
 
@@ -132,6 +151,19 @@ const ResultsMetrics = ({ metrics }) => {
               <span className={styles.metricValue}>{metrics.skillDevelopment.errorReduction}</span>
             </div>
           )}
+          {metrics.skillDevelopment.surveyorHandlingProficiency && (
+      <div className={styles.metricRow}>
+        <span className={styles.metricText}>🛠️ Surveyor Handling</span>
+        <span className={styles.metricValue}>{metrics.skillDevelopment.surveyorHandlingProficiency}</span>
+      </div>
+    )}
+    {metrics.skillDevelopment.designRationaleArticulation && (
+      <div className={styles.metricRow}>
+        <span className={styles.metricText}>🗣️ Design Rationale</span>
+        <span className={styles.metricValue}>{metrics.skillDevelopment.designRationaleArticulation}</span>
+      </div>
+    )}
+ 
         </div>
       )}
     </div>

@@ -2,7 +2,7 @@
 import styles from './FilterButton.module.css';
 const categories = [
   'all', 'restorative', 'implant', 'cosmetic', 
-  'endodontics', 'prosthodontics', 'surgery', 'digital'
+  'endodontics', 'prosthodontics', 'surgery', 'digital', 'aligners'
 ];
 
 const FilterButtons = ({ activeFilter, setActiveFilter }) => (

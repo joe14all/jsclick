@@ -15,6 +15,7 @@ const Header = ({ isHomePage = false, currentPage = '', activeSection = '' }) =>
     { name: 'Portfolio', path: '#featured-work' },
     { name: 'Skills', path: '#services' },
     { name: 'Achievements', path: '#achievements' },
+    { name: 'Testimonials', path: '#testimonials' },
     { name: 'Collaborations', path: '#clients' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -60,8 +61,8 @@ const Header = ({ isHomePage = false, currentPage = '', activeSection = '' }) =>
           links={navLinks}
           isMenuOpen={isMenuOpen}
           closeMenu={() => setIsMenuOpen(false)}
-          isHomePage={isHomePage} // Pass isHomePage to handle smooth scroll links
-          activeSection={activeSection} // ✅ Pass activeSection for underlining current section
+          isHomePage={isHomePage} 
+          activeSection={activeSection} 
         />
       </div>
     </header>

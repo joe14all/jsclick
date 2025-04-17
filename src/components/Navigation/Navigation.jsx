@@ -7,8 +7,8 @@ const Navigation = ({ links, isMenuOpen, closeMenu, activeSection, isHomePage })
   const renderLink = (link) => {
     // Determine if the link is active
     const isActive = isHomePage
-      ? activeSection === link.path.replace('#', '') // For home page, compare section ids
-      : window.location.pathname === link.path; // For other pages, compare route path
+      ? activeSection === link.path.replace('#', '') 
+      : window.location.pathname === link.path; 
 
     const linkClassName = `${styles.navLink} ${isActive ? styles.active : ''}`;
 
@@ -35,6 +35,7 @@ const Navigation = ({ links, isMenuOpen, closeMenu, activeSection, isHomePage })
         {link.name}
       </Link>
     );
+    
   };
 
   return (

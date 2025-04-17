@@ -20,7 +20,7 @@ const caseTwelve = {
         caption: "Surveyed Prep Occlusal",
         alt: "Post-preparation Survey Analysis",
         modality: "Lab Photography",
-        date: "2023-05-10",
+        date: "2020-07-27",
         tags: ["finish-line", "prep", "draw"],
       },
       {
@@ -28,7 +28,7 @@ const caseTwelve = {
         caption: "Surveyed Prep Buccal",
         alt: "Buccal Bulge Development",
         modality: "Lab Photography",
-        date: "2023-05-10",
+        date: "2020-07-27",
         tags: ["axial", "prep", "draw"],
       },
       {
@@ -36,7 +36,7 @@ const caseTwelve = {
         caption: "Wax-up Buccal View",
         alt: "Supra-bulge Contour Formation",
         modality: "Lab Photography",
-        date: "2023-05-17",
+        date: "2020-07-27",
         tags: ["wax-up", "contour", "emergence-profile"],
       },
       {
@@ -44,7 +44,7 @@ const caseTwelve = {
         caption: "Wax-up Occlusal",
         alt: "Occlusal Rest Seat Design",
         modality: "Lab Photography",
-        date: "2023-05-17",
+        date: "2020-07-27",
         tags: ["wax-up", "anatomy"],
       },
       {
@@ -52,7 +52,7 @@ const caseTwelve = {
         caption: "Wax-up Lingual View",
         alt: "Proximal Guide Plane Creation",
         modality: "Lab Photography",
-        date: "2023-05-17",
+        date: "2020-07-27",
         tags: ["wax-up", "contour"],
       },
       {
@@ -60,7 +60,7 @@ const caseTwelve = {
         caption: "Master Cast Survey",
         alt: "Final Wax-up Verification",
         modality: "Lab Photography",
-        date: "2023-05-24",
+        date: "2020-07-27",
         tags: ["surveyed", "master-cast"],
       },
     ],
@@ -77,9 +77,9 @@ const caseTwelve = {
             medicalHistory: {
               systemic: ["Hypertension"],
               dental: [
-                "Partial edentoulism (Class III mod I)",
-                "Recurrent #30 MOD amalgam failure",
-                "Non-ideal abutment contours",
+                "Partial edentulism (Class III mod I)",
+                "Recurring failure of #30 MOD amalgam",
+                "Non-ideal contours for abutment use",
               ],
             },
           },
@@ -87,41 +87,41 @@ const caseTwelve = {
             chiefComplaint:
               "My back tooth keeps breaking and my partial doesn't snap in like it used to",
             concerns: [
-              "❗️ Repeated fracture of large filling in #30",
-              "❗️ Decreasing RPD retention",
-              "❗️ Food trapping around abutment",
+              "❗️ Frequent fracture of extensive filling in #30",
+              "❗️ Diminished retention of RPD",
+              "❗️ Food impaction around abutment tooth",
             ],
             expectations: [
-              "🔶 Optimizing abutment #30 for a new RPD",
-              "🔶 Easier cleaning around abutment",
-              "🔶 Durable chewing surface",
+              "🔶 Optimize #30 for RPD compatibility",
+              "🔶 Simplify cleaning around abutment",
+              "🔶 Ensure a long-lasting chewing surface",
             ],
           },
           clinicalAssessment: {
             existingConditions: {
               "Abutment Tooth (#30)": [
-                "➞ MOD amalgam (60% tooth structure)",
-                "➞ Inadequate buccal contour for RPD",
+                "➞ MOD amalgam restoration (60% of structure remains)",
+                "➞ Insufficient buccal contour for RPD design",
               ],
               "RPD Design": {
                 "Missing Teeth": ["🦷#20", "🦷#28", "🦷#29"],
                 "Rest Locations": [
                   "🦷#27 ➞ Cingulum rest",
-                  "🦷#18 ➞ Mesial Occlusal rest",
-                  "🦷#19 ➞ Distal Occlusal rest",
+                  "🦷#18 ➞ Mesial occlusal rest",
+                  "🦷#19 ➞ Distal occlusal rest",
                   "🦷#21 ➞ Mesial occlusal rest",
                 ],
                 "Existing Issues": [
-                  "Poor reciprocation on #30",
-                  "Inadequate buccal contour",
+                  "Lack of proper reciprocation at #30",
+                  "Deficient buccal contour",
                 ],
               },
             },
             prosthodonticFactors: {
               "Survey Findings": [
-                "➞ 0 mm undercut on mesio-buccal",
-                "➞ 4° tilt required for common path",
-                "➞ Ideal clasp position: mid-buccal",
+                "➞ 0 mm undercut on mesio-buccal surface",
+                "➞ 4° tilt needed to establish a shared path of insertion",
+                "➞ Ideal clasp placement: mid-buccal zone",
               ],
             },
           },
@@ -131,30 +131,30 @@ const caseTwelve = {
         content: [
           {
             id: "SC1",
-            title: "Abutment Rehabilitation",
+            title: "Rehabilitation of Abutment Tooth",
             category: "structure",
             details: {
               issues: [
-                "Large MOD preparation with minimal remaining walls",
-                "Existing buccal contour inadequate for RPD",
+                "Extensive MOD cavity with limited remaining structure",
+                "Current buccal contour does not support RPD design",
               ],
               impact:
-                "Required simultaneous structural rehabilitation and prosthodontic optimization",
+                "Simultaneous structural reinforcement and prosthodontic refinement required",
             },
             priority: "critical",
           },
-
           {
             id: "SC2",
-            title: "Occluso-Prosthetic Harmony",
+            title: "Occlusal and Prosthetic Alignment",
             category: "occlusion",
             details: {
               issues: [
-                "Balancing natural crown occlusion with RPD",
-                "Creating adequate rest seat depth without over-prep",
-                "Restoring tooth natural taper ",
+                "Balancing occlusion between natural dentition and RPD",
+                "Providing sufficient rest seat depth with conservative prep",
+                "Restoring anatomical taper of the abutment",
               ],
-              impact: "Critical for both crown longevity and RPD function",
+              impact:
+                "Essential for crown durability and functional RPD integration",
             },
             priority: "high",
           },
@@ -165,29 +165,29 @@ const caseTwelve = {
           phases: [
             {
               phase: 1,
-              duration: "Day 1-3",
-              focus: "Diagnostic Surveying & Preparation",
+              duration: "Day 1–3",
+              focus: "Diagnostic Evaluation & Preparation Planning",
             },
             {
               phase: 2,
-              duration: "Day 4-7",
-              focus: "Manual Wax-up & Casting",
+              duration: "Day 4–7",
+              focus: "Manual Wax-up & Crown Casting",
             },
             {
               phase: 3,
               duration: "Day 8",
-              focus: "RPD Framework Adjustment",
+              focus: "RPD Framework Verification",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Guided Tooth Preparation",
+            title: "Precision Tooth Preparation",
             objectives: [
-              "Establish optimal path of insertion",
-              "Create suprabulge contour",
-              "Develop guiding planes",
+              "Establish an ideal path of insertion",
+              "Design appropriate suprabulge contour",
+              "Incorporate stable guiding planes",
             ],
             procedures: [
               {
@@ -195,32 +195,35 @@ const caseTwelve = {
                 instruments: ["Ney surveyor", "Undercut gauges"],
                 parameters: [
                   "10° axial convergence",
-                  "1mm suprabulge ",
-                  "1mm shoulder margin",
+                  "1mm suprabulge contour",
+                  "1mm defined shoulder margin",
                 ],
               },
               {
-                type: "Prep Stent Fabrication",
+                type: "Preparation Stent Fabrication",
                 material: "Autopolymerizing resin",
-                features: ["Guide plane replication", "Occlusal index key"],
+                features: [
+                  "Accurate replication of guide planes",
+                  "Occlusal index for consistency",
+                ],
               },
             ],
           },
           {
             phase: 2,
-            title: "Manual Crown Fabrication",
+            title: "Custom Crown Fabrication",
             objectives: [
-              "Precision wax-up",
-              "Optimal metal thickness",
-              "RPD compatibility",
+              "High-precision wax modeling",
+              "Achieve proper metal bulk",
+              "Ensure full RPD compatibility",
             ],
             procedures: [
               {
                 type: "Crown Wax-up",
                 steps: [
-                  "Surveyor-verified guide planes",
-                  "Proximal contact verification",
-                  "Occlusal anatomy carving",
+                  "Guide planes confirmed using surveyor",
+                  "Verification of proximal contact",
+                  "Detailed occlusal anatomy sculpting",
                 ],
                 instruments: ["#7 wax spatula", "Digital waxer"],
               },
@@ -228,28 +231,28 @@ const caseTwelve = {
                 type: "Casting Process",
                 material: "Type IV gold",
                 parameters: [
-                  "2mm occlusal reduction",
+                  "2mm occlusal clearance",
                   "0.3mm coping thickness",
-                  "M Occlusal rest seat",
+                  "Mesial occlusal rest seat",
                 ],
               },
             ],
           },
           {
             phase: 3,
-            title: "Prosthetic Integration",
+            title: "Final Prosthetic Integration",
             objectives: [
-              "Passive RPD fit",
-              "Optimal clasp engagement",
-              "Occlusal verification",
+              "Ensure passive RPD seating",
+              "Secure effective clasp retention",
+              "Confirm occlusal harmony",
             ],
             procedures: [
               {
                 type: "Delivery Protocol",
                 steps: [
-                  "Surveyor-verified seating",
-                  "Articulating paper check",
-                  "Clasp tension adjustment",
+                  "Seating verified with surveyor",
+                  "Marking with articulating paper",
+                  "Adjust clasp tension as needed",
                 ],
               },
             ],
@@ -267,21 +270,21 @@ const caseTwelve = {
         },
         content: {
           achievements: [
-            "Successful RPD retention improvement",
-            "No recurrent caries at 6-month recall",
-            "Optimal emergence profile for hygiene",
-            "Harmonized occlusal contacts",
+            "Improved RPD retention successfully achieved",
+            "No signs of recurrent decay at 6-month review",
+            "Ideal emergence profile facilitating hygiene",
+            "Well-distributed occlusal contacts achieved",
           ],
           limitations: {
             noted: [
-              "Slight metal visibility on buccal",
-              "0.5mm overcontour on distal",
-              "Increased plaque retention score (1.8)",
+              "Minor buccal metal visibility",
+              "0.5mm distal overcontour observed",
+              "Increased plaque retention index (1.8)",
             ],
             corrections: [
-              "Added oral hygiene instruction",
-              "Modified flossing technique",
-              "Dietary counseling",
+              "Provided advanced hygiene instructions",
+              "Recommended flossing modification",
+              "Delivered dietary modification guidance",
             ],
           },
           technicalSuccess: {
@@ -303,9 +306,9 @@ const caseTwelve = {
           patientFeedback: {
             quote: "My partial clicks into place better than ever!",
             improvementsNoted: [
-              "Chewing tough foods confidently",
-              "No more food packing",
-              "Easy to clean around crown",
+              "Can now chew tougher foods comfortably",
+              "No longer experiencing food impaction",
+              "Cleaning around crown is much easier",
             ],
           },
         },

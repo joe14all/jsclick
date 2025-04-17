@@ -16,7 +16,7 @@ const caseFourteen = {
         caption: "Preoperative Radiograph",
         alt: "Residual Apical Periodontitis (5-6mm Radiolucency)",
         modality: "Periapical Radiograph",
-        date: "2023-05-09",
+        date: "2022-10-10",
         tags: [
           "pre-op",
           "digital",
@@ -30,7 +30,7 @@ const caseFourteen = {
         caption: "Postoperative Obturation",
         alt: "Four-Canal Obturation with Bioceramics (MB2 Negotiated to WL)",
         modality: "Periapical Radiograph",
-        date: "2023-06-20",
+        date: "2022-10-10",
         tags: ["post-op", "CBCT-guided", "bioceramic", "apical seal"],
       },
     ],
@@ -40,12 +40,12 @@ const caseFourteen = {
         content: {
           patientProfile: {
             demographic: {
-              age: "➞ 42 YO",
-              gender: "➞ Female",
+              age: "➞ 62 YO",
+              gender: "➞ Male",
               occupation: "➞ Executive",
             },
             medicalHistory: {
-              systemic: ["ASA I", "Non-smoker"],
+              systemic: ["ASA III", "Non-smoker"],
               dental: [
                 "Previous RCT ➞ 2018 (General dentist)",
                 "CRRM ➞ High risk (Multiple retreatments)",
@@ -56,8 +56,8 @@ const caseFourteen = {
             chiefComplaint:
               "Chronic dull ache exacerbated by mastication with previous failed endodontic therapy",
             concerns: [
-              "Recurrent sinus tract",
-              "Vertical root fracture suspicion",
+              "❗️ Recurrent sinus tract",
+              "❗️ Vertical root fracture suspicion",
             ],
             expectations: [
               "🔶 Definitive infection resolution",
@@ -68,10 +68,10 @@ const caseFourteen = {
           clinicalAssessment: {
             findings: {
               Tooth: "🦷#3",
-              "Thermal Pulp Test": "Non-vital",
-              "Percussion Test": "Localized tenderness++",
+
+              "Percussion Test": "++",
               Mobility: "Miller Class I",
-              "Periodontal Status": "PD ≤4mm (Buccal pocket 5mm with exudate)",
+              "Periodontal Status": "PD ≤4mm (Buccal pocket 5mm)",
             },
             radiographicFeatures: {
               "Apical Lesion": "5-6mm radiolucency (ICOI Class 2B)",
@@ -83,7 +83,6 @@ const caseFourteen = {
       },
       challenges: {
         title: "Clinical Challenges",
-        icon: "⚠️",
         content: [
           {
             id: "C1",
@@ -93,7 +92,6 @@ const caseFourteen = {
               issues: [
                 "Calcified MB2 orifice (C-shaped groove anatomy)",
                 "Dentinal map formation ➞ 0.5mm apical to MB1",
-                "Distal canals partially treated in prior RCT",
               ],
               impact: "Persistent infection reservoir risk",
             },
@@ -134,15 +132,14 @@ const caseFourteen = {
                   "90μm voxel size",
                   "Accuitomo 170",
                 ],
-                outcome:
-                  "MB2 confirmed 1.5mm palatal to MB1; Distal canals identified",
+                outcome: "MB2 confirmed 1.5mm palatal to MB1",
               },
               {
                 type: "Ultrasonic Retreatment",
                 instruments: ["ProUltra ENDO-2 tip", "Woodpecker RCT unit"],
                 sequence: [
                   "Coronal zap ➞ 25% power",
-                  "GP removal ➞ H-file watch-winding",
+                  "GP removal ➞ #20 H-file",
                 ],
                 irrigation: [
                   "Solvent protocol: Chloroform 0.5ml/canal",
@@ -188,8 +185,6 @@ const caseFourteen = {
         ],
       },
       results: {
-        title: "Treatment Outcomes",
-        icon: "✅",
         metrics: {
           patientSatisfaction: {
             painRelief: 4.9,
@@ -217,9 +212,8 @@ const caseFourteen = {
           },
           limitations: {
             noted: [
-              "0.2mm sealer extrusion in MB apex",
               "Remaining dentin thickness 1.3mm (buccal)",
-              "Minor overfill in distal canal",
+              "Minor overfill in Palatal canal",
             ],
             futureConsiderations: [
               "Full-coverage crown within 8 weeks",

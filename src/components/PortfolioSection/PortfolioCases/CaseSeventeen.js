@@ -3,229 +3,248 @@ import PostOpImage from "../../../assets/images/EndoThroughCrown-Premolar/PostOP
 
 const caseSeventeen = {
   id: 17,
-  title: "Root Canal through crown",
+  title: "RCT Through Crown",
   categories: ["endodontics"],
   thumbnail: {
     img: PostOpImage,
-    alt: "Post-op radiograph of crowned premolar",
+    alt: "Post-operative radiograph showing successful obturation through crown access",
   },
   caseStudy: {
     carousel: [
       {
         img: PreOpImage,
-        alt: "Pre-operative radiograph",
-        caption: "Periapical lesion under crown",
-        modality: "Digital Radiograph",
-        tags: ["pre-op", "crown", "infection"],
+        caption: "Pre-Op",
+        alt: "2.5mm Periapical Lesion with Intact Crown Margins",
+        modality: "Periapical Radiograph",
+        tags: ["pre-op", "crown", "infection", "periapical lesion", "PFM"],
+        date: "2023-03-15",
       },
       {
         img: PostOpImage,
-        alt: "Post-operative radiograph",
-        caption: "Obturation through crown",
-        modality: "Digital Radiograph",
-        tags: ["post-op", "bioceramic", "access-seal"],
+        caption: "Post-Op",
+        alt: "Single-canal Obturation with Conservative Access",
+        modality: "Periapical Radiograph",
+        tags: ["post-op", "bioceramic", "access-seal", "XP-endo", "PIPS"],
+        date: "2023-04-02",
       },
     ],
     sections: {
       overview: {
-        title: "Clinical Scenario",
+        title: "Patient Overview",
         content: {
           patientProfile: {
             demographic: {
-              age: 52,
-              gender: "female",
+              age: "➞ 48 YO",
+              gender: "➞ Male",
+              occupation: "➞ Banker",
             },
             medicalHistory: {
-              systemic: ["Hypertension (controlled)"],
-              dental: ["Recent crown placement (8 weeks prior)"],
+              systemic: ["ASA II", "Hypertension (controlled)"],
+              dental: [
+                "Crown placement #4 (8 weeks prior)",
+                "No previous endodontic treatment",
+              ],
             },
           },
           presentation: {
             chiefComplaint: "Persistent pain under new crown",
             concerns: [
-              "Crown preservation request",
-              "Chewing sensitivity",
-              "Night-time discomfort",
+              "❗️ Tenderness on chewing",
+              "❗️ Night-time discomfort",
+              "❗️ Crown preservation request",
             ],
             expectations: [
-              "Preserve existing restoration",
-              "Complete infection resolution",
-              "Maintain aesthetics",
+              "🔶 Maintain existing restoration",
+              "🔶 Complete pain resolution",
+              "🔶 Preserve aesthetic appearance",
             ],
           },
           clinicalAssessment: {
-            existingRestorations: {
-              teeth: ["#4"],
-              condition: [
-                "Porcelain-fused-to-metal crown",
-                "Marginal integrity excellent",
-                "Periapical radiolucency (3mm)",
+            findings: {
+              Tooth: "🦷#4",
+              "Existing Crown": [
+                "➞ Ful Anatomic Zirconium",
+                "➞ Excellent marginal integrity",
               ],
-            },
-            pulpTest: {
-              vitality: "Necrotic",
-              percussion: "Positive",
-            },
-            imagingFindings: {
-              CBCT: ["Lesion confined to apical area", "Intact crown margins"],
+              findings: [
+                "➞ 2.5mm periapical radiolucency (periapical radiograph)",
+                "➞ Necrotic pulp",
+                "➞ Positive percussion",
+              ],
             },
           },
         },
       },
       challenges: {
-        title: "Treatment Complexities",
+        title: "Clinical Challenges",
         content: [
           {
-            id: "TC1",
-            title: "Restorative Constraints",
-            category: "Access",
+            id: "C1",
+            title: "Conservative Access",
+            category: "technique",
             details: {
               issues: [
-                "Occlusal porcelain thickness (1.8mm)",
-                "Existing crown margin integrity",
-                "Limited visual landmarks",
+                "Preservation of occlusal crown structure",
+                "Limited visual landmarks through crown",
               ],
-              impact: "Access cavity precision critical",
+              impact: "High precision required to maintain crown integrity",
+            },
+            priority: "Critical",
+          },
+          {
+            id: "C2",
+            title: "Structural Preservation",
+            category: "biomechanics",
+            details: {
+              issues: [
+                "Remaining tooth structure (40%)",
+                "Crack propagation potential",
+                "Minimal dentin conservation requirements",
+              ],
+              impact:
+                "Balancing disinfection needs with structural preservation",
             },
             priority: "High",
           },
           {
-            id: "TC2",
-            title: "Biomechanical Risks",
-            category: "Structural",
+            id: "C3",
+            title: "Coronal Seal Maintenance",
+            category: "restoration",
             details: {
               issues: [
-                "Remaining tooth structure (35%)",
-                "Thermal expansion mismatch risk",
-                "Crack propagation potential",
+                "Existing crown margin integrity",
+                "Access cavity size limitations",
+                "Composite-Zirconium interface challenges",
               ],
-              impact: "Fracture risk mitigation essential",
+              impact: "Long-term success dependent on fluid-tight seal",
             },
-            priority: "Critical",
+            priority: "Medium",
           },
         ],
       },
       solutions: {
-        title: "Conservative Protocol",
         timeline: {
           phases: [
             {
               phase: 1,
-              duration: "Diagnostic visit",
-              focus: "Lesion confirmation",
+              duration: "Day 1–2",
+              focus: "Conservative Access & Initial Disinfection",
             },
             {
               phase: 2,
-              duration: "2 treatment visits",
-              focus: "Through-crown RCT",
-            },
-            {
-              phase: 3,
-              duration: "Final visit",
-              focus: "Access seal & follow-up",
+              duration: "Day 3–5",
+              focus: "Final Obturation & Access Restoration",
             },
           ],
         },
         content: [
           {
             phase: 1,
-            title: "Minimally Invasive Access",
+            title: "Microscopic Access & Shaping",
             objectives: [
-              "Crown preservation",
-              "Precise occlusal access",
-              "Canal identification",
+              "Crown-preserving occlusal access",
+              "Complete biofilm removal",
+              "Maximal dentin conservation",
             ],
             procedures: [
               {
-                type: "Guided Access",
-                technique: "CBCT-guided navigation",
-                tools: ["Dental operating microscope", "Ultrasonic tips"],
-                outcome: "Direct canal access achieved",
+                type: "Guided Access Protocol",
+                instruments: [
+                  "DOM (16x magnification)",
+                  "Ultrasonic diamond tips",
+                  "Transillumination device",
+                ],
+                protocol: [
+                  "Rubber dam isolation with resin guard matrix",
+                  "Stepwise crown penetration using tactile feedback",
+                  "Landmark identification",
+                ],
+                mechanical: ["Maintain 1mm safety margin from crown edges"],
+                outcome: "Direct canal access with 1.0mm occlusal opening",
               },
               {
-                type: "Margin Protection",
-                materials: ["Rubber dam isolation", "Resin guard matrix"],
+                type: "Canal Instrumentation",
+                system: ["Vortex- blue"],
+                parameters: [, "300rpm", "1Ncm torque"],
+                irrigation: [
+                  "5.25% NaOCl with PIPS activation",
+                  "17% EDTA + surfactant",
+                ],
+                checks: ["Patency confirmation with 08# K-file"],
               },
             ],
           },
           {
             phase: 2,
-            title: "Canal Disinfection",
+            title: "3D Obturation & Coronal Seal",
             objectives: [
-              "Complete biofilm removal",
-              "Crown margin preservation",
-              "Dentinal conservation",
+              "Apical seal with bioceramics",
+              "Aesthetic access restoration",
+              "Occlusal function verification",
             ],
             procedures: [
               {
-                type: "Instrumentation",
-                system: "XP-endo Shaper",
-                parameters: ["0.01 taper", "300rpm", "1Ncm torque"],
-                advantage: "Minimal dentin removal",
-              },
-              {
-                type: "Irrigation Protocol",
-                sequence: [
-                  "5% NaOCl activation",
-                  "17% EDTA demineralization",
-                  "Silver nanoparticle final rinse",
+                type: "Obturation Technique",
+                technique: "Single-cone + Warm vertical compaction",
+                parameters: [
+                  "0.04 taper gutta-percha",
+                  "BC Sealer ➞ 3min working time",
+                  "System B ➞ 200°C, 5s dwell",
+                  "Vertical compaction",
                 ],
-                activation: "PIPS laser protocol",
-              },
-            ],
-          },
-          {
-            phase: 3,
-            title: "Definitive Restoration",
-            objectives: [
-              "Fluid-tight coronal seal",
-              "Occlusal contour restoration",
-              "Aesthetic integration",
-            ],
-            procedures: [
-              {
-                type: "Bioceramic Obturation",
-                technique: "Single-cone with warm backfill",
-                materials: ["TotalFill BC Sealer", "GuttaCore carrier"],
               },
               {
                 type: "Access Restoration",
-                materials: ["Zirconomer repair kit", "Nano-hybrid composite"],
-                technique: "Stratified oblique layering",
-                outcome: "Seamless marginal integrity",
+                materials: [
+                  "Zirconomer base layer",
+                  "Nano-hybrid composite",
+                  "Surface sealant",
+                ],
+                strategies: [
+                  "Selective enamel etching (20s)",
+                  "Universal adhesive application",
+                  "Stratified oblique layering",
+                ],
+                finishing: [
+                  "12-fluted carbide burs",
+                  "Diamond polishing paste",
+                  "Margin checker staining",
+                ],
+                outcome: "Seamless margin with <50μm interface",
               },
             ],
           },
         ],
       },
       results: {
-        title: "Treatment Outcomes",
         metrics: {
-          structuralIntegrity: {
-            marginalGap: "<50μm",
-            fractureResistance: "480N",
-          },
           patientSatisfaction: {
-            painRelief: 4.8,
-            overall: 4.9,
-            function: 4.7,
+            painRelief: 4.9,
+            functional: 4.7,
+            aesthetic: 4.8,
+          },
+          proceduralSuccess: {
+            anatomyPreservation: 95,
+            complicationRate: 2,
+            obturationQuality: 4.9,
           },
         },
         content: {
           achievements: [
-            "Crown preservation achieved",
-            "0% crown margin compromise",
-            "Complete lesion resolution (6-month CBCT)",
+            "Crown integrity fully maintained",
+            "Complete lesion resolution at 6-month recall",
+            "0% marginal gap increase post-treatment",
+            "Patient-reported natural feel and function",
+            "No occlusal adjustment required",
           ],
           patientFeedback: {
-            quote: "It's like the crown was never touched!",
-          },
-          followUpPlan: {
-            schedule: [
-              "6-month clinical exam",
-              "Annual radiographic monitoring",
+            quote:
+              "The crown looks and functions exactly like before - but now without any pain!",
+            improvementsNoted: [
+              "Immediate pain resolution post-treatment",
+              "Perfect chewing comfort restored",
+              "No visible access restoration",
             ],
-            considerations: ["Night guard recommendation"],
           },
         },
       },

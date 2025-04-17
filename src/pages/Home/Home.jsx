@@ -5,21 +5,25 @@ import Introduction from '../../components/Introduction/Introduction';
 import FeaturedWork from '../../components/FeaturedWork/FeaturedWork';
 import ServicesProvided from '../../components/ServicesProvided/ServicesProvided';
 import Achievements from '../../components/Achievements/Achievements';
+import Testimonials from '../../components/Testimonials/Testimonials';
 import Collaborations from '../../components/Collaborations/Collaborations';
 import ContactCTA from '../../components/ContactCTA/ContactCTA';
 import useSectionObserver from '../../hooks/useSectionObserver';
 import styles from "./Home.module.css";
 
 const Home = () => {
-  const activeSection = useSectionObserver([
-    'hero',
-    'introduction',
-    'featured-work',
-    'services',
-    'achievements',
-    'clients'
-  ]);
 
+const sectionIds = [
+  'hero', 
+  'introduction', 
+  'featured-work', 
+  'services', 
+  'achievements', 
+  'testimonials', 
+  'clients'
+];
+
+const activeSection = useSectionObserver(sectionIds);
   return (
     <MainLayout isHomePage={true} currentPage="Home" activeSection={activeSection}>
       {/* Parallax Background */}
@@ -32,6 +36,7 @@ const Home = () => {
       <FeaturedWork />
       <ServicesProvided />
       <Achievements />
+      <Testimonials/>
       <Collaborations />
       <ContactCTA />
     </MainLayout>
