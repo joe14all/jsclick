@@ -167,9 +167,9 @@ const caseSeven = {
           presentation: {
             chiefComplaint: "My Upper flipper has been loose for some time",
             concerns: [
-              "Speech Challenges",
-              "Aesthetic dissatisfaction",
-              "Chewing difficulty",
+              "❗️ Speech Challenges",
+              "❗️ Aesthetic dissatisfaction",
+              "❗️ Chewing difficulty",
             ],
             expectations: [
               "🔶 Better Chewing functionality",

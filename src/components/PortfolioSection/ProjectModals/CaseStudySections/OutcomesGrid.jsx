@@ -16,7 +16,7 @@ const OutcomesGrid = ({ data }) => {
   const hasSatisfaction = Boolean(data?.metrics?.patientSatisfaction);
   const hasClinicalImprovements = Boolean(data?.metrics?.clinicalImprovements);
   const hasRetentionPlan = Boolean(data?.retentionPlan?.length > 0);
-console.log(" Clinical Imporvments:", data )
+
   if (
     !hasAchievements &&
     !hasFeedback &&
@@ -179,6 +179,26 @@ console.log(" Clinical Imporvments:", data )
               </ul>
             </section>
           )}
+
+{data.technicalSuccess.alignmentAndOcclusion && (
+      <section>
+        <strong>Alignment & Occlusion</strong>
+        <ul>
+          {data.technicalSuccess.alignmentAndOcclusion.alignment && (
+            <>
+              <li><strong>Anterior Alignment:</strong> {data.technicalSuccess.alignmentAndOcclusion.alignment.anterior}</li>
+              <li><strong>Posterior Alignment:</strong> {data.technicalSuccess.alignmentAndOcclusion.alignment.posterior}</li>
+            </>
+          )}
+          {data.technicalSuccess.alignmentAndOcclusion.occlusion && (
+            <>
+              <li><strong>Overjet:</strong> {data.technicalSuccess.alignmentAndOcclusion.occlusion.overjet}</li>
+              <li><strong>Overbite:</strong> {data.technicalSuccess.alignmentAndOcclusion.occlusion.overbite}</li>
+            </>
+          )}
+        </ul>
+      </section>
+    )}
         </div>
       )}
 

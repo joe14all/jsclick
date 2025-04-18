@@ -84,10 +84,11 @@ const renderNestedList = (data, depth = 0) => {
         
         {procedure.product && <div><strong>Product:</strong> {procedure.product}</div>}
         {procedure.software && <div><strong>Software:</strong> {procedure.software}</div>}
+        {procedure.timeline && <div><strong>Timeline:</strong> {procedure.timeline}</div>}
         {procedure.material && <div><strong>Material:</strong> {procedure.material}</div>}
         {procedure.technique && <div><strong>Technique:</strong> {procedure.technique}</div>}
         {procedure.method && <div><strong>Method:</strong> {procedure.method}</div>}
-        {procedure.type && <div><strong>Type:</strong> {procedure.type}</div>}
+        
         {procedure.step && <div><strong>Step:</strong> {procedure.step}</div>}
         {procedure.notes && <div><strong>Notes:</strong> {procedure.notes}</div>}
         

@@ -6,6 +6,8 @@ import LeftPrepOP from "../../../assets/images/Invisalign/Left.jpg";
 import MandibularPrepOP from "../../../assets/images/Invisalign/Mandibular.jpg";
 import MaxillaryPrepOP from "../../../assets/images/Invisalign/Maxillary.jpg";
 import RightPrepOP from "../../../assets/images/Invisalign/Right.jpg";
+import FrontalPostOp from "../../../assets/images/Invisalign/FrontalPostOp.jpg";
+import FrontalPostOpOpen from "../../../assets/images/Invisalign/FrontalOpenPostOp.jpeg";
 
 const carouselItems = [
   {
@@ -72,11 +74,27 @@ const carouselItems = [
     date: "2022-10-19",
     tags: ["progress", "lateral-track", "biomechanics"],
   },
+  {
+    img: FrontalPostOp,
+    caption: "Frontal Closed - Revision 1",
+    alt: "Lateral Progress Video",
+    modality: "Intra-Oral Frontal",
+    date: "2023-08-01",
+    tags: ["revision", "correction", "levelling"],
+  },
+  {
+    img: FrontalPostOpOpen,
+    caption: "Frontal Opened - Revision 1",
+    alt: "Lateral Progress Video",
+    modality: "Extra-Oral Frontal",
+    date: "2023-08-01",
+    tags: ["revision", "correction", "levelling"],
+  },
 ];
 
 const caseNineteen = {
   id: 19,
-  title: "Invisalign- clear aligners",
+  title: "Invisalign - Clear Aligners",
   categories: ["aligners", "digital"],
   thumbnail: {
     img: FrontalPrepOP,
@@ -372,64 +390,64 @@ const caseNineteen = {
       results: {
         metrics: {
           patientSatisfaction: {
-            aesthetic: 4.5, // 😊 Visual appeal
-            functional: 4.7,
-            overall: 4.6,
+            aesthetic: 4.3,
+            functional: 4.5,
+            overall: 4.4,
+          },
+          clinicalImprovement: {
+            overjet: {
+              initial: 1.9,
+              final: 2.0,
+              change: "➕ 0.1 mm",
+            },
+            overbite: {
+              initial: 2.4,
+              final: 2.6,
+              change: "➕ 0.2 mm",
+            },
+            archExpansion: {
+              upper: "➕ 1.6 mm (Segment 3–14), ➕ 0.7 mm (Segment 4–13)",
+              lower: "➕ 0.9 mm (Segment 30–19), ➖ 0.6 mm (Segment 27–22)",
+            },
           },
         },
         content: {
           achievements: [
-            "🏆 Resolved Bolton anterior discrepancy (1.64 mm)",
-            "🏆 Overjet corrected to 2.0 mm",
+            "🏆 Bolton anterior discrepancy addressed (1.64 mm)",
+            "🏆 Overjet reached 2.0 mm — within functional range",
             "🏆 Overbite improved to 2.6 mm",
-            "🏆 Arch expansion achieved within planned limits",
+            "🏆 Arch expansion achieved per initial targets",
           ],
 
           patientFeedback: {
-            quote: "Can’t wait to show off my new smile! 😁",
+            quote:
+              "Seeing the before-and-after pictures makes the progress clear, though I can feel it’s not quite done yet — excited for the final tweaks!",
             improvementsExpected: [
-              "Better chewing function",
-              "Easier interdental cleaning",
-              "Enhanced smile symmetry",
+              "Further improvement in chewing efficiency",
+              "Smoother interdental cleaning",
+              "Better anterior alignment and smile symmetry after refinements",
             ],
-          },
-
-          metrics: {
-            clinicalImprovements: {
-              overjet: {
-                initial: 1.9,
-                final: 2.0,
-                change: "➕ 0.1 mm",
-              },
-              overbite: {
-                initial: 2.4,
-                final: 2.6,
-                change: "➕ 0.2 mm",
-              },
-              archExpansion: {
-                upper: "➕ 1.6 mm (Segment 3–14), ➕ 0.7 mm (Segment 4–13)",
-                lower: "➕ 0.9 mm (Segment 30–19), ➖ 0.6 mm (Segment 27–22)",
-              },
-            },
           },
 
           technicalSuccess: {
             alignmentAndOcclusion: {
               alignment: {
-                anterior: "🟢 98% tracking predicted",
-                posterior: "🟡 Moderate difficulty – refinements possible",
+                anterior:
+                  "🟡 Partial improvement — lower and upper anterior still require leveling and final positioning",
+                posterior: "🟢 Good tracking, minor refinements planned",
               },
               occlusion: {
-                overjet: "🟢 On target",
-                overbite: "🟢 On target",
+                overjet: "🟢 Achieved functional correction",
+                overbite: "🟢 Within target range",
               },
             },
           },
 
           retentionPlan: [
-            "🔒 Deliver Vivera retainers post‑treatment",
-            "🔒 Recommend night‑time wear for 6 months",
-            "🔒 Schedule recall appointments at 6‑ and 12‑month intervals",
+            "🔒 Refinement phase planned prior to final retention",
+            "🔒 Vivera retainers post‑treatment after final alignment",
+            "🔒 Recommend night‑time wear",
+            "🔒 Schedule follow-up at 6‑ and 12‑month intervals post-refinement",
           ],
         },
       },

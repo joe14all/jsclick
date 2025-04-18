@@ -7,6 +7,36 @@ const ResultsMetrics = ({ metrics }) => {
 
   return (
     <div className={styles.metricsGrid}>
+       {/* --- Bone Gain --- */}
+       {metrics.boneGain && (
+        <div className={`${styles.metricItem} ${styles.boneGain}`}>
+          <h5>Bone Gain</h5>
+          {metrics.boneGain.initialGraftHeight && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>📏 Initial Height</span>
+              <span className={styles.metricValue}>{metrics.boneGain.initialGraftHeight}</span>
+            </div>
+          )}
+          {metrics.boneGain.postMaturationHeight && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>📈 Post-Maturation</span>
+              <span className={styles.metricValue}>{metrics.boneGain.postMaturationHeight}</span>
+            </div>
+          )}
+          {metrics.boneGain.resorptionRate && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>📉 Resorption Rate</span>
+              <span className={styles.metricValue}>{metrics.boneGain.resorptionRate}</span>
+            </div>
+          )}
+          {metrics.boneGain.implantStabilityQuotient && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>⚖️ Stability Quotient</span>
+              <span className={styles.metricValue}>{metrics.boneGain.implantStabilityQuotient}</span>
+            </div>
+          )}
+        </div>
+      )}
       {/* --- Patient Satisfaction --- */}
       {metrics.patientSatisfaction && (
         <div className={`${styles.metricItem} ${styles.patientSatisfaction}`}>
@@ -41,6 +71,37 @@ const ResultsMetrics = ({ metrics }) => {
               <span className={styles.metricValue}>{metrics.patientSatisfaction.overall}/5</span>
             </div>
           )}
+          {metrics.patientSatisfaction.aesthetic && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>🎨 Aesthetic</span>
+              <span className={styles.metricValue}>{metrics.patientSatisfaction.aesthetic}/5</span>
+            </div>
+          )}
+          {metrics.patientSatisfaction.functional && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>🦷 Functional</span>
+              <span className={styles.metricValue}>{metrics.patientSatisfaction.functional}/5</span>
+            </div>
+          )}
+          {/* New metrics */}
+          {metrics.patientSatisfaction.functionalImprovement && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>📈 Functional Improvement</span>
+              <span className={styles.metricValue}>{metrics.patientSatisfaction.functionalImprovement}/5</span>
+            </div>
+          )}
+          {metrics.patientSatisfaction.comfort && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>😌 Comfort</span>
+              <span className={styles.metricValue}>{metrics.patientSatisfaction.comfort}/5</span>
+            </div>
+          )}
+          {metrics.patientSatisfaction.aestheticIntegration && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>🖼️ Aesthetic Integration</span>
+              <span className={styles.metricValue}>{metrics.patientSatisfaction.aestheticIntegration}/5</span>
+            </div>
+          )}
         </div>
       )}
 
@@ -48,6 +109,7 @@ const ResultsMetrics = ({ metrics }) => {
       {metrics.clinicalImprovement && (
         <div className={`${styles.metricItem} ${styles.clinicalImprovement}`}>
           <h5>Clinical Improvements</h5>
+
           {metrics.clinicalImprovement.occlusion && (
             <div className={styles.metricRow}>
               <span className={styles.metricText}>🦷 Occlusion</span>
@@ -56,6 +118,7 @@ const ResultsMetrics = ({ metrics }) => {
               </span>
             </div>
           )}
+
           {metrics.clinicalImprovement.probingDepth && (
             <div className={styles.metricRow}>
               <span className={styles.metricText}>📏 Probing Depth</span>
@@ -64,8 +127,44 @@ const ResultsMetrics = ({ metrics }) => {
               </span>
             </div>
           )}
+
+          {metrics.clinicalImprovement.overjet && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>📐 Overjet</span>
+              <span className={styles.metricValue}>
+                {metrics.clinicalImprovement.overjet.initial}mm → {metrics.clinicalImprovement.overjet.final}mm ({metrics.clinicalImprovement.overjet.change})
+              </span>
+            </div>
+          )}
+
+          {metrics.clinicalImprovement.overbite && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>📐 Overbite</span>
+              <span className={styles.metricValue}>
+                {metrics.clinicalImprovement.overbite.initial}mm → {metrics.clinicalImprovement.overbite.final}mm ({metrics.clinicalImprovement.overbite.change})
+              </span>
+            </div>
+          )}
+
+          {metrics.clinicalImprovement.archExpansion && (
+            <>
+              <div className={styles.metricRow}>
+                <span className={styles.metricText}>🦷 Arch Expansion (Upper)</span>
+                <span className={styles.metricValue}>
+                  {metrics.clinicalImprovement.archExpansion.upper}
+                </span>
+              </div>
+              <div className={styles.metricRow}>
+                <span className={styles.metricText}>🦷 Arch Expansion (Lower)</span>
+                <span className={styles.metricValue}>
+                  {metrics.clinicalImprovement.archExpansion.lower}
+                </span>
+              </div>
+            </>
+          )}
         </div>
       )}
+
 
       {/* --- Procedural Success --- */}
       {metrics.proceduralSuccess && (
@@ -113,24 +212,49 @@ const ResultsMetrics = ({ metrics }) => {
             <span className={styles.metricValue}>{metrics.proceduralSuccess.fractureResistance}%</span>
           </div>
         )}
-            {metrics.proceduralSuccess.pathOfInsertionClarity && (
+          {metrics.proceduralSuccess.pathOfInsertionClarity && (
       <div className={styles.metricRow}>
         <span className={styles.metricText}>📐 Path of Insertion Clarity</span>
         <span className={styles.metricValue}>{metrics.proceduralSuccess.pathOfInsertionClarity}</span>
       </div>
     )}
-    {metrics.proceduralSuccess.undercutIdentificationAccuracy && (
-      <div className={styles.metricRow}>
-        <span className={styles.metricText}>📊 Undercut Identification Accuracy</span>
-        <span className={styles.metricValue}>{metrics.proceduralSuccess.undercutIdentificationAccuracy}</span>
-      </div>
-    )}
-    {metrics.proceduralSuccess.designCompleteness && (
-      <div className={styles.metricRow}>
-        <span className={styles.metricText}>✅ Design Completeness</span>
-        <span className={styles.metricValue}>{metrics.proceduralSuccess.designCompleteness}</span>
-      </div>
-    )}
+      {metrics.proceduralSuccess.undercutIdentificationAccuracy && (
+        <div className={styles.metricRow}>
+          <span className={styles.metricText}>📊 Undercut Identification Accuracy</span>
+          <span className={styles.metricValue}>{metrics.proceduralSuccess.undercutIdentificationAccuracy}</span>
+        </div>
+      )}
+      {metrics.proceduralSuccess.designCompleteness && (
+        <div className={styles.metricRow}>
+          <span className={styles.metricText}>✅ Design Completeness</span>
+          <span className={styles.metricValue}>{metrics.proceduralSuccess.designCompleteness}</span>
+        </div>
+      )}
+       {metrics.proceduralSuccess.anatomyPreservation && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>🦴 Anatomy Preservation</span>
+              <span className={styles.metricValue}>{metrics.proceduralSuccess.anatomyPreservation}%</span>
+            </div>
+          )}
+          {/* New metrics */}
+          {metrics.proceduralSuccess.graftIntegration && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>🩺 Graft Integration</span>
+              <span className={styles.metricValue}>{metrics.proceduralSuccess.graftIntegration}%</span>
+            </div>
+          )}
+          {metrics.proceduralSuccess.sinusMembraneIntegrity && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>📜 Membrane Integrity</span>
+              <span className={styles.metricValue}>{metrics.proceduralSuccess.sinusMembraneIntegrity}</span>
+            </div>
+          )}
+          {metrics.proceduralSuccess.infectionStatus && (
+            <div className={styles.metricRow}>
+              <span className={styles.metricText}>🦠 Infection Status</span>
+              <span className={styles.metricValue}>{metrics.proceduralSuccess.infectionStatus}</span>
+            </div>
+          )}
    
         </div>
       )}
