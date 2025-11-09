@@ -6,7 +6,10 @@ import DGOILogo from "../../assets/images/DGOI.png";
 import MIULogo from "../../assets/images/MIU_logo.png";
 import AachenLogo from "../../assets/images/aachen.png";
 const resumeData = {
-  position: "Associate Dentist at White Dental Clinic",
+  position: [
+    "Associate Dentist at Lotus Dental Practice",
+    "Associate Dentist at All Care Dental By The Sea",
+  ],
   education: [
     "DDS | UCLA School of Dentistry (2019 - 2021)",
     "BDS | MISR International University (2008 - 2013)",

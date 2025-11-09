@@ -5,7 +5,6 @@ import resumeData from '../../components/ResumeSection/resumeData';
 import ResumeList from '../../components/ResumeSection/ResumeList/ResumeList';
 import DownloadCV from '../../components/ResumeSection/DownloadCV';
 import LinkedInIntegration from '../../components/ResumeSection/LinkedInIntegration';
-import { CheckCircle } from 'lucide-react'; 
 
 import styles from './Resume.module.css';
 import ExpandableResumeList from '../../components/ResumeSection/ExpandableResumeList/ExpandableResumeList';
@@ -27,17 +26,8 @@ const Resume = () => {
 
             {/* Main List */}
             <ul className={styles.resumeList}>
-              <li className={styles.resumeListSection}>
-                <h4 className={styles.sectionTitle}>Current Position</h4>
-                <ul className={styles.listItems}>
-                  {resumeData.position && (
-                    <li className={styles.listItem}>
-                      <CheckCircle size={18} className={styles.icon} />
-                      <span>{resumeData.position}</span>
-                    </li>
-                  )}
-                </ul>
-              </li>
+            
+              <ResumeList title="Current Position" items={resumeData.position} />
 
               <ResumeList title="Education" items={resumeData.education} />
 
