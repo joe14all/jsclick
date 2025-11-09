@@ -119,21 +119,9 @@ const caseTwo = {
         content: [
           {
             phase: 1,
-            title: "Diagnostic Phase",
-            objectives: ["Caries excavation ", "Temporization"],
-            procedures: [
-              {
-                type: "Access Cavity",
-
-                instruments: ["Endo-Z bur (Safe-ended)"],
-                outcome: "Access to all canals",
-              },
-            ],
-          },
-          {
-            phase: 2,
             title: "Treatment Phase",
             objectives: [
+              "Access Cavity",
               "WL determination",
               "Cleaning and Shaping",
               "Irrigation activation",
@@ -141,30 +129,65 @@ const caseTwo = {
             ],
             procedures: [
               {
+                type: "Access Cavity",
+                // This was already correct: an array of strings.
+                instruments: ["Endo-Z bur (Safe-ended)"],
+                outcome: "Access to all canals",
+              },
+              {
                 type: "Instrumentation",
-                system: "ProTaper Gold (Torque-controlled)",
+
+                // FIX 1: 'system' was a string ("...").
+                // It must be an array to be rendered by the 'sections' map.
+                system: ["ProTaper Gold (Torque-controlled)"],
+
+                // This was already correct: an array of strings.
                 sequence: ["SX orifice opener", "F2 (Apical prep #25/.04 )"],
+
+                // REFINEMENT 1: 'specifications' was an array of strings ("Torque ➞ ...").
+                // This refactors it to use the { label, value } structure
+                // that your `renderNestedList` component is built to handle.
                 specifications: [
-                  "Torque ➞ Adaptive motion (6:1 reduction)",
-                  "Apical control ➞ Patency file #10 K-file maintained",
+                  { label: "Torque", value: "Adaptive motion (6:1 reduction)" },
+                  {
+                    label: "Apical control",
+                    value: "Patency file #10 K-file maintained",
+                  },
                 ],
               },
               {
                 type: "Irrigation",
+
+                // This was already correct: an array of strings.
                 sequence: [
                   "5.25% NaOCl (between files)",
                   "17% EDTA ",
                   "2% CHX final rinse ",
                 ],
+
+                // REFINEMENT 2: 'activation' was an array of strings.
+                // This also fits the { label, value } structure perfectly.
                 activation: [
-                  "EndoActivator (Yellow tip) - NaOCl agitation",
-                  "3x20s cycles per canal (NaOCl)",
+                  {
+                    label: "Device",
+                    value: "EndoActivator (Yellow tip) - NaOCl agitation",
+                  },
+                  {
+                    label: "Protocol",
+                    value: "3x20s cycles per canal (NaOCl)",
+                  },
                 ],
               },
               {
                 type: "Obturation",
+                // This is correct: 'technique' is a string and is rendered
+                // in the footer of Procedure.jsx, not in the 'sections' map.
                 technique: "Continuous wave vertical compaction",
+
+                // This was already correct: an array of strings.
                 parameters: ["System B", "Obtura III "],
+
+                // This was already correct: an array of strings.
                 materials: [
                   "AH Plus Bioceramic (Premixed syringe)",
                   "GP MatchPoint .04 (Non-standardized cone)",

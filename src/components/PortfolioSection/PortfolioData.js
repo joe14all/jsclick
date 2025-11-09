@@ -16,7 +16,7 @@ import caseFifteen from "./PortfolioCases/CaseFifteen";
 import caseSixteen from "./PortfolioCases/CaseSixteen";
 import caseSeventeen from "./PortfolioCases/CaseSeventeen";
 import caseEighteen from "./PortfolioCases/CaseEighteen";
-import caseNineteen from "./PortfolioCases/caseNineteen";
+// import caseNineteen from "./PortfolioCases/caseNineteen";
 
 const portfolioData = [
   caseOne,
@@ -37,7 +37,7 @@ const portfolioData = [
   caseSixteen,
   caseSeventeen,
   caseEighteen,
-  caseNineteen,
+  // caseNineteen,
 ];
 
 export default portfolioData;

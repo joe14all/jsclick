@@ -25,6 +25,7 @@ const caseTen = {
   },
   caseStudy: {
     carousel: [
+      // ... (carousel content is fine, no changes needed) ...
       {
         video: OcclusalVideo,
         caption: "Start-to-finish video",
@@ -157,6 +158,7 @@ const caseTen = {
 
     sections: {
       overview: {
+        // ... (overview content is fine, no changes needed) ...
         title: "Clinical Presentation",
         content: {
           patientProfile: {
@@ -206,6 +208,7 @@ const caseTen = {
         },
       },
       challenges: {
+        // ... (challenges content is fine, no changes needed) ...
         content: [
           {
             id: "PC1",
@@ -289,19 +292,22 @@ const caseTen = {
             procedures: [
               {
                 type: "Preliminary Casts",
-                material: "Alginate",
+                // FIX 1: Renamed 'material' to 'materials' and wrapped in an array.
+                materials: ["Alginate"],
                 technique: "Pour study casts to examine ridge anatomy",
                 outcome: "Base model for custom tray fabrication",
               },
               {
                 type: "Custom Trays",
-                material: "self-cured acrylic",
+                // FIX 2: Renamed 'material' to 'materials' and wrapped in an array.
+                materials: ["self-cured acrylic"],
                 outcome:
                   "Tray supports accurate border molding and detail capture",
               },
               {
                 type: "Master Impressions",
-                material: "PVS (medium & light body)",
+                // FIX 3: Renamed 'material' to 'materials' and wrapped in an array.
+                materials: ["PVS (medium & light body)"],
                 technique:
                   "Functional impression capturing anatomical landmarks",
                 outcome:
@@ -320,13 +326,16 @@ const caseTen = {
             procedures: [
               {
                 type: "Record Bases & Occlusal Rims",
-                material: "Baseplate wax with acrylic base",
+                // FIX 4: Renamed 'material' to 'materials' and wrapped in an array.
+                materials: ["Baseplate wax with acrylic base"],
                 technique: "Adjusted for esthetic support and phonetics",
                 outcome: "Validated maxillo-mandibular record",
               },
               {
                 type: "Teeth Setup",
-                system: "Anatomic acrylic teeth (e.g. Vita, Ivoclar)",
+                // FIX 5: 'system' was a string, now it's an array.
+                system: ["Anatomic acrylic teeth (e.g. Vita, Ivoclar)"],
+                // This was already correct: an array of strings.
                 parameters: [
                   "Posterior unilateral crossbite configuration",
                   "Esthetics matched to midline and smile curve",
@@ -336,7 +345,8 @@ const caseTen = {
               {
                 type: "Wax Try-In",
                 technique: "Facial esthetics checked, phonetics evaluated",
-                material: "Full-contour wax",
+                // FIX 6: Renamed 'material' to 'materials' and wrapped in an array.
+                materials: ["Full-contour wax"],
                 outcome: "Functional validation before processing",
               },
             ],
@@ -353,11 +363,13 @@ const caseTen = {
               {
                 type: "Processing",
                 technique: "Compression mold",
-                material: "Heat-cured acrylic",
+                // FIX 7: Renamed 'material' to 'materials' and wrapped in an array.
+                materials: ["Heat-cured acrylic"],
                 outcome: "Precision fit with long-term material integrity",
               },
               {
                 type: "Polishing & Delivery",
+                // This was already correct: an array of strings.
                 checks: [
                   "Border integrity & pressure points",
                   "Occlusion adjustment post-processing",
@@ -366,6 +378,7 @@ const caseTen = {
               },
               {
                 type: "Post-Insertion Protocol",
+                // This was already correct: an array of strings.
                 schedule: [
                   "48-hour follow-up for tissue response",
                   "1-week review for function and retention",
@@ -377,6 +390,7 @@ const caseTen = {
         ],
       },
       results: {
+        // ... (results content is fine, no changes needed) ...
         title: "Treatment Outcomes",
         metrics: {
           patientSatisfaction: {
@@ -402,6 +416,7 @@ const caseTen = {
             corrections: [
               "Special tray underextention compensated with green stick during final impression",
               "Tooth arrangement adjusted for crossbite compensation",
+
               "Midline adjusted during final waxing session",
             ],
           },
